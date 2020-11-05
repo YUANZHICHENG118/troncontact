@@ -7,13 +7,13 @@
     </div>
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
-        <div class="avatar-wrapper">
-          中文
-          <i class="el-icon-caret-bottom" />
-        </div>
+        <div class="avatar-wrapper">中文<i class="el-icon-caret-bottom" /></div>
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
+          <el-dropdown-item>English</el-dropdown-item>
+          <el-dropdown-item>韩语</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
+      <span class="user-name">用户名</span>
     </div>
   </div>
 </template>
@@ -102,12 +102,17 @@ export default {
         }
       }
     }
-
+    .user-name{
+      font-size: 14px;
+      font-family: PingFangSC-Semibold, PingFang SC;
+      font-weight: 600;
+      color: #00304D;
+      margin:0 30px 0 10px;
+    }
     .avatar-container {
-      margin-right: 30px;
-
       .avatar-wrapper {
         position: relative;
+        cursor: pointer;
       }
     }
   }

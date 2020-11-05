@@ -4,7 +4,7 @@
       <div>
         <h2 class="title">{{ $route.meta.title }}</h2>
         <el-row :gutter="20">
-          <el-col :xs="24" :sm="17" :md="17" :lg="17">
+          <el-col :xs="24" :sm="24" :md="17" :lg="17">
             <router-view :key="key" />
           </el-col>
           <el-col :span="7">
@@ -85,8 +85,10 @@ export default {
       display: none;
     }
     .app-main {
+      padding: 110px 7% 0px;
+      height: 100vh;
       .title{
-        font-size: 25px;
+        font-size: 24px;
         line-height: 30px;
         text-align: center;
       }
