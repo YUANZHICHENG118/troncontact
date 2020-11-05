@@ -5,10 +5,12 @@ const state = {
     opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
     withoutAnimation: false
   },
-  device: 'desktop'
+  device: 'desktop',
+  showAccountDialog:false
 }
 
 const mutations = {
+  TOGGLE_ACCOUNTDIALOG:state=>state.showAccountDialog=!state.showAccountDialog,
   TOGGLE_SIDEBAR: state => {
     state.sidebar.opened = !state.sidebar.opened
     state.sidebar.withoutAnimation = false

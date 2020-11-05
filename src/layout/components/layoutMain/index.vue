@@ -8,78 +8,46 @@
             <router-view :key="key" />
           </el-col>
           <el-col :span="7">
-            <div class="assetInfo">
-              <asset-item>
-                <h2><img src="@/assets/assetImgs/user.png" alt="">个人信息</h2>
-                <ul>
-                  <li><span class="label">钱包余额</span> <span>83.23TRX</span></li>
-                  <li><span class="label">合同数量</span> <span>2</span></li>
-                  <li><span class="label">冻结金额</span> <span>20.23TRX</span></li>
-                  <li><span class="label">总收益</span> <span>20.23TRX</span></li>
-                  <li><span class="label">推荐奖励</span> <span>20.23TRX</span></li>
-                  <li><span class="label">推荐数量</span> <span>1</span></li>
-                </ul>
-
-              </asset-item>
-              <asset-item>
-                <h2><img src="@/assets/assetImgs/network.png" alt="">全网信息</h2>
-                <ul>
-                  <li><span class="label">全网投资</span> <span>83.23TRX</span></li>
-                  <li><span class="label">用户数量</span> <span>2</span></li>
-                </ul>
-              </asset-item>
-              <asset-item>
-                <h2><img src="@/assets/assetImgs/star.png" alt="">推荐链接</h2>
-                <div class="invite">
-                  www.troncontact.com
-                </div>
-                <div class="copy">
-                  <el-button type="primary">复制</el-button>
-                </div>
-              </asset-item>
-
-            </div>
+            <asset-info/>
           </el-col>
         </el-row>
       </div>
     </transition>
+    <el-dialog
+      :visible="dialogVisible"
+      width="90%"
+      :before-close="toggleAccount"
+    >
+      <asset-info/>
+    </el-dialog>
   </section>
 </template>
 
 <script>
-import AssetItem from './assetItem'
-
+import AssetInfo from '../AssetInfo'
+import {mapState,mapMutations} from 'vuex'
 export default {
   name: 'LayoutMain',
   components: {
-    AssetItem
+    AssetInfo
   },
   computed: {
+    ...mapState({
+      dialogVisible: store => store.app.showAccountDialog
+    }),
     key() {
       return this.$route.path
     }
+  },
+  methods:{
+    ...mapMutations({
+      toggleAccount:'app/TOGGLE_ACCOUNTDIALOG'
+    })
   }
 }
 </script>
 
 <style scoped lang="scss">
-  .copy {
-    text-align: right;
-  }
-
-  .invite {
-    height: 44px;
-    line-height: 44px;
-    background: #E6E6E6;
-    border-radius: 6px;
-    font-size: 14px;
-    text-align: center;
-    font-family: PingFangTC-Medium, PingFangTC;
-    font-weight: 500;
-    color: #666666;
-    margin-bottom: 20px;
-  }
-
   .mobile{
     .assetInfo {
       display: none;
@@ -121,7 +89,7 @@ export default {
   // fix css style bug in open el-dialog
   .el-popup-parent--hidden {
     .fixed-header {
-      padding-right: 15px;
+      padding-right: 0;
     }
   }
 </style>

@@ -10,6 +10,22 @@
   border-radius: 14px;
   padding: 30px;
   margin-bottom: 24px;
+  .copy {
+    text-align: right;
+  }
+
+  .invite {
+    height: 44px;
+    line-height: 44px;
+    background: #E6E6E6;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    font-family: PingFangTC-Medium, PingFangTC;
+    font-weight: 500;
+    color: #666666;
+    margin-bottom: 20px;
+  }
   h2{
     display: flex;
     align-items: center;

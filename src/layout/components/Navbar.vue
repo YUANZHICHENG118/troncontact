@@ -13,15 +13,15 @@
           <el-dropdown-item>韩语</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <span class="user-name">用户名</span>
+      <span class="user-name" @click="toggleAccountDialog">用户名</span>
     </div>
+
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import Hamburger from '@/components/Hamburger'
-
 export default {
   components: {
     Hamburger
@@ -33,6 +33,9 @@ export default {
     ])
   },
   methods: {
+    toggleAccountDialog(){
+      this.$store.commit('app/TOGGLE_ACCOUNTDIALOG')
+    },
     toggleSideBar() {
       this.$store.dispatch('app/toggleSideBar')
     }
