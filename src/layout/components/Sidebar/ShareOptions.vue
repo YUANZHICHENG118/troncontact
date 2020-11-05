@@ -12,6 +12,8 @@
     margin-top:20px;
   img {
     width: 35px;
+    height: 35px;
+    border-radius:50%;
     margin-right: 5%;
   &:last-child{
      margin-right: 0;
