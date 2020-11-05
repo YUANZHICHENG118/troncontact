@@ -1,0 +1,52 @@
+@import "./variables";
+
+.contact {
+  &-container {
+    margin: 30px 0;
+    position: relative;
+    .tabs{
+      position: absolute;
+      top: -80px;
+      display: flex;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 44px;
+      background: #E6E6E6;
+      border-radius: 10px;
+      padding: 3px 5px;
+      align-items: center;
+      justify-content: space-between;
+      .tab{
+        flex-basis: 33%;
+        font-weight: 600;
+        color: #808080;
+        font-size: 14px;
+        height: 100%;
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .tab.active{
+        border-radius: 10px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.18);
+        color: $menuActiveText;
+      }
+    }
+  }
+}
+.mobile{
+  .contact{
+    &-container {
+      .tabs{
+        position: sticky;
+        top: -40px;
+        transform: none;
+        z-index: 99;
+      }
+
+    }
+  }
+}

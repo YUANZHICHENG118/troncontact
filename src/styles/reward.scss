@@ -1,0 +1,139 @@
+@import "./variables.scss";
+
+.wrap {
+  padding-top: 32px;
+}
+
+.rewardItem.contact-item {
+  overflow: hidden;
+  height: auto;
+  .contact-list{
+    padding: 30px;
+  }
+  .contact-list-opt{
+    display: flex;
+    justify-content: space-between;
+    line-height: 35px;
+    .label{
+      font-weight: 400;
+      color: #717171;
+
+    }
+    .value{
+      font-weight: 600;
+      color: rgba(77, 77, 77, 0.85);
+    }
+
+  }
+  .head {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    font-family: Helvetica-Condensed-Black-Se, Helvetica-Condensed-Black;
+    b {
+      font-size: 42px;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+  }
+  .contactA {
+    background: linear-gradient(
+        to right,
+        rgba(116, 215, 184, 1) 0%,
+        rgba(34, 166, 108, 1) 100%
+    );
+  }
+  .contactB {
+    background: linear-gradient(
+        to right,
+        rgba(255, 190, 147, 1) 0%,
+        rgba(250, 100, 0, 1) 100%
+    );
+  }
+  .contactC {
+    background: linear-gradient(
+        to right,
+        rgba(255, 153, 153, 1) 0%,
+        rgba(224, 32, 32, 1) 100%
+    );
+  }
+}
+
+.rewardItem {
+  background: #ffffff;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  border: 1px solid #ebebeb;
+  height: 187px;
+  box-sizing: border-box;
+}
+
+.contacts {
+  margin-top: 34px;
+}
+
+.myreward {
+  .right {
+    padding: 40px;
+    .invite-con{
+      margin-top:24px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .invite-link{
+        background: rgba(34, 166, 108, 0.13);
+        border-radius: 8px;
+        padding: 0 2%;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        margin-right: 10px;
+
+        font-weight: 500;
+        color: #666666;
+
+      }
+    }
+    .invite-title {
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      color: $menuActiveText;
+      img{
+        margin-right:10px;
+        width: 20px;
+      }
+    }
+  }
+  .left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: PingFangTC-Semibold, PingFangTC;
+    .tit {
+      color: #4d4d4d;
+    }
+    .val {
+      color: #666666;
+      margin-top: 14px;
+      span {
+        color: $menuActiveText;
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+
+.mobile{
+  .rewardItem.contact-item,.myreward .left{
+    margin-bottom: 20px;
+  }
+}

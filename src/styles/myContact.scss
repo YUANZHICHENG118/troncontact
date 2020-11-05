@@ -1,0 +1,48 @@
+@import "./mixin.scss";
+@import "./variables.scss";
+
+.myContactWrap {
+  padding-top: 32px;
+  .myContactCard {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    border: 1px solid #EBEBEB;
+    padding: 30px;
+    .my-contact-card-list{
+      margin: 20px 0;
+
+    }
+    .my-contact-card-list-item, .my-contact-card-head {
+      @include flex-between;
+    }
+    .my-contact-card-list-item .left, .my-contact-card-head .right {
+      color: #666666;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .my-contact-card-list-item .right, .my-contact-card-head .left {
+      color: $menuActiveText;
+    }
+    .my-contact-card-list-item {
+      line-height: 40px;
+      .right {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    .my-contact-card-head {
+      .left {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+.mobile{
+  .myContactWrap{
+    .myContactCard{
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "./variables";
+.contactCard {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 31px -6px rgba(34, 166, 108, 0.09);
+  border-radius: 14px;
+  border: 1px solid #EBEBEB;
+  padding: 20px 7%;
+  .profit{
+    text-align: center;
+    .desc{
+      display: flex;
+      flex-direction: column;
+      font-weight: 400;
+      color: #616161;
+      font-size: 14px;
+      line-height: 26px;
+    }
+    .percent{
+      font-size: 16px;
+      font-weight: 500;
+      color: #666666;
+      span{
+        color: $menuActiveText;
+        font-size: 78px;
+      }
+    }
+  }
+  .capital {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0 18px;
+    .amount{
+      font-size: 14px;
+      text-align: right;
+      margin-top: 12px;
+      .el-input__inner{
+        font-size: 14px;
+        font-weight: 500;
+        color: #000000;
+        text-align: center;
+      }
+      .suffix{
+        font-size: 12px;
+        font-weight: 500;
+        color: #545454;
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+      }
+      .tip{
+        font-weight: 400;
+        color: #B3B3B3;
+        margin-top: 5px;
+        font-size: 13px;
+      }
+
+    }
+    .tit {
+      font-weight: 500;
+      color: #666666;
+      font-size: 14px;
+    }
+  }
+  .head {
+    font-weight: 400;
+    color: #B3B3B3;
+    font-size: 14px;
+    b {
+      color: $menuActiveText;
+      font-size: 36px;
+      margin-right: 5px;
+    }
+  }
+}
+.mobile {
+  .contactCard {
+    margin-top: 20px;
+  }
+}

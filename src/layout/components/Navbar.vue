@@ -1,0 +1,115 @@
+<template>
+  <div class="navbar">
+    <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+    <div class="logoWrap">
+      <img src="@/assets/logo.png" class="logoImg" alt="" />
+      <img src="@/assets/logoText.png"  class="logoTextImg" alt="" />
+    </div>
+    <div class="right-menu">
+      <el-dropdown class="avatar-container" trigger="click">
+        <div class="avatar-wrapper">
+          中文
+          <i class="el-icon-caret-bottom" />
+        </div>
+        <el-dropdown-menu slot="dropdown" class="user-dropdown">
+        </el-dropdown-menu>
+      </el-dropdown>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+import Hamburger from '@/components/Hamburger'
+
+export default {
+  components: {
+    Hamburger
+  },
+  computed: {
+    ...mapGetters([
+      'sidebar',
+      'avatar'
+    ])
+  },
+  methods: {
+    toggleSideBar() {
+      this.$store.dispatch('app/toggleSideBar')
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.navbar {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  .logoWrap{
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    .logoImg{
+      height: 30px;
+    }
+    .logoTextImg{
+      height: 16px;
+    }
+  }
+  .hamburger-container {
+    height: 100%;
+    float: left;
+    cursor: pointer;
+    transition: background .3s;
+    -webkit-tap-highlight-color:transparent;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background: rgba(0, 0, 0, .025)
+    }
+  }
+
+  .breadcrumb-container {
+    float: left;
+  }
+
+  .right-menu {
+    float: right;
+    height: 100%;
+    line-height: 50px;
+
+    &:focus {
+      outline: none;
+    }
+
+    .right-menu-item {
+      display: inline-block;
+      padding: 0 8px;
+      height: 100%;
+      font-size: 18px;
+      color: #5a5e66;
+      vertical-align: text-bottom;
+
+      &.hover-effect {
+        cursor: pointer;
+        transition: background .3s;
+
+        &:hover {
+          background: rgba(0, 0, 0, .025)
+        }
+      }
+    }
+
+    .avatar-container {
+      margin-right: 30px;
+
+      .avatar-wrapper {
+        position: relative;
+      }
+    }
+  }
+}
+</style>
