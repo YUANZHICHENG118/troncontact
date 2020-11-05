@@ -11,7 +11,8 @@ import store from './store'
 import router from './router'
 
 import '@/icons' // icon
-
+import VueClipboard from 'vue-clipboard2'
+Vue.use( VueClipboard )
 // set ElementUI lang to EN
 Vue.use(ElementUI)
 
