@@ -12,7 +12,6 @@ import router from './router'
 
 import '@/icons' // icon
 
-
 // set ElementUI lang to EN
 Vue.use(ElementUI)
 
