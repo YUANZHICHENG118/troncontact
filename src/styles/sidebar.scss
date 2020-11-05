@@ -99,8 +99,12 @@
     .submenu-title-noDropdown,
     .el-submenu__title {
       &:hover {
-        background-color: $menuHover !important;
+       color: $menuActiveText !important;
+        background-color: transparent!important;
       }
+    }
+    .el-menu-item.is-active{
+      background-color: $menuHover !important;
     }
 
     .is-active > .el-submenu__title {
@@ -123,7 +127,9 @@
       width: 54px !important;
       padding: 46px 1%;
     }
-
+    .el-menu-item.is-active{
+      background-color: transparent !important;
+    }
     .main-container {
       margin-left: 54px;
     }
