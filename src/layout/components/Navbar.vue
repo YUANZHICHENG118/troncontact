@@ -20,13 +20,16 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters,mapState } from 'vuex'
 import Hamburger from '@/components/Hamburger'
 export default {
   components: {
     Hamburger
   },
   computed: {
+    ...mapState({
+      device:state=>state.app.device
+    }),
     ...mapGetters([
       'sidebar',
       'avatar'
@@ -34,6 +37,7 @@ export default {
   },
   methods: {
     toggleAccountDialog(){
+      this.device==='mobile'&&
       this.$store.commit('app/TOGGLE_ACCOUNTDIALOG')
     },
     toggleSideBar() {

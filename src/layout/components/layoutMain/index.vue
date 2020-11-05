@@ -7,7 +7,7 @@
           <el-col :xs="24" :sm="24" :md="17" :lg="17">
             <router-view :key="key" />
           </el-col>
-          <el-col :span="7">
+          <el-col :span="7" :xs="0">
             <asset-info/>
           </el-col>
         </el-row>
@@ -49,9 +49,6 @@ export default {
 
 <style scoped lang="scss">
   .mobile{
-    .assetInfo {
-      display: none;
-    }
     .app-main {
       padding: 110px 7% 0px;
       height: 100vh;
