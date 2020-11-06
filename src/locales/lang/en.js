@@ -1,5 +1,33 @@
 export default {
   global: {
-    test: 'test22'
+    test: 'test',
+    share:'share',
+    copy:'copy'
+  },
+  sidebar:{
+    contact:'contract',
+    myContact:'my contract',
+    reward: 'team reward',
+    question:'frequently asked questions'
+  },
+  account:{
+    userData:{
+      title:'personal information',
+      balance:'Wallet balance',
+      contactNum:'Contract quantity',
+      frozen:'Frozen amount',
+      profit:'Total revenue',
+      inviteReward:'Recommendation reward',
+      inviteNum:'Recommended quantity'
+    },
+    networkData:{
+      title:'Network wide information',
+      chargeNum:'Global recharge quantity',
+      userNum:'Number of users'
+    },
+    inviteData:{
+      title:'Recommended links'
+    }
+
   }
 }
