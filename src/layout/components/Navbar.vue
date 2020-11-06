@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import i18n from '@/locales'
+import {loadLanguageAsync} from '@/locales'
 import { mapGetters,mapState } from 'vuex'
 import Hamburger from '@/components/Hamburger'
 export default {
@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     handleCommand(data){
-      i18n.locale=data;
+      loadLanguageAsync(data);
       localStorage.setItem('language',data)
     },
     toggleAccountDialog(){
