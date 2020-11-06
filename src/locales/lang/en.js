@@ -34,5 +34,15 @@ export default {
     investMoney:'Investment amount',
     getMoney:'Access to funds',
     Issued:'Issued with principal'
+  },
+  myContact:{
+    code:'Contract code',
+    amount:'Deposit amount',
+    profit:'Current profit',
+    gain:'Gain revenue',
+    ThawingDate:'Thawing date',
+    Withdrawable:'Withdrawable',
+    get:'extract',
+    getCash:'Getting cash'
   }
 }

@@ -34,5 +34,15 @@ export default {
     investMoney:'投资金额',
     getMoney:'获取资金',
     Issued:'随本金发放'
+  },
+  myContact:{
+    code:'合同编码',
+    amount:'存款金额',
+    profit:'本期利润',
+    gain:'获得收益',
+    ThawingDate:'解冻日期',
+    Withdrawable:'可取款',
+    get:'提取',
+    getCash:'获取现金'
   }
 }
