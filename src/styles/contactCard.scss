@@ -33,6 +33,9 @@
       font-size: 14px;
       text-align: right;
       margin-top: 12px;
+      .el-select{
+        display: flex;
+      }
       .el-input__inner{
         font-size: 14px;
         font-weight: 500;
