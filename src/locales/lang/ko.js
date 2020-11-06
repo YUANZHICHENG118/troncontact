@@ -29,5 +29,10 @@ export default {
       title:'추천 링크'
     }
 
+  },
+  contact:{
+    investMoney:'투자 금액',
+    getMoney:'자금 을 획득 하 다',
+    Issued:'원금 에 따라 지급 하 다'
   }
 }

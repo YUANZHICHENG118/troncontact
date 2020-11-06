@@ -29,5 +29,10 @@ export default {
       title:'推荐链接'
     }
 
+  },
+  contact:{
+    investMoney:'投资金额',
+    getMoney:'获取资金',
+    Issued:'随本金发放'
   }
 }

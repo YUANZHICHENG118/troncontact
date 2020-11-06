@@ -29,5 +29,10 @@ export default {
       title:'Recommended links'
     }
 
+  },
+  contact:{
+    investMoney:'Investment amount',
+    getMoney:'Access to funds',
+    Issued:'Issued with principal'
   }
 }
