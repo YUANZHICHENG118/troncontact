@@ -6,20 +6,22 @@
       <img src="@/assets/logoText.png"  class="logoTextImg" alt="" />
     </div>
     <div class="right-menu">
-      <el-dropdown class="avatar-container" trigger="click">
+      <el-dropdown class="avatar-container" trigger="click"  @command="handleCommand">
         <div class="avatar-wrapper">中文<i class="el-icon-caret-bottom" /></div>
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
-          <el-dropdown-item>English</el-dropdown-item>
-          <el-dropdown-item>韩语</el-dropdown-item>
+          <el-dropdown-item command="zh">中文</el-dropdown-item>
+          <el-dropdown-item command="en">English</el-dropdown-item>
+          <el-dropdown-item command="ko">韩语</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <span class="user-name" @click="toggleAccountDialog">用户名</span>
+      <span class="user-name" @click="toggleAccountDialog">用户名{{$t('global.test')}}</span>
     </div>
 
   </div>
 </template>
 
 <script>
+import i18n from '@/locales'
 import { mapGetters,mapState } from 'vuex'
 import Hamburger from '@/components/Hamburger'
 export default {
@@ -36,6 +38,10 @@ export default {
     ])
   },
   methods: {
+    handleCommand(data){
+      i18n.locale=data;
+      localStorage.setItem('language',data)
+    },
     toggleAccountDialog(){
       this.device==='mobile'&&
       this.$store.commit('app/TOGGLE_ACCOUNTDIALOG')

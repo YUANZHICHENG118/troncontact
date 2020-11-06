@@ -9,7 +9,7 @@ import '@/styles/index.scss' // global css
 import App from './App'
 import store from './store'
 import router from './router'
-
+import i18n from './locales'
 import '@/icons' // icon
 import VueClipboard from 'vue-clipboard2'
 Vue.use( VueClipboard )
@@ -21,6 +21,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  i18n,
   store,
   render: h => h(App)
 })
