@@ -4,7 +4,7 @@
     <div class="profit">
       <div class="percent"><span>{{data.rate}}</span>%</div>
       <div class="desc">
-        <span>30 days</span>
+        <span>{{data.d}} days</span>
         <span>随本金发放</span>
       </div>
     </div>
@@ -39,7 +39,7 @@ export default {
     return {
       loading: false,
       money: '666',
-      payType: 0,
+      payType: 100,
       moneyArr: [100, 500, 1000, 5000, 10000, 50000, 100000]
     }
   },
@@ -61,9 +61,10 @@ export default {
   methods: {
     deposit () {
       this.loading = true
-      this.getTronWeb(this.ref || this.defRef, this.data.pid, this.payType).then(tronWeb => {
-        this.contract.makeDeposit(this.ref || this.defRef, this.data.pid, this.payType).send({
-          callValue: tronWeb.toSun(this.moneyArr[this.payType])
+        const type=this.moneyArr.indexOf(this.payType)
+      this.getTronWeb(this.ref || this.defRef, this.data.pid, type).then(tronWeb => {
+        this.contract.makeDeposit(this.ref || this.defRef, this.data.pid, type).send({
+          callValue: tronWeb.toSun(this.payType)
         }).then(tx => {
           this.loading = false
 
@@ -76,11 +77,11 @@ export default {
             //this.updateInfo();
           })
         }).catch(e => {
-          this.loading = true
+          this.loading = false
 
         })
       }).catch(e => {
-        this.loading = true
+        this.loading = false
       })
     }
   }

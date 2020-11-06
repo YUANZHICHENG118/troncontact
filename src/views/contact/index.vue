@@ -68,17 +68,18 @@ export default {
       let rersult = []
       switch (this.current) {
         case 'A':
-          rersult = [{ pid: 0, title: 'A1', rate: '5' }, { pid: 1, title: 'A2', rate: '20' }, {
+          rersult = [{ pid: 0, title: 'A1', rate: '5',d:5 }, { pid: 1, title: 'A2', rate: '20' ,d:15}, {
             pid: 2,
             title: 'A3',
-            rate: '10'
+            rate: '10',
+              d:3
           }]
           break
         case 'B':
-          rersult = [{ pid: 3, title: 'B1', rate: '120' }, { pid: 4, title: 'B2', rate: '160' }]
+          rersult = [{ pid: 3, title: 'B1', rate: '120',d:10 }, { pid: 4, title: 'B2', rate: '160',d:20 }]
           break
         case 'C':
-          rersult = [{ pid: 5, title: 'C', rate: '45' }]
+          rersult = [{ pid: 5, title: 'C', rate: '45',d:30 }]
           break
         default:
           rersult = []

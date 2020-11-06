@@ -16,6 +16,9 @@
             <ul>
                 <li><span class="label">全球充值数量</span> <span>{{depositsCounter}} TRX</span></li>
                 <li><span class="label">用户数量</span> <span>{{playersCount}}</span></li>
+                <li><span class="label">全球团队奖励</span> <span>{{team}} TRX</span></li>
+                <li><span class="label">重启倒计时</span> <span>{{time}}</span></li>
+
             </ul>
         </asset-item>
         <asset-item>
@@ -35,6 +38,7 @@
     import AssetItem from './assetItem'
     import TrxMixin from '../../../mixin/trx'
 
+    let timer=undefined
     export default {
         components: {
             AssetItem
@@ -49,7 +53,9 @@
                 referralsCount:0,
                 depositsCounter:0,
                 playersCount:0,
-                totalReward:0
+                totalReward:0,
+                team:0,
+                time:0
             };
         },
         mixins: [TrxMixin],
@@ -61,15 +67,21 @@
                 });
             }
         },
+        beforeDestroy() {
+            if(timer){
+                clearInterval(timer)
+            }
+        },
+        mounted(){
+            timer = setInterval(() => {
+                this.loadData()
+            }, 5000)
+        },
         methods: {
             loadData(){
                 this.address=this.host+"/?ref="+this.tron.account
 
                 this.getTronWeb().then(tronWeb => {
-
-
-
-
                     this.contract.getPersonalStats(this.tron.account).call().then(res => {
                         this.balance =tronWeb.fromSun(res["stats"][0]);
                         // 用户合同数量
@@ -90,8 +102,11 @@
 
                     // 全网数量
                     this.contract.getGlobalStats().call().then(res => {
+                        console.log("res==",res)
                         this.depositsCounter = tronWeb.fromSun(res["stats"][0]);
                         this.playersCount = parseInt(res["stats"][1]);
+                        this.team = tronWeb.fromSun(res["stats"][2]);
+                        this.time = parseInt(res["stats"][3]);
 
 
                     });
