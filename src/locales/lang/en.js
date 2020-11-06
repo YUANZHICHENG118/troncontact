@@ -44,5 +44,16 @@ export default {
     Withdrawable:'Withdrawable',
     get:'extract',
     getCash:'Getting cash'
+  },
+  teamReward:{
+    title:'Team reward',
+    nthFirst:'First generation',
+    nthSecond:'Second generation',
+    nthThird:'The third generation',
+    nthforth:'Generation 4-10',
+    nthFifth:'Generation 10-15'
+  },
+  question:{
+    title:'common problem'
   }
 }

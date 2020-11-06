@@ -44,5 +44,16 @@ export default {
     Withdrawable:'可取款',
     get:'提取',
     getCash:'获取现金'
+  },
+  teamReward:{
+    title:'团队奖励',
+    nthFirst:'第1代',
+    nthSecond:'第2代',
+    nthThird:'第3代',
+    nthforth:'第4-10代',
+    nthFifth:'第10-15代'
+  },
+  question:{
+    title:'常见问题'
   }
 }

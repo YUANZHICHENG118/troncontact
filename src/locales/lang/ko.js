@@ -44,5 +44,16 @@ export default {
     Withdrawable:'인출 가능',
     get:'추출 하 다.',
     getCash:'현금 을 확보 하 다'
+  },
+  teamReward:{
+    title:'단체 보상',
+    nthFirst:'제 1 대',
+    nthSecond:'제2 대',
+    nthThird:'제3 대',
+    nthforth:'4 - 10 대',
+    nthFifth:'10 - 15 세대'
+  },
+  question:{
+    title:'흔 한 문제'
   }
 }
