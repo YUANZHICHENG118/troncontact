@@ -128,9 +128,13 @@
                 this.address=this.host+"/?ref="+this.tron.account
                 this.getTronWeb().then(tronWeb => {
 
-                    // 推荐奖励
-                    this.contract.getWithdrawnReferalFunds(this.tron.account).call().then(res => {
-                        this.withdrawnReferalFunds = tronWeb.fromSun(res);
+
+                    this.contract.getPersonalStats(this.tron.account).call().then(res => {
+
+                        // 推荐奖励
+                        this.withdrawnReferalFunds = tronWeb.fromSun(res["stats"][4]);
+
+
                     });
 
                 })

@@ -83,6 +83,47 @@
     </el-row>
   </div>
 </template>
+<script>
+    import TrxMixin from '../../mixin/trx'
+
+    export default {
+        data() {
+            return {
+                myContact: [],
+            }
+        },
+
+        mixins: [TrxMixin],
+        watch: {
+            'tron.account'() {
+                this.getTronWeb().then(tronWeb => {
+                    this.contract = tronWeb.contract(this.ABI, tronWeb.address.toHex(this.contract_address));
+                    this.loadData();
+                });
+            }
+        },
+        methods: {
+            loadData() {
+                this.getTronWeb().then(tronWeb => {
+
+
+                    this.contract.getDeposits(this.tron.account).call().then(res => {
+
+                        console.log("res====",res)
+
+                    });
+
+                })
+            },
+            changeCurrent(val) {
+                this.current = val;
+            }
+
+
+        }
+
+    }
+</script>
 <style scoped lang="scss">
   @import "~@/styles/myContact.scss";
 </style>
