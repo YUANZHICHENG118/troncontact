@@ -92,24 +92,24 @@
                 address:'',
                 contactAlist: [
                     {label: '第1代', value: '10%'},
-                    {label: '第2代', value: '8%'},
-                    {label: '第3代', value: '5%'},
-                    {label: '第4-10代', value: '3%'},
-                    {label: '第10-15代', value: '1%'}
+                    {label: '第2代', value: '5%'},
+                    {label: '第3代', value: '6%'},
+                    {label: '第4-10代', value: '2%'},
+                    {label: '第11-15代', value: '3%'}
                 ],
                 contactBlist: [
-                    {label: '第1代', value: '2%'},
-                    {label: '第2代', value: '2%'},
-                    {label: '第3代', value: '0.5%'},
-                    {label: '第4-10代', value: '0.5%'},
+                    {label: '第1代', value: '3%'},
+                    {label: '第2代', value: '1%'},
+                    {label: '第3代', value: '2%'},
+                    {label: '第4-10代', value: '0.2%'},
                     {label: '第10-15代', value: '0.5%'}
                 ],
                 contactClist: [
-                    {label: '第1代', value: '10%'},
-                    {label: '第2代', value: '8%'},
-                    {label: '第3代', value: '5%'},
-                    {label: '第4-10代', value: '3%'},
-                    {label: '第10-15代', value: '3%'}
+                    {label: '第1代', value: '3%'},
+                    {label: '第2代', value: '1%'},
+                    {label: '第3代', value: '2%'},
+                    {label: '第4-10代', value: '0.2%'},
+                    {label: '第10-15代', value: '0.5%'}
                 ]
             }
         },

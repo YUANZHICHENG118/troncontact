@@ -102,7 +102,6 @@
 
                     // 全网数量
                     this.contract.getGlobalStats().call().then(res => {
-                        console.log("res==",res)
                         this.depositsCounter = tronWeb.fromSun(res["stats"][0]);
                         this.playersCount = parseInt(res["stats"][1]);
                         this.team = tronWeb.fromSun(res["stats"][2]);

@@ -3,6 +3,7 @@
 </template>
 
 <script>
+    let timer=undefined
 
     export default {
         name: 'Reward',
@@ -29,8 +30,18 @@
         watch: {
 
         },
+        beforeDestroy() {
+            if(timer){
+                clearInterval(timer)
+            }
+        },
         created() {
             this.getOutputReward(this.pid)
+
+            let that=this;
+            timer = setInterval(() => {
+                this.getOutputReward(that.pid)
+            }, 3000)
         },
         methods: {
             async getOutputReward(pid) {

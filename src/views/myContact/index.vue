@@ -96,15 +96,15 @@
             }
         },
         mounted(){
-            timer = setInterval(() => {
-                this.loadData()
-            }, 8000)
+            // timer = setInterval(() => {
+            //     this.loadData()
+            // }, 8000)
         },
         methods: {
             async getOutputReward(pid) {
                 const d = await  this.contract.outputReward(this.tron.account, pid).call();
                 //this.$set(this.reward, 'pid'+pid,  parseFloat(d) / 1000000)
-                return parseFloat(d) / 1000000
+                return d
             },
             chkWithdraw(time, ttl) {
                 const date = moment(time * 1000).add(ttl, 'day')
@@ -113,7 +113,7 @@
             },
             endDate(time, ttl) {
                 const d = moment(time * 1000).add(ttl, 'day')
-                return moment(d).format('YYYY-MM-DD')
+                return moment(d).format('YYYY-MM-DD HH:mm:ss')
             },
             //提取奖励
             withdrawReward(pid) {
@@ -131,6 +131,7 @@
                         this.awaitTx(tx).then(() => {
                             // if(auto_upline) fetch('/auto_upline/?address=' + this.tron.account + '&upline=' + this.upline);
                            
+                           // setTimeout(()=>{})
                         })
                     }).catch(e => {
                         this.loading1 = false
@@ -176,9 +177,10 @@
             },
 
             loadData() {
+                
                 this.getTronWeb().then(tronWeb => {
+                    
                     this.contract.getDeposits(this.tron.account).call().then(res => {
-
                         let i = 0;
                         let j = 0;
 
@@ -197,9 +199,23 @@
 
                         })
 
-                        this.myContact = arr;
+                        // arr.forEach(async (item,index)=>{
+                        //     if(parseInt(item[8])>0){
+                        //          //item[9]=await this.getOutputReward(parseInt(item[0]))
+                        //         item.push(await this.getOutputReward(parseInt(item[0])))
+                        //     }
+                        //
+                        // })
+
+                        this.myContact=arr;
+
 
                     });
+
+                   
+
+                    
+                    
 
                 })
             },
