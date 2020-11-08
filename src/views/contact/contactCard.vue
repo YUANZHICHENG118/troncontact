@@ -26,8 +26,11 @@
                 <!--<div class="tip">最低100TRX</div>-->
             </div>
         </div>
-        <el-button type="primary" style="width:100%;" :loading="loading" :disabled="loading" @click="deposit">获取资金
-        </el-button>
+        <el-button  type="primary" style="width:100%;" :loading="loading" :disabled="data.pid===2?!a3:loading" @click="deposit">获取资金
+    </el-button>
+
+
+
 
     </div>
 </template>
@@ -42,7 +45,8 @@
                 payType: 100,
                 moneyArr: [100, 500, 1000, 5000, 10000, 50000, 100000],
                 moneyArrC: [1000, 5000, 10000, 50000, 100000, 500000, 1000000],
-                pid:0
+                pid:0,
+                a3:false,
 
             }
         },
@@ -58,6 +62,8 @@
             'tron.account'() {
                 this.getTronWeb().then(tronWeb => {
                     this.contract = tronWeb.contract(this.ABI, tronWeb.address.toHex(this.contract_address))
+
+                    if (this.data.pid===2) this.allow();
                 })
             },
             'data.pid'(v,o){
@@ -68,12 +74,35 @@
                 }else {
                     this.payType=100
                 }
+
+                debugger
+                if(v===2){
+                    this.allow()
+                }
             }
         },
         mounted(){
 
+
         },
         methods: {
+
+            a3Allow(){
+                if(this.pid===2){
+                    debugger
+                    return !this.a3;
+                }else{
+                    return this.loading;
+                }
+            },
+
+           async allow(){
+
+                const res = await  this.contract.a3Valve().call();
+               console.log("res",res)
+
+                this.a3 = res["opening"]
+            },
             deposit() {
                 this.loading = true
                 const type =this.pid===5?this.moneyArrC.indexOf(this.payType): this.moneyArr.indexOf(this.payType)
