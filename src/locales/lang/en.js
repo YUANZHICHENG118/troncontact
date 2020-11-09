@@ -23,7 +23,9 @@ export default {
       promotionNum:'Total number of direct promotion',
       teamSize:'Total team size',
       deposit:'Total deposit',
-      extraction:'Total extraction'
+      extraction:'Total extraction',
+      OrdinaryUser:'Ordinary users',
+      super:'super'
     },
     networkData:{
       title:'Network wide information',
@@ -32,8 +34,6 @@ export default {
       withdrawalTotal:'Total withdrawal of member',
       membership:'Global membership',
       Restart:'Restart countdown',
-      OrdinaryUser:'Ordinary users',
-      super:'super'
     },
     inviteData:{
       title:'Recommended links'
