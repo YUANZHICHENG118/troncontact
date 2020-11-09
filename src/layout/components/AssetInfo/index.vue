@@ -29,7 +29,7 @@
                 <li><span class="label">会员总提币</span> <span>{{g2}} TRX</span></li>
                 <li><span class="label">全球会员数</span> <span>{{g3}} </span></li>
 
-                <li><span class="label">重启倒计时</span> <span>{{g4===0?"00:00:00":"12:13:06"}}</span></li>
+                <li v-if="g4>0"><span class="label">重启倒计时</span> <span>{{g4===0?"00:00:00":"12:13:06"}}</span></li>
 
             </ul>
         </asset-item>
