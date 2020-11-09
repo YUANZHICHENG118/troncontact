@@ -30,7 +30,7 @@
         :key="index"
         :xs="24" :sm="12" :md="12" :lg="8"
       >
-        <contact-card :data="item"></contact-card>
+        <contact-card :data="item" :class="contactItemClass(index)"></contact-card>
       </el-col>
     </el-row>
   </div>
@@ -62,6 +62,12 @@ export default {
   },
 
   computed: {
+    contactItemClass(){
+      return index=>{
+        return 'contactItem'+(index+1)
+      }
+
+    },
     ContactData () {
       let rersult = []
       switch (this.current) {

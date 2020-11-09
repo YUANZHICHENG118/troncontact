@@ -78,6 +78,40 @@
     }
   }
 }
+.contactCard.contactItem3{
+  .el-button--primary{
+    background: $red;
+    border:$red;
+  }
+  .head b{
+    color: $red;
+  }
+  .profit{
+    .percent{
+      span{
+        color: $red;
+      }
+    }
+
+  }
+}
+.contactCard.contactItem2{
+  .el-button--primary{
+    background: $orange;
+    border:$orange;
+  }
+  .head b{
+    color: $orange;
+  }
+  .profit{
+    .percent{
+      span{
+        color: $orange;
+      }
+    }
+
+  }
+}
 .mobile {
   .contactCard {
     margin-top: 20px;
