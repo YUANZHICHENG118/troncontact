@@ -43,7 +43,9 @@
         <!--全球会员数-->
         <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g3}} </span></li>
         <!--重启倒计时-->
-        <li v-if="g4>0"><span class="label">{{$t('account.networkData.Restart')}}</span> <span>{{g4===0?'00:00:00':'12:13:06'}}</span></li>
+        <li v-if="g4>0"><span class="label">{{$t('account.networkData.Restart')}}</span> <span> <Countdown :time="time" format="hh:mm:ss" @on-end="onCountdownEnd">
+    <template slot-scope="{ time }">{{ time }}</template>
+  </Countdown></span></li>
 
       </ul>
     </asset-item>
@@ -65,11 +67,13 @@
 <script>
 import AssetItem from './assetItem'
 import TrxMixin from '../../../mixin/trx'
+import Countdown from '@choujiaojiao/vue2-countdown'
 
 let timer = undefined
 export default {
   components: {
-    AssetItem
+    AssetItem,
+      Countdown
   },
   data () {
     return {
@@ -125,6 +129,9 @@ export default {
     }, 5000)
   },
   methods: {
+      onCountdownEnd() {
+          console.log('countdown end~')
+      },
     loadData () {
       this.address = this.host + '/?ref=' + this.tron.account
 
@@ -162,6 +169,17 @@ export default {
           this.g2 = tronWeb.fromSun(res['stats'][2])
           this.g3 = parseInt(res['stats'][3])
           this.g4 = parseInt(res['stats'][4])
+
+            console.log("g4===",this.g4)
+            if(this.g4>0&&this.time==0){
+                const d=new Date();
+                console.log("d.getTime()",d.getTime())
+                const t=(this.g4+24*60*60)-d.getTime()/1000
+                console.log("t",t)
+
+                this.time=parseInt(t);
+            }
+
 
 
         })
