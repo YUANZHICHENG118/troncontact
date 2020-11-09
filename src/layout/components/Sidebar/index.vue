@@ -20,7 +20,7 @@
         <div class="mobileIcon" v-show="isCollapse">
           <el-popover
             placement="left"
-            title="分享"
+            :title="$t('global.share')"
             width="200"
             trigger="hover"
             >
@@ -28,7 +28,7 @@
             <i slot="reference" class="el-icon-share"></i>
           </el-popover>
         </div>
-        <div class="share-title" v-show="!isCollapse">分享</div>
+        <div class="share-title" v-show="!isCollapse">{{$t('global.share')}}</div>
         <share-options v-show="!isCollapse"></share-options>
       </div>
     </div>

@@ -28,7 +28,6 @@ export default {
     inviteData:{
       title:'推荐链接'
     }
-
   },
   contact:{
     investMoney:'投资金额',

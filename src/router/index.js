@@ -8,7 +8,8 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
-
+//翻译
+import {i18nRender} from '../locales'
 
 /**
  * constantRoutes
@@ -30,7 +31,7 @@ export const constantRoutes = [
       path: 'contact',
       name: 'contact',
       component: () => import('@/views/contact/index'),
-      meta: { title: '合同', icon: ClockIcon }
+      meta: { title: i18nRender('sidebar.contact'), icon: ClockIcon }
     },{
       path: 'mycontact',
       name: 'mycontact',

@@ -7,21 +7,21 @@
         :class="{ active: current === 'A' }"
         @click="() => changeCurrent('A')"
       >
-        A合同
+        A {{$t('sidebar.contact')}}
       </div>
       <div
         class="tab"
         :class="{ active: current === 'B' }"
         @click="() => changeCurrent('B')"
       >
-        B合同
+        B {{$t('sidebar.contact')}}
       </div>
       <div
         class="tab"
         :class="{ active: current === 'C' }"
         @click="() => changeCurrent('C')"
       >
-        C合同
+        C {{$t('sidebar.contact')}}
       </div>
     </div>
     <el-row :gutter="30">

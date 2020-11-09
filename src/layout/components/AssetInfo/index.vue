@@ -1,7 +1,7 @@
 <template>
     <div class="assetInfo">
         <asset-item>
-            <h2><img src="@/assets/assetImgs/user.png" alt="">个人信息</h2>
+            <h2><img src="@/assets/assetImgs/user.png" alt="">{{$t('account.userData.title')}}</h2>
             <ul>
                 <li><span class="label">A类合约累计投资</span> <span>{{stats0}}TRX</span></li>
                 <li><span class="label">&nbsp;正在投资</span> <span>{{stats1}}TRX</span></li>
@@ -22,24 +22,31 @@
             </ul>
         </asset-item>
         <asset-item>
-            <h2><img src="@/assets/assetImgs/network.png" alt="">全网信息</h2>
+            <!--全网信息-->
+            <h2><img src="@/assets/assetImgs/network.png" alt="">{{$t('account.networkData.title')}}</h2>
             <ul>
+                <!--总投资数量-->
                 <li><span class="label">总投资数量</span> <span>{{g0}} TRX</span></li>
+                <!--资金池结余-->
                 <li><span class="label">资金池结余</span> <span>{{g1}}</span></li>
+                <!--会员总提币-->
                 <li><span class="label">会员总提币</span> <span>{{g2}} TRX</span></li>
+                <!--全球会员数-->
                 <li><span class="label">全球会员数</span> <span>{{g3}} </span></li>
-
+                <!--重启倒计时-->
                 <li><span class="label">重启倒计时</span> <span>{{g4===0?"00:00:00":"12:13:06"}}</span></li>
 
             </ul>
         </asset-item>
         <asset-item>
-            <h2><img src="@/assets/assetImgs/star.png" alt="">推荐链接</h2>
+            <!--推荐链接-->
+            <h2><img src="@/assets/assetImgs/star.png" alt="">{{$t('account.inviteData.title')}}</h2>
             <div class="invite">
                 {{host}}/?ref={{tron.account.substring(0,5)+"..."}}
             </div>
             <div class="copy">
-                <el-button  type="primary" v-clipboard:copy="address" v-clipboard:success="onCopy" v-clipboard:error="onError">复制</el-button>
+                <!--复制-->
+                <el-button  type="primary" v-clipboard:copy="address" v-clipboard:success="onCopy" v-clipboard:error="onError">{{$t('global.copy')}}</el-button>
 
             </div>
         </asset-item>
