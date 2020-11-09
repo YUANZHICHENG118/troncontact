@@ -13,22 +13,31 @@ export default {
   account:{
     userData:{
       title:'personal information',
-      balance:'Wallet balance',
-      contactNum:'Contract quantity',
-      frozen:'Frozen amount',
-      profit:'Total revenue',
-      inviteReward:'Recommendation reward',
-      inviteNum:'Recommended quantity'
+      AInvest:'Cumulative investment of type A ',
+      BInvest:'Cumulative investment of type B ',
+      CInvest:'Cumulative investment of type C ',
+      investing:'Investment in progress',
+      rewardQuota:'Team reward quota',
+      receivedQuota:'Amount received by the team',
+      level:'Personal level',
+      promotionNum:'Total number of direct promotion',
+      teamSize:'Total team size',
+      deposit:'Total deposit',
+      extraction:'Total extraction'
     },
     networkData:{
       title:'Network wide information',
-      chargeNum:'Global recharge quantity',
-      userNum:'Number of users'
+      investTotal:'Total investment',
+      poolBalance:'Fund pool balance',
+      withdrawalTotal:'Total withdrawal of member',
+      membership:'Global membership',
+      Restart:'Restart countdown',
+      OrdinaryUser:'Ordinary users',
+      super:'super'
     },
     inviteData:{
       title:'Recommended links'
     }
-
   },
   contact:{
     investMoney:'Investment amount',

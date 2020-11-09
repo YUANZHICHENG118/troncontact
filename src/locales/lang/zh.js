@@ -13,17 +13,27 @@ export default {
   account:{
     userData:{
       title:'个人信息',
-      balance:'钱包余额',
-      contactNum:'合同数量',
-      frozen:'冻结金额',
-      profit:'总收益',
-      inviteReward:'团队奖励',
-      inviteNum:'推荐数量'
+      AInvest:'A类合约累计投资',
+      BInvest:'B类合约累计投资',
+      CInvest:'C类合约累计投资',
+      investing:'正在投资',
+      rewardQuota:'团队奖励额度',
+      receivedQuota:'团队领取额度',
+      level:'个人级别',
+      promotionNum:'直推总人数',
+      teamSize:'团队总人数',
+      deposit:'总存入',
+      extraction:'总提取',
+      OrdinaryUser:'普通用户',
+      super:'超级'
     },
     networkData:{
       title:'全网信息',
-      chargeNum:'全球充值数量',
-      userNum:'用户数量'
+      investTotal:'总投资数量',
+      poolBalance:'资金池结余',
+      withdrawalTotal:'会员总提币',
+      membership:'全球会员数',
+      Restart:'重启倒计时'
     },
     inviteData:{
       title:'推荐链接'
