@@ -1,9 +1,9 @@
 <template>
   <div class="share-options" >
-    <img src="@/assets/facebook.png" alt="">
-    <img src="@/assets/twitter.png" alt="">
-    <img src="@/assets/QQ.png" alt="">
-    <img src="@/assets/wechat.png" alt="">
+    <a href="https://www.facebook.com/contract.tron.3" target="_blank"><img src="@/assets/facebook.png" alt=""></a>
+    <a href="https://twitter.com/troncontract1" target="_blank"><img src="@/assets/twitter.png" alt=""></a>
+    <a href="https://t.me/troncontractcc" target="_blank"><img src="@/assets/telegram.png" alt=""></a>
+    <a href="https://www.instagram.com/troncontractcc" target="_blank"><img src="@/assets/instagram.svg" alt=""></a>
   </div>
 </template>
 <style lang="scss" scoped>
