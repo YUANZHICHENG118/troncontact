@@ -170,12 +170,14 @@ export default {
           this.g3 = parseInt(res['stats'][3])
           this.g4 = parseInt(res['stats'][4])
 
-            console.log("g4===",this.g4)
+           // console.log("g4===",this.g4)
             if(this.g4>0&&this.time==0){
                 const d=new Date();
                 console.log("d.getTime()",d.getTime())
-                const t=(this.g4+24*60*60)-d.getTime()/1000
-                console.log("t",t)
+                //const t=(this.g4+24*60*60)-d.getTime()/1000
+                const t=(this.g4+60)-d.getTime()/1000
+
+                // console.log("t",t)
 
                 this.time=parseInt(t);
             }
