@@ -18,7 +18,7 @@ export default {
       CInvest:'C类合约累计投资',
       investing:'正在投资',
       rewardQuota:'团队奖励额度',
-      receivedQuota:'团队领取额度',
+      receivedQuota:'已发放奖励',
       level:'个人级别',
       promotionNum:'直推总人数',
       teamSize:'团队总人数',
