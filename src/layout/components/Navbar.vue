@@ -14,7 +14,7 @@
           <el-dropdown-item command="ru">русский язык</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <span class="user-name" @click="toggleAccountDialog">{{tron.account.substring(0,5)}}...</span>
+      <span class="user-name" @click="toggleAccountDialog">{{tron.account.substring(0,5)}}<i style="letter-spacing: -3px;">···</i></span>
     </div>
 
   </div>
