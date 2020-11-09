@@ -131,7 +131,7 @@
 
                     this.contract.getPersonalStats(this.tron.account).call().then(res => {
 
-                        // 推荐奖励
+                        // 团队奖励
                         this.withdrawnReferalFunds = tronWeb.fromSun(res["stats"][4]);
 
 

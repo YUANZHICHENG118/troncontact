@@ -76,10 +76,10 @@ export default {
           }]
           break
         case 'B':
-          rersult = [{ pid: 3, title: 'B1', rate: '120',d:10 }, { pid: 4, title: 'B2', rate: '160',d:20 }]
+          rersult = [{ pid: 3, title: 'B1', rate: '120',d:10 }, { pid: 4, title: 'B2', rate: '150',d:20 }]
           break
         case 'C':
-          rersult = [{ pid: 5, title: 'C', rate: '45',d:30 }]
+          rersult = [{ pid: 5, title: 'C', rate: '42',d:30 }]
           break
         default:
           rersult = []

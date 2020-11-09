@@ -3,21 +3,33 @@
         <asset-item>
             <h2><img src="@/assets/assetImgs/user.png" alt="">个人信息</h2>
             <ul>
-                <li><span class="label">钱包余额</span> <span>{{balance}} TRX</span></li>
-                <li><span class="label">合同数量</span> <span>{{depositsCount}}</span></li>
-                <li><span class="label">冻结金额</span> <span>{{freeze}} TRX</span></li>
-                <li><span class="label">总收益</span> <span>{{totalReward}} TRX</span></li>
-                <li><span class="label">推荐奖励</span> <span>{{withdrawnReferalFunds}} TRX</span></li>
-                <li><span class="label">推荐数量</span> <span>{{referralsCount}}</span></li>
+                <li><span class="label">A类合约累计投资</span> <span>{{stats0}}TRX</span></li>
+                <li><span class="label">&nbsp;正在投资</span> <span>{{stats1}}TRX</span></li>
+                <li><span class="label">B类合约累计投资</span> <span>{{stats2}}TRX</span></li>
+                <li><span class="label">&nbsp;正在投资</span> <span>{{stats3}}TRX</span></li>
+                <li><span class="label">C类合约累计投资</span> <span>{{stats4}}TRX</span></li>
+                <li><span class="label">&nbsp;正在投资</span> <span>{{stats5}}TRX</span></li>
+
+                <li><span class="label">团队奖励额度</span> <span>{{stats6}}TRX</span></li>
+                <li><span class="label">团队领取额度</span> <span>{{stats7}}TRX</span></li>
+
+                <li><span class="label">个人级别</span> <span>{{stats8===0?"普通用户":stats8===1?"VIP":"超级VIP"}}</span></li>
+                <li><span class="label">直推总人数</span> <span>{{stats9}}</span></li>
+                <li><span class="label">团队总人数</span> <span>{{stats10}}</span></li>
+                <li><span class="label">总存入</span> <span>{{stats11}}TRX</span></li>
+                <li><span class="label">总提取</span> <span>{{stats12}}TRX</span></li>
+
             </ul>
         </asset-item>
         <asset-item>
             <h2><img src="@/assets/assetImgs/network.png" alt="">全网信息</h2>
             <ul>
-                <li><span class="label">全球充值数量</span> <span>{{depositsCounter}} TRX</span></li>
-                <li><span class="label">用户数量</span> <span>{{playersCount}}</span></li>
-                <li><span class="label">全球团队奖励</span> <span>{{team}} TRX</span></li>
-                <li><span class="label">重启倒计时</span> <span>{{time}}</span></li>
+                <li><span class="label">总投资数量</span> <span>{{g0}} TRX</span></li>
+                <li><span class="label">资金池结余</span> <span>{{g1}}</span></li>
+                <li><span class="label">会员总提币</span> <span>{{g2}} TRX</span></li>
+                <li><span class="label">全球会员数</span> <span>{{g3}} </span></li>
+
+                <li><span class="label">重启倒计时</span> <span>{{g4===0?"00:00:00":"12:13:06"}}</span></li>
 
             </ul>
         </asset-item>
@@ -55,7 +67,26 @@
                 playersCount:0,
                 totalReward:0,
                 team:0,
-                time:0
+                time:0,
+                stats0:0,
+                stats1:0,
+                stats2:0,
+                stats3:0,
+                stats4:0,
+                stats5:0,
+                stats6:0,
+                stats7:0,
+                stats8:0,
+                stats9:0,
+                stats10:0,
+                stats11:0,
+                stats12:0,
+                g0:0,
+                g1:0,
+                g2:0,
+                g3:0,
+                g4:0
+
             };
         },
         mixins: [TrxMixin],
@@ -83,18 +114,28 @@
 
                 this.getTronWeb().then(tronWeb => {
                     this.contract.getPersonalStats(this.tron.account).call().then(res => {
-                        this.balance =tronWeb.fromSun(res["stats"][0]);
+                        this.stats0 =tronWeb.fromSun(res["stats"][0]);
                         // 用户合同数量
-                        this.depositsCount = parseInt(res["stats"][1]);
+                        this.stats1 = tronWeb.fromSun(res["stats"][1]);
                         // 冻结数量
-                        this.freeze = tronWeb.fromSun(res["stats"][2]);
+                        this.stats2 = tronWeb.fromSun(res["stats"][2]);
                         // 总收益
-                        this.totalReward = tronWeb.fromSun(res["stats"][3]);
-                        // 推荐奖励
-                        this.withdrawnReferalFunds = tronWeb.fromSun(res["stats"][4]);
-                        // 推荐人数
+                        this.stats3 = tronWeb.fromSun(res["stats"][3]);
+                        // 团队奖励
+                        this.stats4 = tronWeb.fromSun(res["stats"][4]);
 
-                        this.referralsCount = parseInt(res["stats"][5]);
+                        this.stats5 = tronWeb.fromSun(res["stats"][5]);
+
+                        this.stats6 = tronWeb.fromSun(res["stats"][6]);
+                        this.stats7 = tronWeb.fromSun(res["stats"][7]);
+                        this.stats8 = parseInt(res["stats"][8]);
+                        this.stats9 = parseInt(res["stats"][9]);
+
+                        this.stats10 = parseInt(res["stats"][10]);
+                        this.stats11 = tronWeb.fromSun(res["stats"][11]);
+                        this.stats12 = tronWeb.fromSun(res["stats"][12]);
+
+
 
                     });
 
@@ -102,10 +143,11 @@
 
                     // 全网数量
                     this.contract.getGlobalStats().call().then(res => {
-                        this.depositsCounter = tronWeb.fromSun(res["stats"][0]);
-                        this.playersCount = parseInt(res["stats"][1]);
-                        this.team = tronWeb.fromSun(res["stats"][2]);
-                        this.time = parseInt(res["stats"][3]);
+                        this.g0 = tronWeb.fromSun(res["stats"][0]);
+                        this.g1 = tronWeb.fromSun(res["stats"][1]);
+                        this.g2 = tronWeb.fromSun(res["stats"][2]);
+                        this.g3 = parseInt(res["stats"][3]);
+                        this.g4 = parseInt(res["stats"][4]);
 
 
                     });

@@ -17,7 +17,7 @@ export default {
       contactNum:'合同数量',
       frozen:'冻结金额',
       profit:'总收益',
-      inviteReward:'推荐奖励',
+      inviteReward:'团队奖励',
       inviteNum:'推荐数量'
     },
     networkData:{

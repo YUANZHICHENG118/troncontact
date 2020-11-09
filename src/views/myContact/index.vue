@@ -26,7 +26,7 @@
 
                         </div>
                         <div class="my-contact-card-list-item">
-                            <span class="left">总奖励金额</span>
+                            <span class="left">获得收益</span>
                             <span class="right">{{parseFloat(item[7])/1000000}}TRX</span>
                         </div>
                         <div class="my-contact-card-list-item">
