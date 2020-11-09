@@ -8,7 +8,7 @@ export default {
     contact:'contract',
     myContact:'my contract',
     reward: 'team reward',
-    question:'frequently asked questions'
+    question:'common problems'
   },
   account:{
     userData:{
@@ -54,7 +54,11 @@ export default {
     ThawingDate:'Thawing date',
     Withdrawable:'Withdrawable',
     get:'extract',
-    getCash:'Getting cash'
+    getCash:'Getting cash',
+    pledgeDay:'Pledge days',
+    getReward:'Get a reward',
+    redeem:'redeem',
+    PleaseWithdraw:'Please withdraw the reward first'
   },
   teamReward:{
     title:'Team reward',

@@ -1,6 +1,6 @@
 <!--常见问题-->
 <template>
   <div>
-    常见问题
+    {{$t('question.title')}}
   </div>
 </template>

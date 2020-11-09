@@ -47,14 +47,18 @@ export default {
     lock:'锁定{day}天'
   },
   myContact:{
-    code:'合同编码',
+    code:'合同编号',
     amount:'存款金额',
     profit:'本期利润',
     gain:'获得收益',
     ThawingDate:'解冻日期',
     Withdrawable:'可取款',
     get:'提取',
-    getCash:'获取现金'
+    getCash:'获取现金',
+    pledgeDay:'质押天数',
+    getReward:'获取奖励',
+    redeem:'赎回',
+    PleaseWithdraw:'请先提取奖励'
   },
   teamReward:{
     title:'团队奖励',

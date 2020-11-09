@@ -54,7 +54,11 @@ export default {
     ThawingDate:'дата размораживания',
     Withdrawable:'наличный деньги',
     get:'извлечение',
-    getCash:'получать деньги'
+    getCash:'получать деньги',
+    pledgeDay:'срок залога',
+    getReward:'получить награду',
+    redeem:'выкуп',
+    PleaseWithdraw:'сначала получить бонус'
   },
   teamReward:{
     title:'групповая награда',
