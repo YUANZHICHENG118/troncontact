@@ -4,7 +4,7 @@
             <el-row :gutter="20">
                 <el-col :span="8" :xs="24">
                     <div class="left rewardItem">
-                        <div class="tit">{{$t('account.userData.receivedQuota')}}</div>
+                        <div class="tit">可提取奖励</div>
                         <div class="val"><span>{{withdrawnReferalFunds}}</span>TRX</div>
                         <el-button  type="primary" style="width:100%;" :loading="loading" :disabled="loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">提取
                         </el-button>
