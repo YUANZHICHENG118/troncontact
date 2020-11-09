@@ -5,7 +5,7 @@
             <div class="percent"><span>{{data.rate}}</span>%</div>
             <div class="desc">
                 <span>{{data.d}} days</span>
-                <span>{{data.pid===0||data.pid===1||data.pid===2||data.pid===5?"锁定天数":"随本金发放"}}
+                <span>{{data.pid===0||data.pid===1||data.pid===2||data.pid===5?`锁定${data.d}天`:"随本金发放"}}
 </span>
             </div>
         </div>
