@@ -10,7 +10,7 @@
     <template v-else-if="this.item.path==='/'">
       <app-link v-for="child in item.children" :key="child.path"  :to="resolvePath(child.path)">
         <el-menu-item :index="resolvePath(child.path)" class="submenu-title-noDropdown">
-          <item :icon="child.meta&&child.meta.icon" :title="child.meta.title" />
+          <item :icon="child.meta&&child.meta.icon" :title="$t(child.meta.title)" />
         </el-menu-item>
       </app-link>
     </template>

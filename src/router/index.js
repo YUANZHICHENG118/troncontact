@@ -8,8 +8,6 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
-//翻译
-import {i18nRender} from '../locales'
 
 /**
  * constantRoutes
@@ -31,23 +29,23 @@ export const constantRoutes = [
       path: 'contact',
       name: 'contact',
       component: () => import('@/views/contact/index'),
-      meta: { title: i18nRender('sidebar.contact'), icon: ClockIcon }
+      meta: { title:'sidebar.contact', icon: ClockIcon }
     },{
       path: 'mycontact',
       name: 'mycontact',
       component: () => import('@/views/myContact/index'),
-      meta: { title: '我的合同', icon: WalletIcon }
+      meta: { title: 'sidebar.myContact', icon: WalletIcon }
     },{
       path: 'reward',
       name: 'reward',
       component: () => import('@/views/reward/index'),
-      meta: { title: '团队奖励', icon: MoneyIcon }
+      meta: { title: 'sidebar.reward', icon: MoneyIcon }
     },
       {
         path: 'question',
         name: 'question',
         component: () => import('@/views/question/index'),
-        meta: { title: '常见问题', icon: BookIcon }
+        meta: { title: 'sidebar.question', icon: BookIcon }
       }
     ]
   },
