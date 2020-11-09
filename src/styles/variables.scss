@@ -16,6 +16,8 @@ $subMenuBg:#1f2d3d;
 $subMenuHover:#001528;
 
 $sideBarWidth: 260px;
+$orange:#FA6400;
+$red:#FF4826;
 
 // the :export directive is the magic sauce for webpack
 // https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
@@ -28,4 +30,6 @@ $sideBarWidth: 260px;
   subMenuBg: $subMenuBg;
   subMenuHover: $subMenuHover;
   sideBarWidth: $sideBarWidth;
+  orange:$orange;
+  red:$red
 }
