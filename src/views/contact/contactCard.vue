@@ -94,9 +94,9 @@ export default {
     },
 
     async allow () {
-      const res = await  this.contract.a3Valve().call()
+      const res = await  this.contract.getA3Status().call()
       // console.log('res', res)
-      this.a3 = res['opening']
+      this.a3 = res
     },
     deposit () {
       this.loading = true
