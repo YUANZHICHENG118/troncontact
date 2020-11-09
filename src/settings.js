@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Tron contact',
+  title: 'Tron coatract',
 
   /**
    * @type {boolean} true | false
