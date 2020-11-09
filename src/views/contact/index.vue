@@ -56,8 +56,6 @@ export default {
     changeCurrent (val) {
       this.current = val
     }
-
-
   },
   components: {
     contactCard
@@ -86,9 +84,6 @@ export default {
       }
       return rersult
     }
-  },
-  mounted () {
-
   }
 }
 </script>

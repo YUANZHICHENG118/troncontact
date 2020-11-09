@@ -42,7 +42,9 @@ export default {
   contact:{
     investMoney:'сумма капиталовложений',
     getMoney:'Доступ к средствам',
-    Issued:'выплата с основной суммы'
+    Issued:'выплата с основной суммы',
+    choose:'Выберите',
+    lock:'Заблокировать {day} день'
   },
   myContact:{
     code:'Кодировка контракта',

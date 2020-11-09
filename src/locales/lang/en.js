@@ -42,7 +42,9 @@ export default {
   contact:{
     investMoney:'Investment amount',
     getMoney:'Access to funds',
-    Issued:'Issued with principal'
+    Issued:'Issued with principal',
+    choose:'Please select',
+    lock:'Lock in for {day} day'
   },
   myContact:{
     code:'Contract code',

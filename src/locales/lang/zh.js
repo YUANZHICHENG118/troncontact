@@ -42,7 +42,9 @@ export default {
   contact:{
     investMoney:'投资金额',
     getMoney:'获取资金',
-    Issued:'随本金发放'
+    Issued:'随本金发放',
+    choose:'请选择',
+    lock:'锁定{day}天'
   },
   myContact:{
     code:'合同编码',
