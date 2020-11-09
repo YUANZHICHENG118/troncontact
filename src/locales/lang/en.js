@@ -18,7 +18,7 @@ export default {
       CInvest:'Cumulative investment of type C ',
       investing:'Investment in progress',
       rewardQuota:'Team reward quota',
-      receivedQuota:'Amount received by the team',
+      receivedQuota:'Award issued',
       level:'Personal level',
       promotionNum:'Total number of direct promotion',
       teamSize:'Total team size',

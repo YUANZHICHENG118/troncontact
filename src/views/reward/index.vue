@@ -4,7 +4,7 @@
       <el-row :gutter="20">
         <el-col :span="8" :xs="24">
           <div class="left rewardItem">
-            <div class="tit">我的推荐奖励</div>
+            <div class="tit">{{$t('account.userData.receivedQuota')}}</div>
             <div class="val"><span>{{withdrawnReferalFunds}}</span>TRX</div>
           </div>
         </el-col>
@@ -141,7 +141,7 @@ export default {
       this.getTronWeb().then(tronWeb => {
         this.contract.getPersonalStats(this.tron.account).call().then(res => {
           // 团队奖励
-          this.withdrawnReferalFunds = tronWeb.fromSun(res['stats'][4])
+          this.withdrawnReferalFunds = tronWeb.fromSun(res['stats'][7])
         })
       })
     },
