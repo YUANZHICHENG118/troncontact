@@ -58,6 +58,7 @@ export default {
     pledgeDay:'срок залога',
     getReward:'получить награду',
     redeem:'выкуп',
+      again:'Again',
     PleaseWithdraw:'сначала получить бонус'
   },
   teamReward:{

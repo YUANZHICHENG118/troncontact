@@ -57,7 +57,8 @@ export default {
     getCash:'Getting cash',
     pledgeDay:'Pledge days',
     getReward:'Get a reward',
-    redeem:'redeem',
+    redeem:'Redeem',
+      again:'Again',
     PleaseWithdraw:'Please withdraw the reward first'
   },
   teamReward:{

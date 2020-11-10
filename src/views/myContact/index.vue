@@ -91,7 +91,7 @@
                                         :loading="loading3"
                                         :disabled="loading3"
                                         @click="makeDepositAgain(parseInt(item[0]))"
-                                >复投
+                                >{{$t('myContact.again')}}
                                 </el-button>
                             </el-col>
                         </el-row>
