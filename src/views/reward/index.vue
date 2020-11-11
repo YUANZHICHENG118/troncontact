@@ -152,6 +152,8 @@
         },
         methods: {
             loadData() {
+                this.address = this.host + '/#/contact?ref=' + this.tron.account
+
                 this.getTronWeb().then(tronWeb => {
                     this.contract.referRewardMaps(this.tron.account).call().then(res => {
                         // 团队奖励

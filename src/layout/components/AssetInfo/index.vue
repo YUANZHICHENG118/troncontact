@@ -141,7 +141,7 @@
                 console.log('countdown end~')
             },
             loadData() {
-                this.address = this.host + '/?ref=' + this.tron.account
+                this.address = this.host + '/#/contact?ref=' + this.tron.account
 
                 this.getTronWeb().then(tronWeb => {
                     this.contract.getPersonalStats(this.tron.account).call().then(res => {
