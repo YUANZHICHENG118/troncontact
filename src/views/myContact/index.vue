@@ -32,19 +32,20 @@
                             <!--质押天数-->
                             <span class="left">{{$t('myContact.pledgeDay')}}</span>
 
-                             <span class="right">{{parseInt(item[4])/(24*60*60)}}</span>
+                             <!--<span class="right">{{parseInt(item[4])/(24*60*60)}}</span>-->
+                            <span class="right">{{parseInt(item[4])/60}}</span>
 
                         </div>
                         <div class="my-contact-card-list-item">
                             <!--获得收益-->
                             <span class="left">{{$t('myContact.gain')}}</span>
-                            <span class="right">{{ parseFloat(item[7]) / 1000000 }}TRX</span>
+                            <span class="right">{{ (parseFloat(item[1]) / 1000000) *(parseFloat(item[3]) / 100/100) }}TRX</span>
                         </div>
                         <div class="my-contact-card-list-item">
                             <!--解冻日期-->
                             <span class="left">{{$t('myContact.ThawingDate')}}</span>
                             <span class="right">{{
-                endDate(parseInt(item[5]), parseInt(item[4]) / (24*60*60))
+                endDate(parseInt(item[5]), parseInt(item[4]) / 60)
               }}</span>
                         </div>
                         <div class="my-contact-card-list-item">
@@ -75,7 +76,7 @@
                                         style="width: 100%;"
                                         :loading="loading2"
                                         :disabled="
-                    chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60)) ||
+                    chkWithdraw(parseInt(item[5]), parseInt(item[4]) / 60) ||
                     loading2
                   "
                                         @click="takeAwayDeposit(parseInt(item[0]))"
@@ -88,7 +89,7 @@
                                         type="primary"
                                         style="width: 100%;"
                                         :loading="loading3"
-                                        :disabled="chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60))"
+                                        :disabled="chkWithdraw(parseInt(item[5]), parseInt(item[4]) / 60)"
                                         @click="makeDepositAgain(parseInt(item[0]))"
                                 >{{$t('myContact.again')}}
                                 </el-button>
