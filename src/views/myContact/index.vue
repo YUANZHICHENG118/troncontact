@@ -151,12 +151,12 @@
                 return d
             },
             chkWithdraw(time, ttl) {
-                const date = moment(time * 1000).add(ttl, 'day')
+                const date = moment(time * 1000).add(ttl, 'm')
                 var now = moment()
                 return now < date
             },
             endDate(time, ttl) {
-                const d = moment(time * 1000).add(ttl, 'day')
+                const d = moment(time * 1000).add(ttl, 'm')
                 return moment(d).format('YYYY-MM-DD HH:mm:ss')
             },
 
