@@ -146,13 +146,9 @@
                 this.getTronWeb().then(tronWeb => {
                     this.contract.getPersonalStats(this.tron.account).call().then(res => {
                         this.stats0 = tronWeb.fromSun(res['stats'][0])
-                        // 用户合同数量
                         this.stats1 = tronWeb.fromSun(res['stats'][1])
-                        // 冻结数量
                         this.stats2 = tronWeb.fromSun(res['stats'][2])
-                        // 总收益
                         this.stats3 = tronWeb.fromSun(res['stats'][3])
-                        // 团队奖励
                         this.stats4 = tronWeb.fromSun(res['stats'][4])
 
                         this.stats5 = tronWeb.fromSun(res['stats'][5])

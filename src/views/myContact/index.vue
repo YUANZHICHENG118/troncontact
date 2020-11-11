@@ -31,10 +31,9 @@
                         <div class="my-contact-card-list-item">
                             <!--质押天数-->
                             <span class="left">{{$t('myContact.pledgeDay')}}</span>
-                            <!--
+
                              <span class="right">{{parseInt(item[4])/(24*60*60)}}</span>
-                            -->
-                            <span class="right">{{ parseInt(item[4]) / 60 }}</span>
+
                         </div>
                         <div class="my-contact-card-list-item">
                             <!--获得收益-->
@@ -45,7 +44,7 @@
                             <!--解冻日期-->
                             <span class="left">{{$t('myContact.ThawingDate')}}</span>
                             <span class="right">{{
-                endDate(parseInt(item[5]), parseInt(item[4]) / 60)
+                endDate(parseInt(item[5]), parseInt(item[4]) / (24*60*60))
               }}</span>
                         </div>
                         <div class="my-contact-card-list-item">
@@ -76,7 +75,7 @@
                                         style="width: 100%;"
                                         :loading="loading2"
                                         :disabled="
-                    chkWithdraw(parseInt(item[5]), parseInt(item[4]) / 60) ||
+                    chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60)) ||
                     loading2
                   "
                                         @click="takeAwayDeposit(parseInt(item[0]))"
@@ -89,7 +88,7 @@
                                         type="primary"
                                         style="width: 100%;"
                                         :loading="loading3"
-                                        :disabled="loading3"
+                                        :disabled="chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60))"
                                         @click="makeDepositAgain(parseInt(item[0]))"
                                 >{{$t('myContact.again')}}
                                 </el-button>
@@ -180,7 +179,9 @@
                                 })
                                 this.awaitTx(tx).then(() => {
                                     // if(auto_upline) fetch('/auto_upline/?address=' + this.tron.account + '&upline=' + this.upline);
-                                    // setTimeout(()=>{})
+                                     setTimeout(()=>{
+                                         this.loadData()
+                                     },3000)
                                 })
                             })
                             .catch((e) => {
@@ -210,7 +211,9 @@
                                 })
                                 this.awaitTx(tx).then(() => {
                                     // if(auto_upline) fetch('/auto_upline/?address=' + this.tron.account + '&upline=' + this.upline);
-                                    // setTimeout(()=>{})
+                                    setTimeout(()=>{
+                                        this.loadData()
+                                    },3000)
                                 })
                             })
                             .catch((e) => {
@@ -249,7 +252,9 @@
                                     type: 'success'
                                 })
                                 this.awaitTx(tx).then(() => {
-                                    // if(auto_upline) fetch('/auto_upline/?address=' + this.tron.account + '&upline=' + this.upline);
+                                    setTimeout(()=>{
+                                        this.loadData()
+                                    },3000)
                                 })
                             })
                             .catch((e) => {
@@ -291,6 +296,8 @@
                             //     }
                             //
                             // })
+
+                            console.log("arr===",arr)
 
                             this.myContact = arr
                         })
