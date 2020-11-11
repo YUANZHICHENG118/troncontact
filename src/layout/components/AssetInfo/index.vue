@@ -59,7 +59,7 @@
             <!--推荐链接-->
             <h2><img src="@/assets/assetImgs/star.png" alt="">{{$t('account.inviteData.title')}}</h2>
             <div class="invite">
-                {{host}}/?ref={{tron.account.substring(0,5)+'...'}}
+                {{host}}/#/contact?ref={{tron.account.substring(0,5)+'...'}}
             </div>
             <div class="copy">
                 <el-button type="primary" v-clipboard:copy="address" v-clipboard:success="onCopy"

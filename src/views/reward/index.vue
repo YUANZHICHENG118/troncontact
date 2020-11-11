@@ -17,7 +17,7 @@
                             <span>{{$t('account.inviteData.title')}}</span>
                         </div>
                         <div class="invite-con">
-                            <div class="invite-link">{{host}}/?ref={{tron.account.substring(0,15)+'...'}}</div>
+                            <div class="invite-link">{{host}}/#/contact?ref={{tron.account.substring(0,15)+'...'}}</div>
                             <el-button
                                     type="primary"
                                     v-clipboard:copy="address"
