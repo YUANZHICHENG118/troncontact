@@ -72,6 +72,52 @@ export default {
     available:'Awards available'
   },
   question:{
-    title:'common problem'
+    title:'common problem',
+    Q1:{
+      title:'What do I need to participate in this project?'
+    },
+    Q2:{
+      title:'How do I need to get TRX?'
+    },
+
+    Q3:{
+      title:'Why? troncontract.cc Trustworthy?'
+    },
+    Q4:{
+      title:'How to obtain capital (investment)?'
+    },
+    Q5:{
+      title:'What types of investment are available?'
+    },
+    Q6:{
+      title:'How to play type A contract?'
+    },
+    Q7:{
+      title:'How to play type B contract?'
+    },
+    Q8:{
+      title:'How to play type C contract?'
+    },
+    Q9:{
+      title:'How to upgrade to VIP? What are the advantages of VIP?'
+    },
+    Q10:{
+      title:'How to activate my recommended links?'
+    },
+    Q11:{
+      title:'How to get team rewards?'
+    },
+    Q12:{
+      title:'How is the team reward calculated?'
+    },
+    Q13:{
+      title:'Relevant policies on profit, reward and principal withdrawal?'
+    },
+    Q14:{
+      title:'Is there any investment limit?'
+    },
+    Q15:{
+      title:'How long will this project last?'
+    }
   }
 }
