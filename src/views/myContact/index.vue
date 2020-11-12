@@ -65,7 +65,7 @@
                                         type="warning"
                                         style="width: 100%;"
                                         :disabled="
-                    chkReward(parseInt(item[9])) ||
+                    chkReward(parseInt(item[9]),parseInt(item[2])) ||
                     loading1
                   "
                                         :loading="loading1"
@@ -89,7 +89,7 @@
 
                             <el-col :span="8" v-if="parseInt(item[2])===5">
                                 <el-button
-                                        type="primary"
+                                        type="success"
                                         style="width: 100%;"
                                         :loading="loading3"
                                         :disabled="chkWithdraw(parseInt(item[5]), parseInt(item[4]) / 60)"
@@ -153,13 +153,15 @@
                 //this.$set(this.reward, 'pid'+pid,  parseFloat(d) / 1000000)
                 return d
             },
-            chkReward(time) {
+            chkReward(time,pid) {
+                if(pid===5) return false;
                 let ttl=1;
                 const date = moment(time * 1000).add(ttl, 'm')
                 var now = moment()
                 return now < date
             },
             chkWithdraw(time, ttl) {
+
                 const date = moment(time * 1000).add(ttl, 'm')
                 var now = moment()
                 return now < date
