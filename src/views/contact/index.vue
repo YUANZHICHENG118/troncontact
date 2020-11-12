@@ -30,7 +30,7 @@
         :key="index"
         :xs="24" :sm="12" :md="12" :lg="8"
       >
-        <contact-card :data="item" :class="contactItemClass(index)"></contact-card>
+        <contact-card :data="item" :userData="userData" :class="contactItemClass(index)"></contact-card>
       </el-col>
     </el-row>
   </div>
@@ -44,15 +44,26 @@ export default {
   name: 'Contact',
   data () {
     return {
-      current: 'A'
+      current: 'A',
+        userData:undefined
     }
   },
   mixins: [TrxMixin],
-  watch: {},
+  watch: {
+      'tron.account'() {
+          this.getTronWeb().then(tronWeb => {
+              this.contract = tronWeb.contract(this.ABI, tronWeb.address.toHex(this.contract_address))
+              this.loadData()
+          })
+      },
+  },
   methods: {
     loadData () {
-
-    },
+        this.getTronWeb().then(tronWeb => {
+                this.contract.getPersonalStats(this.tron.account).call().then(res => {
+                    this.userData=res;
+                })
+    })},
     changeCurrent (val) {
       this.current = val
     }
@@ -80,10 +91,10 @@ export default {
           }]
           break
         case 'B':
-          rersult = [{ pid: 3, title: 'B1', rate: '120',d:10 }, { pid: 4, title: 'B2', rate: '150',d:20 }]
+          rersult = [{ pid: 3, title: 'B1', rate: '110',d:10 }, { pid: 4, title: 'B2', rate: '130',d:20 }]
           break
         case 'C':
-          rersult = [{ pid: 5, title: 'C', rate: '42',d:30 }]
+          rersult = [{ pid: 5, title: 'C', rate: '20',d:30 }]
           break
         default:
           rersult = []

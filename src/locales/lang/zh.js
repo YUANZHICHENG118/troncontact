@@ -56,8 +56,9 @@ export default {
     get:'提取',
     getCash:'获取现金',
     pledgeDay:'质押天数',
-    getReward:'获取奖励',
-    redeem:'赎回',
+    getReward:'取款',
+    redeem:'退本',
+      again:'复投',
     PleaseWithdraw:'请先提取奖励'
   },
   teamReward:{

@@ -4,7 +4,7 @@
             <el-row :gutter="20">
                 <el-col :span="8" :xs="24">
                     <div class="left rewardItem">
-                        <div class="tit">{{$t('account.userData.receivedQuota')}}</div>
+                        <div class="tit">可提取奖励</div>
                         <div class="val"><span>{{withdrawnReferalFunds}}</span>TRX</div>
                         <el-button  type="primary" style="width:100%;" :loading="loading" :disabled="loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">提取
                         </el-button>
@@ -17,7 +17,7 @@
                             <span>{{$t('account.inviteData.title')}}</span>
                         </div>
                         <div class="invite-con">
-                            <div class="invite-link">{{host}}/?ref={{tron.account.substring(0,15)+'...'}}</div>
+                            <div class="invite-link">{{host}}/#/contact?ref={{tron.account.substring(0,15)+'...'}}</div>
                             <el-button
                                     type="primary"
                                     v-clipboard:copy="address"
@@ -152,6 +152,8 @@
         },
         methods: {
             loadData() {
+                this.address = this.host + '/#/contact?ref=' + this.tron.account
+
                 this.getTronWeb().then(tronWeb => {
                     this.contract.referRewardMaps(this.tron.account).call().then(res => {
                         // 团队奖励
