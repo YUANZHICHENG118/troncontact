@@ -1,7 +1,7 @@
 export default {
     global: {
         test: '測試',
-        share:'分享',
+        share:'聯繫我們',
         copy:'複製'
     },
     sidebar:{
