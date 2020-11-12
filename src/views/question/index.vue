@@ -4,20 +4,20 @@
     <el-collapse v-model="activeNames">
       <!--我需要什么来参加这个项目？-->
       <el-collapse-item :title="$t('question.Q1.title')" name="1">
-        <div>您需要有TronLink的Chrome浏览器扩展工具 或像Klever（TronWallet）或TronLink这样的移动应用程序。</div>
+        <div>{{$t('question.Q1.item1')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q2.title')" name="2">
-        <div>您可以在流行的数字加密货币交易所购买TRON（TRX）：Binance、Poloniex、bitrex、Bitfinex、OKEx，或使用本地在线交易所。您需把加密币放在个人钱包里，然后用它来获取资金（存款）!
+        <div>{{$t('question.Q2.item1')}}
         </div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q3.title')" name="3">
-        <div>本平台由TRON区块链上的智能合约管理。没人可以改变智能合约的算法，甚至管理部门也不能。您可以在tron浏览器里查看到合约的开源代码，可以自己通过专业工具检查智能合约代码来确保平台是安全的。</div>
+        <div>{{$t('question.Q3.item1')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q4.title')" name="4">
-        <div>您需要选择所需的合同类型，然后选择合同（存款）期限并选择或输入存款金额。</div>
+        <div>{{$t('question.Q4.item1')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q5.title')" name="5">
-        <div>在troncontract平台，您可以选择A，B，C三种类型的合同进行投资。如果您愿意的话，还可以在合同到期后续签。</div>
+        <div>{{$t('question.Q5.item1')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q6.title')" name="6">
         <div>A类合同冻结本金，收益每5秒发放一次。</div>

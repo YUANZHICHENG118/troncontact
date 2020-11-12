@@ -74,23 +74,32 @@ export default {
   question:{
     title:'common problem',
     Q1:{
-      title:'What do I need to participate in this project?'
+      title:'What do I need to participate in this project?',
+      item1:'You need to have a Chrome browser extension tool for tronlink or a mobile application like Klever (tronwallet) or tronlink.'
     },
     Q2:{
-      title:'How do I need to get TRX?'
+      title:'How do I need to get TRX?',
+      item1:'You can buy Tron (TRX) from popular digital cryptocurrency exchanges: binance, poloniex, bitrex, bitfinex, okex, or use a local online exchange. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposits)!'
     },
-
     Q3:{
-      title:'Why? troncontract.cc Trustworthy?'
+      title:'Why? troncontract.cc Trustworthy?',
+      item1:'This platform is managed by the smart contract on the Tron blockchain. No one can change the algorithm of smart contracts, not even management. You can view the open source code of the contract in the Tron browser. You can check the smart contract code through professional tools to ensure that the platform is secure.'
     },
     Q4:{
-      title:'How to obtain capital (investment)?'
+      title:'How to obtain capital (investment)?',
+      item1:'You need to select the type of contract you want, then select the contract (deposit) period and select or enter the deposit amount.'
     },
     Q5:{
-      title:'What types of investment are available?'
+      title:'What types of investment are available?',
+      item1:'In the troncontract platform, you can choose a, B, C three types of contracts to invest. You can also renew the contract after its expiration if you like.'
     },
     Q6:{
-      title:'How to play type A contract?'
+      title:'How to play type A contract?',
+      item1:'',
+      item2:'',
+      item3:'',
+      item4:'',
+      item5:'',
     },
     Q7:{
       title:'How to play type B contract?'
