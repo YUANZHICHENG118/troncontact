@@ -25,8 +25,7 @@
                 <!--团队总人数-->
                 <li><span class="label">{{$t('account.userData.teamSize')}}</span> <span>{{stats10}}</span></li>
                 <!--团队业绩-->
-                <li><span class="label">团队业绩</span> <span>{{stats13}}TRX</span></li>
-
+                <li><span class="label">{{$t('account.userData.performance')}}</span> <span>{{stats13}}TRX</span></li>
                 <!--总存入-->
                 <li><span class="label">{{$t('account.userData.deposit')}}</span> <span>{{stats11}}TRX</span></li>
                 <!--总提取-->

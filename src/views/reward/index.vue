@@ -4,9 +4,11 @@
             <el-row :gutter="20">
                 <el-col :span="8" :xs="24">
                     <div class="left rewardItem">
-                        <div class="tit">可提取奖励</div>
+                        <!--可提取奖励-->
+                        <div class="tit">{{$t('teamReward.available')}}</div>
                         <div class="val"><span>{{withdrawnReferalFunds}}</span>TRX</div>
-                        <el-button  type="primary" style="width:100%;" :loading="loading" :disabled="loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">提取
+                        <!--提取-->
+                        <el-button  type="primary" style="width:100%;" :loading="loading" :disabled="loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">{{$t('myContact.get')}}
                         </el-button>
                     </div>
                 </el-col>

@@ -25,7 +25,8 @@ export default {
       deposit:'общий депозит',
       extraction:'общая экстракция',
       OrdinaryUser:'обычный пользователь',
-      super:'супер'
+      super:'супер',
+      performance:'работа коллектива'
     },
     networkData:{
       title:'общесетевая информация',
@@ -67,7 +68,8 @@ export default {
     nthSecond:'поколение 2',
     nthThird:'поколение 3',
     nthforth:'поколение 4 - 10',
-    nthFifth:'поколение 10 - 15'
+    nthFifth:'поколение 10 - 15',
+    available:'извлекаемая награда'
   },
   question:{
     title:'Общие вопросы'

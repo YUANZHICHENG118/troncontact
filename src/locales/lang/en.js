@@ -25,7 +25,8 @@ export default {
       deposit:'Total deposit',
       extraction:'Total extraction',
       OrdinaryUser:'Ordinary users',
-      super:'super'
+      super:'super',
+      performance:'Team performance'
     },
     networkData:{
       title:'Network wide information',
@@ -67,7 +68,8 @@ export default {
     nthSecond:'Second generation',
     nthThird:'The third generation',
     nthforth:'Generation 4-10',
-    nthFifth:'Generation 10-15'
+    nthFifth:'Generation 10-15',
+    available:'Awards available'
   },
   question:{
     title:'common problem'

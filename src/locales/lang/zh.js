@@ -25,7 +25,8 @@ export default {
       deposit:'总存入',
       extraction:'总提取',
       OrdinaryUser:'普通用户',
-      super:'超级'
+      super:'超级',
+      performance:'团队业绩'
     },
     networkData:{
       title:'全网信息',
@@ -67,7 +68,8 @@ export default {
     nthSecond:'第2代',
     nthThird:'第3代',
     nthforth:'第4-10代',
-    nthFifth:'第10-15代'
+    nthFifth:'第10-15代',
+    available:'可提取奖励'
   },
   question:{
     title:'常见问题'
