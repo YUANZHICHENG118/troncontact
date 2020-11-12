@@ -8,7 +8,7 @@
                         <div class="tit">{{$t('teamReward.available')}}</div>
                         <div class="val"><span>{{withdrawnReferalFunds}}</span>TRX</div>
                         <!--提取-->
-                        <el-button  type="primary" style="width:100%;" :loading="loading" :disabled="loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">{{$t('myContact.get')}}
+                        <el-button  type="primary" style="width:85%;" :loading="loading" :disabled="loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">{{$t('myContact.get')}}
                         </el-button>
                     </div>
                 </el-col>
@@ -19,7 +19,9 @@
                             <span>{{$t('account.inviteData.title')}}</span>
                         </div>
                         <div class="invite-con">
-                            <div class="invite-link">{{host}}/#/contact?ref={{tron.account.substring(0,15)+'...'}}</div>
+                            <div class="invite-link">
+                                <input type="text" :value="`${host}/#/contact?ref=${tron.account.substring(0,15)+'...'}`">
+                            </div>
                             <el-button
                                     type="primary"
                                     v-clipboard:copy="address"
