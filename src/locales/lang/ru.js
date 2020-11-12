@@ -1,7 +1,7 @@
 export default {
   global: {
     test: 'тест',
-    share:'делить',
+    share:'связаться с нами',
     copy:'копировать'
   },
   sidebar:{

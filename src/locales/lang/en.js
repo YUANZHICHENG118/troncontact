@@ -1,7 +1,7 @@
 export default {
   global: {
     test: 'test',
-    share:'share',
+    share:'contact us',
     copy:'copy'
   },
   sidebar:{
