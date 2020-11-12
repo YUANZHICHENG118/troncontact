@@ -64,7 +64,6 @@
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q15.title')" name="15">
         <div>{{$t('question.Q15.item1')}}</div>
-
       </el-collapse-item>
     </el-collapse>
   </div>
