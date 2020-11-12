@@ -1,7 +1,7 @@
 export default {
   global: {
     test: 'test',
-    share:'contact us',
+    share:'share',
     copy:'copy'
   },
   sidebar:{
@@ -125,21 +125,29 @@ export default {
       title:'How to activate my recommended links?',
       item1:'There are three types of contract investment: Class A, type B and type C. in order to activate the recommendation link, you need to make an investment in a class a contract with a minimum investment of 100trx'
     },
-    Q11:{
-      title:'How to get team rewards?'
-    },
-    Q12:{
-      title:'How is the team reward calculated?'
-    },
-    Q13:{
-      title:'Relevant policies on profit, reward and principal withdrawal?'
-    },
-    Q14:{
-      title:'Is there any investment limit?'
-    },
-    Q15:{
-      title:'How long will this project last?',
-      item1:'Trontract.cc This project will be in operation all the time. When the contract fund pool is lower than 100trx, the restart mechanism will be opened 24 hours later. After the restart mechanism is opened, the contract investment amount and the amount not withdrawn of all players will be automatically cleared. But the team framework remains the same, and Reinvestment can be activated, which will start a new round'
-    }
+      Q11:{
+          title:'How can I get team rewards? ',
+          item1:'To get the team bonus, you need to recommend new members to join the contract, take the percentage of the team member’s withdrawal amount each time, and recommend several valid accounts to get a few generations (users whose contracts expire all automatically become invalid accounts), up to 15 generations. Withdrawals that return the principal will not generate team rewards. ',
+          item2:'reward cap: the cumulative maximum available team reward is 3.3 times of the total investment principal in type A contracts. For example, if your total investment principal in Type A contracts is 1000 TRX, then your team rewards will stop issuing when 3300 trx is issued. If you want to continue to get team rewards, you need to increase the investment principal of Type A contracts. If there is no ongoing Type A contract on your account, you will not enjoy team rewards.'
+
+      },
+      Q12:{
+          title:'How is the team reward calculated? ',
+          item1:'Type A contract 10% for the first generation, 5% for the second generation, 6% for the third generation, 2% for the 4-10 generation, 3% for the 11-15 generation',
+          item2:'Type B contract and Type C contract 1st generation 3%, 2nd generation 1%, 3rd generation 2%, 4-10th generation 0.2%, 11-15th generation 0.5%'
+      },
+      Q13:{
+          title:'Related policies for withdrawal of profits, rewards, and principal? ',
+          item1:'In order to prevent a run, each investment is a separate contract number, separate settlement and withdrawal, contract income, contract principal and team rewards are withdrawn separately, each wallet address needs to wait 8 hours for each withdrawal Can withdraw again'
+      },
+      Q14:{
+          title:'Is there any investment limit? ',
+          item1:'There is no limit on the total investment amount, but a single investment amount is limited. Among them, the investment amount of Type A and Type B contracts cannot be filled out independently. You can only choose the following amounts in the drop-down menu to invest: 100trx, 500trx, and 1000trx are available in the first 3 days, 5000trx is available on the 4th day, and the 5th 10000trx option will be open every day, 50,000trx option will be open on the 6th day, and 100000trx option will be open on the 7th day. ',
+          item2:'A single investment amount of 1 to 100,000 TRX in category C contracts can be entered manually'
+      },
+      Q15:{
+          title:'How long can this project run? ',
+          item1:'Trontract.cc will always operate. When the contract fund pool is lower than 100trx, the restart mechanism will be activated after 24 hours. After the restart mechanism is activated, the contract investment and undrawn amounts of all players will be automatically cleared. . But the team framework remains the same, and it can be activated by reinvesting, and a new round will start at that time'
+      }
   }
 }

@@ -64,7 +64,10 @@
                                 <el-button
                                         type="warning"
                                         style="width: 100%;"
-                                        :disabled="loading1"
+                                        :disabled="
+                    chkReward(parseInt(item[9])) ||
+                    loading1
+                  "
                                         :loading="loading1"
                                         @click="withdrawReward(parseInt(item[0]))"
                                 >{{$t('myContact.getReward')}}
@@ -140,15 +143,21 @@
             }
         },
         mounted() {
-            // timer = setInterval(() => {
-            //     this.loadData()
-            // }, 8000)
+            timer = setInterval(() => {
+                this.loadData()
+            }, 5000)
         },
         methods: {
             async getOutputReward(pid) {
                 const d = await this.contract.outputReward(this.tron.account, pid).call()
                 //this.$set(this.reward, 'pid'+pid,  parseFloat(d) / 1000000)
                 return d
+            },
+            chkReward(time) {
+                let ttl=1;
+                const date = moment(time * 1000).add(ttl, 'm')
+                var now = moment()
+                return now < date
             },
             chkWithdraw(time, ttl) {
                 const date = moment(time * 1000).add(ttl, 'm')
@@ -279,7 +288,7 @@
                             let arr = new Array()
 
                             res.deposits.map((item, index) => {
-                                if (index % 9 === 0) {
+                                if (index % 10 === 0) {
                                     if (index > 0) i++
                                     j = 0
                                     arr[i] = new Array()
@@ -298,7 +307,7 @@
                             //
                             // })
 
-                            console.log("arr===",arr)
+                            //console.log("arr===",arr)
 
                             this.myContact = arr
                         })
