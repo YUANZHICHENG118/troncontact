@@ -20,31 +20,31 @@
         <div>{{$t('question.Q5.item1')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q6.title')" name="6">
-        <div>A类合同冻结本金，收益每5秒发放一次。</div>
-        <div>A1合同： 本金冻结天数-5天 合约累计收益5% 每日收益1%</div>
-        <div>A2合同： 本金冻结天数-15天 合约累计收益20% 每日收益1.33%</div>
-        <div>A3合同： 本金冻结天数-3天 合约累计收益10% 每日收益3.33%</div>
-        <div>A3合同默认关闭，平台资金池余额下跌10%自动开启，资金池余额数量恢复并超过开启时的数量后又会自动关闭。</div>
+        <div>{{$t('question.Q6.item1')}}</div>
+        <div>{{$t('question.Q6.item2')}}</div>
+        <div>{{$t('question.Q6.item3')}}</div>
+        <div>{{$t('question.Q6.item4')}}</div>
+        <div>{{$t('question.Q6.item5')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q7.title')" name="7">
-        <div>B类型合同本金随收益一起发放，每5秒发放一次。</div>
-        <div>B1合同：  周期10天，包含本金累计收益110%，每日收益11%</div>
-        <div>B2合同：  周期20天，包含本金累计收益130%，每日收益6.5%</div>
-        <div>B类合同默认锁定，需要先参与C类合约才能解锁。B类合约的累计投资额不能高于C类合约的累计投资额。</div>
+        <div>{{$t('question.Q7.item1')}}</div>
+        <div>{{$t('question.Q7.item2')}}</div>
+        <div>{{$t('question.Q7.item3')}}</div>
+        <div>{{$t('question.Q7.item4')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q8.title')" name="8">
-        <div>C类合同本金冻结天数为30天，合同收益20%-50%，投入成功立刻一次性发放收益。</div>
-        <div>C类合同投资金额100到10万TRX，可以手动输入。</div>
-        <div>C合同第一轮投入的收益为20%。合同到期后可以点击续签按钮，续签金额100到10万trx自由填写。续签第1次的收益为30%。</div>
-        <div>续签第1次到期后可以继续点击续签按钮，续签第2次的收益为40%。</div>
-        <div>续签第2次到期后可以继续点击续签按钮，续签第3次的收益为50%。</div>
-        <div>续签第4次开始每轮续签收益都为50%。</div>
+        <div>{{$t('question.Q8.item1')}}</div>
+        <div>{{$t('question.Q8.item2')}}</div>
+        <div>{{$t('question.Q8.item3')}}</div>
+        <div>{{$t('question.Q8.item4')}}</div>
+        <div>{{$t('question.Q8.item5')}}</div>
+        <div>{{$t('question.Q8.item6')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q9.title')" name="9">
-        <div>C类合同累计投资金额达到50万TRX的账户自动升级为VIP账户，VIP账户每次提现会给予5%的trx奖励。如提现10000个trx，实际到账10500个trx。(不包括退还本金的提款）</div>
+        <div>{{$t('question.Q9.item1')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q10.title')" name="10">
-        <div>合同投资分为A类,B类,C类三种，为激活推荐链接，您需要做一个A类合同的投资，最低投资额为100TRX</div>
+        <div>{{$t('question.Q10.item1')}}</div>
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q11.title')" name="11">
         <div>要想获得团队奖金，需要推荐新会员加入合同，拿团队会员每次提款金额的百分比、推荐几个有效账户拿几代（合约全部到期的用户自动变成无效账户），最多15代。退还本金的提款不会产生团队奖励。</div>
