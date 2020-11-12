@@ -25,6 +25,12 @@
       font-weight: 500;
       color: #666666;
       margin-bottom: 20px;
+      overflow: auto;
+      input{
+        width: 90%;
+        border: none;
+        background: none;
+      }
     }
     h2 {
       display: flex;
@@ -42,15 +48,16 @@
         text-decoration: none;
         display: flex;
         justify-content: space-between;
-        padding: 0;
+        padding:25px 0;
         margin: 0;
         font-size: 14px;
         font-family: PingFangTC-Semibold, PingFangTC;
         font-weight: 600;
         color: #4c4c4c;
-        line-height: 35px;
+        align-items: center;
         .label {
           color: #666666;
+          flex: 1;
         }
       }
     }
