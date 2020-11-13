@@ -12,7 +12,7 @@
                         </el-button>
                     </div>
                 </el-col>
-                <el-col :span="16" :xs="24">
+                <el-col :span="16" :xs="24" v-if="showRefer">
                     <div class="right rewardItem">
                         <div class="invite-title">
                             <img src="@/assets/assetImgs/star.png" alt=""/>
@@ -104,7 +104,8 @@
                 withdrawnReferalFunds: 0,
                 address: '',
                 loading: false,
-                lastWithdrawTime:0
+                lastWithdrawTime:0,
+                showRefer:false
             }
         },
         mixins: [TrxMixin],
@@ -172,6 +173,12 @@
                         this.withdrawnReferalFunds = tronWeb.fromSun(res)
                     })
                 })
+                this.getTronWeb().then(tronWeb => {
+                    this.contract.players(this.tron.account).call().then(res => {
+                        this.showRefer = res["linkEnable"]
+                    })
+                })
+
             },
 
             chkReward() {

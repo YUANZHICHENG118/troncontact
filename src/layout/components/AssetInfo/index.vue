@@ -54,7 +54,7 @@
 
             </ul>
         </asset-item>
-        <asset-item>
+        <asset-item v-if="showRefer">
             <!--推荐链接-->
             <h2><img src="@/assets/assetImgs/star.png" alt="">{{$t('account.inviteData.title')}}</h2>
             <div class="invite">
@@ -83,6 +83,7 @@
         },
         data() {
             return {
+                showRefer:false,
                 address: '',
                 balance: 0,
                 depositsCount: 0,
@@ -141,7 +142,11 @@
             },
             loadData() {
                 this.address = this.host + '/#/contact?ref=' + this.tron.account
-
+                this.getTronWeb().then(tronWeb => {
+                    this.contract.players(this.tron.account).call().then(res => {
+                        this.showRefer = res["linkEnable"]
+                    })
+                })
                 this.getTronWeb().then(tronWeb => {
                     this.contract.getPersonalStats(this.tron.account).call().then(res => {
                         this.stats0 = tronWeb.fromSun(res['stats'][0])
