@@ -38,6 +38,7 @@
         <el-button type="primary" style="width:100%;" :loading="loading" :disabled="data.pid===2?!a3:loading"
                    @click="deposit">{{$t('contact.getMoney')}}
         </el-button>
+
     </div>
 </template>
 <script>
