@@ -33,7 +33,7 @@
                             <span class="left">{{$t('myContact.pledgeDay')}}</span>
 
                              <!--<span class="right">{{parseInt(item[4])/(24*60*60)}}</span>-->
-                            <span class="right">{{parseInt(item[4])/60}}</span>
+                            <span class="right">{{parseInt(item[4])/(24*60*60)}}</span>
 
                         </div>
                         <div class="my-contact-card-list-item">
@@ -45,7 +45,7 @@
                             <!--解冻日期-->
                             <span class="left">{{$t('myContact.ThawingDate')}}</span>
                             <span class="right">{{
-                endDate(parseInt(item[5]), parseInt(item[4]) / 60)
+                endDate(parseInt(item[5]), parseInt(item[4]) / (24*60*60))
               }}</span>
                         </div>
                         <div class="my-contact-card-list-item">
@@ -79,7 +79,7 @@
                                         style="width: 100%;"
                                         :loading="loading2"
                                         :disabled="
-                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / 60) ||
+                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60)) ||
                     loading2
                   "
                                         @click="takeAwayDeposit(parseInt(item[0]))"
@@ -91,7 +91,7 @@
                                         type="success"
                                         style="width: 100%;"
                                         :loading="loading3"
-                                        :disabled="chkWithdraw(parseInt(item[5]), parseInt(item[4]) / 60)"
+                                        :disabled="chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60))"
                                         @click="open(parseInt(item[0]))"
                                 >{{$t('myContact.again')}}
                                 </el-button>
@@ -155,19 +155,19 @@
             },
             chkReward() {
                 console.log("this.lastWithdrawTime",this.lastWithdrawTime)
-                let ttl=1;
-                const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'm')
+                let ttl=8;
+                const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'h')
                 var now = moment()
                 return now < date
             },
             chkWithdraw(time, ttl) {
 
-                const date = moment(time * 1000).add(ttl, 'm')
+                const date = moment(time * 1000).add(ttl, 'd')
                 var now = moment()
                 return now < date
             },
             endDate(time, ttl) {
-                const d = moment(time * 1000).add(ttl, 'm')
+                const d = moment(time * 1000).add(ttl, 'd')
                 return moment(d).format('YYYY-MM-DD HH:mm:ss')
             },
 
