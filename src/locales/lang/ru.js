@@ -13,27 +13,27 @@ export default {
     account: {
         userData: {
             title: 'Личные сведения',
-            AInvest: 'Совокупное капиталовложение по контракту категории A',
-            BInvest: 'Совокупное капиталовложение по контракту категории B',
-            CInvest: 'Совокупное капиталовложение по контракту категории C',
-            investing: 'производить капиталовложения',
-            rewardQuota: 'групповая премия',
-            receivedQuota: 'размер команды',
-            level: 'личный уровень',
-            promotionNum: 'тотальная численность',
-            teamSize: 'общая численность команды',
-            deposit: 'общий депозит',
-            extraction: 'общая экстракция',
-            OrdinaryUser: 'обычный пользователь',
+            AInvest: 'категории A',
+            BInvest: 'категории B',
+            CInvest: 'категории C',
+            investing: 'производить ',
+            rewardQuota: 'премия',
+            receivedQuota: 'команды',
+            level: 'уровень',
+            promotionNum: 'тотальная ',
+            teamSize: 'команды',
+            deposit: 'депозит',
+            extraction: 'экстракция',
+            OrdinaryUser: 'пользователь',
             super: 'супер',
-            performance: 'работа коллектива'
+            performance: 'коллектива'
         },
         networkData: {
-            title: 'общесетевая информация',
+            title: 'информация',
             investTotal: 'Общий объем инвестиций',
             poolBalance: 'остатки средств',
             withdrawalTotal: 'монета участника',
-            membership: 'Членский состав во всем мире',
+            membership: 'мире',
             Restart: 'обратный отсчет'
         },
         inviteData: {
@@ -41,35 +41,35 @@ export default {
         }
     },
     contact: {
-        investMoney: 'сумма капиталовложений',
-        getMoney: 'Доступ к средствам',
-        Issued: 'выплата с основной суммы',
+        investMoney: 'сумма',
+        getMoney: 'Доступ',
+        Issued: 'выплата',
         choose: 'Выберите',
-        lock: 'Заблокировать {day} день'
+        lock: '{day} день'
     },
     myContact: {
-        code: 'Кодировка контракта',
-        amount: 'сумма депозита',
-        profit: 'прибыль текущего периода',
+        code: ' контракта',
+        amount: ' депозита',
+        profit: 'периода',
         gain: 'получать доход',
-        ThawingDate: 'дата размораживания',
-        Withdrawable: 'наличный деньги',
+        ThawingDate: ' размораживания',
+        Withdrawable: ' деньги',
         get: 'извлечение',
-        getCash: 'получать деньги',
-        pledgeDay: 'срок залога',
-        getReward: 'получить награду',
+        getCash: 'деньги',
+        pledgeDay: 'залога',
+        getReward: 'награду',
         redeem: 'выкуп',
         again: 'Again',
-        PleaseWithdraw: 'сначала получить бонус'
+        PleaseWithdraw: 'сначала'
     },
     teamReward: {
-        title: 'групповая награда',
+        title: 'награда',
         nthFirst: 'поколение 1',
         nthSecond: 'поколение 2',
         nthThird: 'поколение 3',
         nthforth: 'поколение 4 - 10',
         nthFifth: 'поколение 10 - 15',
-        available: 'извлекаемая награда'
+        available: 'награда'
     },
     question: {
         title: 'Общие вопросы',
