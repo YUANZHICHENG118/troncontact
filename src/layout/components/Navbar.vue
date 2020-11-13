@@ -167,10 +167,10 @@ export default {
     }
     .navbar .logoWrap {
       .logoImg{
-        height: 23px;
+        height: 20px;
       }
       .logoTextImg {
-        height: 13px;
+        height: 11px;
       }
     }
   }
