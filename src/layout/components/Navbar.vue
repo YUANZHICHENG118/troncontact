@@ -46,7 +46,7 @@ export default {
       'avatar'
     ]),
     currentLang(){
-      let lang=this.activeLang;
+      let lang=this.activeLang||'en';
       switch (lang){
         case 'en':
           return 'English';

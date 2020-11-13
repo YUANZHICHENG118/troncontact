@@ -86,7 +86,7 @@ export default {
       item1:'You can buy Tron (TRX) from popular digital cryptocurrency exchanges: binance, poloniex, bitrex, bitfinex, okex, or use a local online exchange. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposits)!'
     },
     Q3:{
-      title:'Why? troncontract.cc Trustworthy?',
+      title:'Why? troncontract.co Trustworthy?',
       item1:'This platform is managed by the smart contract on the Tron blockchain. No one can change the algorithm of smart contracts, not even management. You can view the open source code of the contract in the Tron browser. You can check the smart contract code through professional tools to ensure that the platform is secure.'
     },
     Q4:{

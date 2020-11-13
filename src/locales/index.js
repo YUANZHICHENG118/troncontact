@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 // default language
-import zhCN from './lang/zh'
+import en from './lang/en'
 Vue.use(VueI18n)
 
-export const defaultLang = 'zh'
+export const defaultLang = 'en'
 
 const messages = {
-  'zh': {
-    ...zhCN
+  'en': {
+    ...en
   }
 }
 
