@@ -183,8 +183,8 @@
                         if (this.g4 > 0 && this.time == 0) {
                             const d = new Date();
                             console.log("d.getTime()", d.getTime())
-                            //const t=(this.g4+24*60*60)-d.getTime()/1000
-                            const t = (this.g4 + 60) - d.getTime() / 1000
+                            const t=(this.g4+24*60*60)-d.getTime()/1000
+                            //const t = (this.g4 + 60) - d.getTime() / 1000
 
                             // console.log("t",t)
 
