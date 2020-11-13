@@ -8,7 +8,7 @@
                         <div class="tit">{{$t('teamReward.available')}}</div>
                         <div class="val"><span>{{withdrawnReferalFunds}}</span>TRX</div>
                         <!--提取-->
-                        <el-button  type="primary" style="width:85%;" :loading="loading" :disabled="loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">{{$t('myContact.get')}}
+                        <el-button  type="primary" style="width:85%;" :loading="loading" :disabled="chkReward()||loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">{{$t('myContact.get')}}
                         </el-button>
                     </div>
                 </el-col>
@@ -95,6 +95,7 @@
 </template>
 <script>
     import TrxMixin from '../../mixin/trx'
+    import moment from 'moment'
 
     let timer;
     export default {
@@ -103,6 +104,7 @@
                 withdrawnReferalFunds: 0,
                 address: '',
                 loading: false,
+                lastWithdrawTime:0
             }
         },
         mixins: [TrxMixin],
@@ -159,6 +161,12 @@
                 this.address = this.host + '/#/contact?ref=' + this.tron.account
 
                 this.getTronWeb().then(tronWeb => {
+                    this.contract.getLastWithdrawTime(this.tron.account).call().then(res => {
+                        // 最后提取时间
+                        this.lastWithdrawTime = parseInt(res["withdrawTime"])
+                    })
+                })
+                this.getTronWeb().then(tronWeb => {
                     this.contract.referRewardMaps(this.tron.account).call().then(res => {
                         // 团队奖励
                         this.withdrawnReferalFunds = tronWeb.fromSun(res)
@@ -166,7 +174,12 @@
                 })
             },
 
-
+            chkReward() {
+                let ttl=1;
+                const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'm')
+                var now = moment()
+                return now < date
+            },
             withdraw() {
                 this.loading = true;
                 this.getTronWeb().then(tronWeb => {

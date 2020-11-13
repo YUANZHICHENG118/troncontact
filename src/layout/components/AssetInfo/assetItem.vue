@@ -48,7 +48,7 @@
         text-decoration: none;
         display: flex;
         justify-content: space-between;
-        padding:25px 0;
+        padding:10px 0;
         margin: 0;
         font-size: 14px;
         font-family: PingFangTC-Semibold, PingFangTC;

@@ -2,7 +2,10 @@ export default {
     global: {
         test: '測試',
         share:'聯繫我們',
-        copy:'複製'
+        copy:'複製',
+        enturPrice:'输入金额',
+        confirm:'确认',
+        cancel:'取消'
     },
     sidebar:{
         contact:'合同',

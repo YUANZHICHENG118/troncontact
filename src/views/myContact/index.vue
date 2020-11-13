@@ -65,7 +65,7 @@
                                         type="warning"
                                         style="width: 100%;"
                                         :disabled="
-                    chkReward(parseInt(item[9]),parseInt(item[2])) ||
+                    chkReward() ||
                     loading1
                   "
                                         :loading="loading1"
@@ -79,21 +79,20 @@
                                         style="width: 100%;"
                                         :loading="loading2"
                                         :disabled="
-                    chkWithdraw(parseInt(item[5]), parseInt(item[4]) / 60) ||
+                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / 60) ||
                     loading2
                   "
                                         @click="takeAwayDeposit(parseInt(item[0]))"
                                 >{{$t('myContact.redeem')}}
                                 </el-button>
                             </el-col>
-
                             <el-col :span="8" v-if="parseInt(item[2])===5">
                                 <el-button
                                         type="success"
                                         style="width: 100%;"
                                         :loading="loading3"
                                         :disabled="chkWithdraw(parseInt(item[5]), parseInt(item[4]) / 60)"
-                                        @click="makeDepositAgain(parseInt(item[0]))"
+                                        @click="open(parseInt(item[0]))"
                                 >{{$t('myContact.again')}}
                                 </el-button>
                             </el-col>
@@ -121,7 +120,8 @@
                 loading1: false, //提取奖励
                 loading2: false, // 提取本金
                 loading3: false, // 复投
-                reward: undefined
+                reward: undefined,
+                lastWithdrawTime:0,
             }
         },
 
@@ -153,10 +153,10 @@
                 //this.$set(this.reward, 'pid'+pid,  parseFloat(d) / 1000000)
                 return d
             },
-            chkReward(time,pid) {
-                if(pid===5) return false;
+            chkReward() {
+                console.log("this.lastWithdrawTime",this.lastWithdrawTime)
                 let ttl=1;
-                const date = moment(time * 1000).add(ttl, 'm')
+                const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'm')
                 var now = moment()
                 return now < date
             },
@@ -171,16 +171,28 @@
                 return moment(d).format('YYYY-MM-DD HH:mm:ss')
             },
 
+            open(pid) {
+                this.$prompt('', this.$t('global.enturPrice'), {
+                    confirmButtonText: this.$t('global.confirm'),
+                    cancelButtonText: this.$t('global.cancel'),
+                }).then(({ value }) => {
+
+                    this.makeDepositAgain(pid,value)
+
+                }).catch(() => {
+
+                });
+            },
 
             //复投
-            makeDepositAgain(pid) {
+            makeDepositAgain(pid,value) {
                 this.loading3 = true
                 this.getTronWeb(pid)
                     .then((tronWeb) => {
                         this.contract
                             .makeDepositAgain(pid)
                             .send({
-                                callValue: 0
+                                callValue: tronWeb.toSun(value)
                             })
                             .then((tx) => {
                                 this.loading3 = false
@@ -279,6 +291,12 @@
             },
 
             loadData() {
+                this.getTronWeb().then(tronWeb => {
+                    this.contract.getLastWithdrawTime(this.tron.account).call().then(res => {
+                        // 最后提取时间
+                        this.lastWithdrawTime = parseInt(res["withdrawTime"])
+                    })
+                })
                 this.getTronWeb().then((tronWeb) => {
                     this.contract
                         .getDeposits(this.tron.account)

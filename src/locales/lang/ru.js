@@ -2,7 +2,10 @@ export default {
     global: {
         test: 'тест',
         share: 'свяжитесь с нами',
-        copy: 'копировать'
+        copy: 'копировать',
+        enturPrice: 'Введите сумму',
+        confirm: 'подтверждаю',
+        cancel: 'Отмена'
     },
     sidebar: {
         contact: 'контракт',

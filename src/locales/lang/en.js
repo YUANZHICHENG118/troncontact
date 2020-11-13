@@ -2,7 +2,10 @@ export default {
   global: {
     test: 'test',
     share:'contact us',
-    copy:'copy'
+    copy:'copy',
+      enturPrice:'enter amount',
+      confirm:'Submit',
+      cancel:'Cancel'
   },
   sidebar:{
     contact:'contract',
