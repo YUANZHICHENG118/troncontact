@@ -38,6 +38,7 @@ export default {
       withdrawalTotal:'Total withdrawal',
       membership:'Global membership',
       Restart:'Restart countdown',
+      contract:'Contract'
     },
     inviteData:{
       title:'Recommended links'

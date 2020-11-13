@@ -37,7 +37,8 @@ export default {
             poolBalance: 'остатки средств',
             withdrawalTotal: 'монета участника',
             membership: 'мире',
-            Restart: 'обратный отсчет'
+            Restart: 'обратный отсчет',
+            contract:'Contract'
         },
         inviteData: {
             title: 'Рекомендуемая ссылка'

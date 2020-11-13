@@ -37,7 +37,8 @@ export default {
             poolBalance:'資金池結餘',
             withdrawalTotal:'會員總提幣',
             membership:'全球會員數',
-            Restart:'重啟倒計時'
+            Restart:'重啟倒計時',
+            contract:'合同'
         },
         inviteData:{
             title:'推薦鏈接'
