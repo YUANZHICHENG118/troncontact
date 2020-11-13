@@ -16,7 +16,7 @@
                     <div class="right rewardItem">
                         <div class="invite-title">
                             <img src="@/assets/assetImgs/star.png" alt=""/>
-                            <span>{{$t('a.logoImgccount.inviteData.title')}}</span>
+                            <span>{{$t('account.inviteData.title')}}</span>
                         </div>
                         <div class="invite-con">
                             <div class="invite-link">
