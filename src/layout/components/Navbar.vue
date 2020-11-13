@@ -3,7 +3,7 @@
     <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar"/>
     <div class="logoWrap">
       <img src="@/assets/logo.png" class="logoImg" alt=""/>
-      <img v-if="device !== 'mobile'" src="@/assets/logoText.png" class="logoTextImg" alt=""/>
+      <img  src="@/assets/logoText.png" class="logoTextImg" alt=""/>
     </div>
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click" @command="handleCommand">
@@ -154,6 +154,23 @@ export default {
           position: relative;
           cursor: pointer;
         }
+      }
+    }
+  }
+  .mobile{
+    .navbar .right-menu{
+      width: 45%;
+      text-align: right;
+      .user-name {
+        margin: 0 10px 0 0;
+      }
+    }
+    .navbar .logoWrap {
+      .logoImg{
+        height: 20px;
+      }
+      .logoTextImg {
+        height: 11px;
       }
     }
   }
