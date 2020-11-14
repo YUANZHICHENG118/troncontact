@@ -341,4 +341,9 @@
 </script>
 <style scoped lang="scss">
     @import "~@/styles/myContact.scss";
+    .my-contact-card-btns .is-disabled {
+        color: #f4f4f5;
+        background-color: #999;
+        border-color: #999;
+    }
 </style>

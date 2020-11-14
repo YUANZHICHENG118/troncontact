@@ -218,4 +218,9 @@
 </script>
 <style lang="scss" scoped>
     @import "~@/styles/reward.scss";
+    .rewardItem .is-disabled {
+        color: #f4f4f5;
+        background-color: #999;
+        border-color: #999;
+    }
 </style>
