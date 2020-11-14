@@ -38,7 +38,7 @@
             <h2><img src="@/assets/assetImgs/network.png" alt="">{{$t('account.networkData.title')}}</h2>
             <ul>
                 <!--总投资数量-->
-                <li><span class="label">{{$t('account.networkData.investTotal')}}</span> <span>{{g0}} TRX</span></li>
+                <!--<li><span class="label">{{$t('account.networkData.investTotal')}}</span> <span>{{g0}} TRX</span></li>-->
                 <!--资金池结余-->
                 <li><span class="label">{{$t('account.networkData.poolBalance')}}</span> <span>{{g1}}</span></li>
                 <!--会员总提币-->

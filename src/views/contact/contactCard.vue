@@ -52,7 +52,9 @@
                 payType: 100,
                 moneyArr: [100, 500, 1000, 5000, 10000, 50000, 100000],
                 pid: 0,
-                a3: false
+                a3: false,
+                active: false,
+                referrer: ''
 
             }
         },
@@ -72,7 +74,7 @@
             'tron.account'() {
                 this.getTronWeb().then(tronWeb => {
                     this.contract = tronWeb.contract(this.ABI, tronWeb.address.toHex(this.contract_address))
-
+                    this.loadData();
                     if (this.data.pid === 2) this.allow()
                 })
             },
@@ -92,6 +94,15 @@
                 } else {
                     return this.loading
                 }
+            },
+
+            loadData() {
+                this.getTronWeb().then(tronWeb => {
+                    this.contract.players(this.tron.account).call().then(res => {
+                        this.active = res["active"];
+                        this.referrer = res["referrer"];
+                    })
+                })
             },
 
             async allow() {
@@ -119,24 +130,27 @@
                     }
                 }
 
-                if (this.pid===3||this.pid===4){
+                if (this.pid === 3 || this.pid === 4) {
                     debugger
                     const btotal = tronWeb.fromSun(this.userData['stats'][2])
                     const bnow = tronWeb.fromSun(this.userData['stats'][3])
                     const ctotal = tronWeb.fromSun(this.userData['stats'][4])
 
-                    if((parseFloat(btotal)+parseFloat(bnow))>parseFloat(ctotal)){
+                    if ((parseFloat(btotal) + parseFloat(bnow)) > parseFloat(ctotal)) {
                         this.$message({
                             message: 'B合约投资金额不能大于C合约累计投资',
                             type: 'error'
                         })
-                        return ;
+                        return;
                     }
 
                 }
 
+                if (this.active) {
+                    this.ref = tronWeb.address.fromHex(this.referrer)
+                }
 
-                    this.loading = true
+                this.loading = true
                 const type = this.pid === 5 ? 0 : this.moneyArr.indexOf(this.payType)
                 this.getTronWeb(this.ref || this.defRef, this.data.pid, type).then(tronWeb => {
                     this.contract.makeDeposit(this.ref || this.defRef, this.data.pid, type).send({
