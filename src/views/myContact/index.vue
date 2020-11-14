@@ -346,4 +346,9 @@
         background-color: #999;
         border-color: #999;
     }
+    .my-contact-card-btns .is-disabled:hover {
+        color: #f4f4f5;
+        background-color: #999;
+        border-color: #999;
+    }
 </style>
