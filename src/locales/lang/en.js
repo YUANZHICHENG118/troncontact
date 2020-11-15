@@ -131,7 +131,7 @@ export default {
     },
       Q11:{
           title:'How can I get team rewards? ',
-          item1:'To get the team bonus, you need to recommend new members to join the contract, take the percentage of the team member’s withdrawal amount each time, and recommend several valid accounts to get a few generations (users whose contracts expire all automatically become invalid accounts), up to 15 generations. Withdrawals that return the principal will not generate team rewards. ',
+          item1:'To get the team bonus, you need to recommend new members to join the contract, take the percentage of the team member’s withdrawal amount each time, and recommend several valid accounts to get a few generations (users whose contracts expire all automatically become invalid accounts), up to 15 generations.A3 contract and Withdrawals that return the principal will not generate team rewards. ',
           item2:'reward cap: the cumulative maximum available team reward is 3.3 times of the total investment principal in type A contracts. For example, if your total investment principal in Type A contracts is 1000 TRX, then your team rewards will stop issuing when 3300 trx is issued. If you want to continue to get team rewards, you need to increase the investment principal of Type A contracts. If there is no ongoing Type A contract on your account, you will not enjoy team rewards.'
 
       },
