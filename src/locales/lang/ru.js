@@ -2,6 +2,7 @@ export default {
     global: {
         test: 'тест',
         share: 'свяжитесь с нами',
+        team:'организация',
         copy: 'копировать',
         enturPrice: 'Введите сумму',
         confirm: 'подтверждаю',

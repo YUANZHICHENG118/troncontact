@@ -54,7 +54,9 @@
                 pid: 0,
                 a3: false,
                 active: false,
-                referrer: ''
+                referrer: '',
+                prv:0,
+                now:0,
 
             }
         },
@@ -85,7 +87,9 @@
                     this.allow()
                 }
             },
+
         },
+
         methods: {
             a3Allow() {
                 if (this.pid === 2) {
@@ -103,12 +107,25 @@
                         this.referrer = res["referrer"];
                     })
                 })
+
             },
 
             async allow() {
                 const res = await  this.contract.getA3Status().call()
                 // console.log('res', res)
-                this.a3 = res
+                //this.a3 = res
+
+               const prv=await this.contract.a3Valve().call();
+
+                const global=await this.contract.getGlobalStats().call();
+
+                const  p = tronWeb.fromSun(prv['previousTotalSupply'])
+                const  now = tronWeb.fromSun(global['stats'][1])
+
+                if(((p-now)/p).toFixed(4)>0.1){
+                    this.a3=true;
+                }
+
             },
             deposit() {
 

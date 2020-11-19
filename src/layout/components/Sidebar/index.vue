@@ -30,6 +30,9 @@
         </div>
         <div class="share-title" v-show="!isCollapse">{{$t('global.share')}}</div>
         <share-options v-show="!isCollapse"></share-options>
+
+        <div class="share-title" v-show="!isCollapse">{{$t('global.team')}}</div>
+        <share-team v-show="!isCollapse"></share-team>
       </div>
     </div>
   </div>
@@ -41,8 +44,10 @@ import Logo from './Logo'
 import SidebarItem from './SidebarItem'
 import variables from '@/styles/variables.scss'
 import shareOptions from './ShareOptions'
+import shareTeam from './ShareTeam'
+
 export default {
-  components: { SidebarItem, Logo, shareOptions },
+  components: { SidebarItem, Logo, shareOptions ,shareTeam},
   computed: {
     ...mapGetters([
       'sidebar'

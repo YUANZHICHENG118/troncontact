@@ -101,6 +101,12 @@
                 </div>
             </el-col>
         </el-row>
+        <el-pagination
+                background
+                layout="prev, pager, next"
+                @current-change="change"
+                :total="50">
+        </el-pagination>
     </div>
 </template>
 <script>
@@ -122,6 +128,7 @@
                 loading3: false, // 复投
                 reward: undefined,
                 lastWithdrawTime:0,
+                page:0
             }
         },
 
@@ -290,16 +297,15 @@
                     })
             },
 
-            loadData() {
-                this.getTronWeb().then(tronWeb => {
-                    this.contract.getLastWithdrawTime(this.tron.account).call().then(res => {
-                        // 最后提取时间
-                        this.lastWithdrawTime = parseInt(res["withdrawTime"])
-                    })
-                })
+            change(p){
+               this.page=p-1;
+               this.loadContract()
+            },
+
+            loadContract(){
                 this.getTronWeb().then((tronWeb) => {
                     this.contract
-                        .getDeposits(this.tron.account)
+                        .getDeposits(this.tron.account,this.page)
                         .call()
                         .then((res) => {
                             let i = 0
@@ -332,6 +338,17 @@
                             this.myContact = arr
                         })
                 })
+            },
+
+            loadData() {
+                this.getTronWeb().then(tronWeb => {
+                    this.contract.getLastWithdrawTime(this.tron.account).call().then(res => {
+                        // 最后提取时间
+                        this.lastWithdrawTime = parseInt(res["withdrawTime"])
+                    })
+                })
+
+                this.loadContract()
             },
             changeCurrent(val) {
                 this.current = val

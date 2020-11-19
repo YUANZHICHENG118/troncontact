@@ -2,6 +2,8 @@ export default {
     global: {
         test: '測試',
         share:'聯繫我們',
+        team:'社會團體',
+
         copy:'複製',
         enturPrice:'输入金额',
         confirm:'确认',

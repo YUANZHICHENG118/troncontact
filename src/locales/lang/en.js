@@ -2,6 +2,7 @@ export default {
   global: {
     test: 'test',
     share:'contact us',
+      team:'Team',
     copy:'copy',
       enturPrice:'enter amount',
       confirm:'Submit',
