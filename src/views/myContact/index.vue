@@ -101,12 +101,12 @@
                 </div>
             </el-col>
         </el-row>
-        <el-pagination
-                background
-                layout="prev, pager, next"
-                @current-change="change"
-                :total="50">
-        </el-pagination>
+        <!--<el-pagination-->
+                <!--background-->
+                <!--layout="prev, pager, next"-->
+                <!--@current-change="change"-->
+                <!--:total="50">-->
+        <!--</el-pagination>-->
     </div>
 </template>
 <script>
@@ -305,7 +305,7 @@
             loadContract(){
                 this.getTronWeb().then((tronWeb) => {
                     this.contract
-                        .getDeposits(this.tron.account,this.page)
+                        .getDeposits(this.tron.account)
                         .call()
                         .then((res) => {
                             let i = 0
