@@ -47,7 +47,7 @@
                 <!--全球会员数-->
                 <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g3}} </span></li>
                 <!--全球会员数-->
-                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TK6ZfoNhRdWscFaZq7ucnUaVJ36VN8UjZS/code" target="_blank">TronContract</a> </span></li>
+                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TCEkD8mxwCxNpTTu3BiGJ72vqzTpNs8XQY/code" target="_blank">TronContract</a> </span></li>
                 <!--重启倒计时-->
                 <li v-if="g4>0"><span class="label">{{$t('account.networkData.Restart')}}</span> <span> <Countdown
                         :time="time" format="hh:mm:ss" @on-end="onCountdownEnd">
