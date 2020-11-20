@@ -3,6 +3,7 @@ export default {
         test: 'тест',
         share: 'свяжитесь с нами',
         team:'организация',
+        report:'ревизии',
         copy: 'копировать',
         enturPrice: 'Введите сумму',
         confirm: 'подтверждаю',
