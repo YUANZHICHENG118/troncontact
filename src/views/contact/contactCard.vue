@@ -112,8 +112,11 @@
 
             async allow() {
                 const res = await  this.contract.getA3Status().call()
-                // console.log('res', res)
-                //this.a3 = res
+
+                if(!res){
+                    this.a3=false
+                    return ;
+                }
 
                const prv=await this.contract.a3Valve().call();
 
@@ -127,10 +130,25 @@
                 }
 
             },
-            deposit() {
+            async deposit() {
+
+                if(this.data.pid===2){
+                    const res = await  this.contract.getA3Status().call()
+
+                    if(!res){
+                        this.$message({
+                            message: 'A3 Closed ',
+                            type: 'error'
+                        })
+                        return;
+                    }
+
+                }
 
 
                 if (this.pid === 5) {
+
+
                     if (this.payType < 100) {
                         this.$message({
                             message: '金额必须大于等于100TRX ',
@@ -148,7 +166,6 @@
                 }
 
                 if (this.pid === 3 || this.pid === 4) {
-                    debugger
                     const btotal = tronWeb.fromSun(this.userData['stats'][2])
                     const bnow = tronWeb.fromSun(this.userData['stats'][3])
                     const ctotal = tronWeb.fromSun(this.userData['stats'][4])
