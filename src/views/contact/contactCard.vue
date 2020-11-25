@@ -125,7 +125,7 @@
                 const  p = tronWeb.fromSun(prv['previousTotalSupply'])
                 const  now = tronWeb.fromSun(global['stats'][1])
 
-                if(((p-now)/p).toFixed(4)>0.1){
+                if(((p-now)/p).toFixed(4)>0.12){
                     this.a3=true;
                 }
 
