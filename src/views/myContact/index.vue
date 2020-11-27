@@ -162,8 +162,8 @@
             },
             chkReward() {
                 console.log("this.lastWithdrawTime",this.lastWithdrawTime)
-                let ttl=8;
-                const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'h')
+                let ttl=1;
+                const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'm')
                 var now = moment()
                 return now < date
             },

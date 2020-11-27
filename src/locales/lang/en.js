@@ -84,8 +84,8 @@ export default {
             item1: 'You need to have a Chrome browser extension tool for tronlink or a mobile application like Klever (tronwallet) or tronlink.'
         },
         Q2: {
-            title: 'How do I need to get TRX?',
-            item1: 'You can buy Tron (TRX) from popular digital cryptocurrency exchanges: binance, poloniex, bitrex, bitfinex, okex, or use a local online exchange. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposits)!'
+            title: 'How do I need to get ais?',
+            item1: 'You can buy Tron (ais) from popular digital cryptocurrency exchanges: binance, poloniex, bitrex, bitfinex, okex, or use a local online exchange. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposits)!'
         },
         Q3: {
             title: 'Why? troncontract.co Trustworthy?',
@@ -97,7 +97,7 @@ export default {
         },
         Q5: {
             title: 'What types of investment are available?',
-            item1: 'In the troncontract platform, you can choose a, B, C three types of contracts to invest. You can also renew the contract after its expiration if you like.'
+            item1: 'In the troncontract platform, you can choose a, B, C three types of contracts to invest. '
         },
         Q6: {
             title: 'How to play type A contract?',
@@ -117,15 +117,15 @@ export default {
         Q8: {
             title: 'How to play type C contract?',
             item1: 'The freezing days of class C contract principal is 30 days, and the contract income is 20% - 50%. Once the investment is successful, the income will be released immediately.',
-            item2: 'The investment amount of category C contract is from 1 million to 100 thousand TRX, which can be manually entered.',
-            item3: 'The return of the first round investment of contract C is 20%. After the contract expires, you can click the renew button, and the renewal amount is 100-100000 TRX. The revenue of the first renewal is 30%.',
-            item4: 'After the first renewal, you can continue to click the renew button. The income of the second renewal is 40%.',
-            item5: 'After the second renewal, you can continue to click the renew button. The income of the third renewal is 50%.',
-            item6: 'Starting from the fourth renewal, the revenue of each renewal is 50%.',
+            item2: 'The investment amount of category C contract is from 1 million to 100 thousand ais, which can be manually entered.',
+            item3: 'The return of the first round investment of contract C is 20%. After the contract expires, you can click the renew button, and the renewal amount is 100-100000 ais. The revenue of the first renewal is 30%.',
+            item4:'',
+            item5:'',
+            item6:'',
         },
         Q9: {
             title: 'How to upgrade to VIP? What are the advantages of VIP?',
-            item1: 'Accounts with an accumulated investment amount of 500000 TRX in class C contracts are automatically upgraded to VIP accounts, and 5% TRX reward will be given to VIP accounts for each withdrawal of cash. If 10000 TRX are withdrawn, 10500 TRX are actually received. (excluding withdrawal of principal refund)'
+            item1: 'Accounts with an accumulated investment amount of 500000 ais in class C contracts are automatically upgraded to VIP accounts, and 5% ais reward will be given to VIP accounts for each withdrawal of cash. If 10000 ais are withdrawn, 10500 ais are actually received. (excluding withdrawal of principal refund)'
         },
         Q10: {
             title: 'How to activate my recommended links?',
@@ -134,7 +134,7 @@ export default {
         Q11: {
             title: 'How can I get team rewards? ',
             item1: 'To get the team bonus, you need to recommend new members to join the contract, take the percentage of the team member’s withdrawal amount each time, and recommend several valid accounts to get a few generations (users whose contracts expire all automatically become invalid accounts), up to 15 generations.A3 contract and Withdrawals that return the principal will not generate team rewards. ',
-            item2: 'reward cap: the cumulative maximum available team reward is 3.3 times of the total investment principal in type A contracts. For example, if your total investment principal in Type A contracts is 1000 TRX, then your team rewards will stop issuing when 3300 trx is issued. If you want to continue to get team rewards, you need to increase the investment principal of Type A contracts. If there is no ongoing Type A contract on your account, you will not enjoy team rewards.'
+            item2: 'reward cap: the cumulative maximum available team reward is 3.3 times of the total investment principal in type A contracts. For example, if your total investment principal in Type A contracts is 1000 ais, then your team rewards will stop issuing when 3300 ais is issued. If you want to continue to get team rewards, you need to increase the investment principal of Type A contracts. If there is no ongoing Type A contract on your account, you will not enjoy team rewards.'
 
         },
         Q12: {
@@ -149,11 +149,11 @@ export default {
         Q14: {
             title: 'Is there any investment limit? ',
             item1: 'There is no limit on the total investment amount, but a single investment amount is limited. Among them, the investment amount of Type A and Type B contracts cannot be filled out independently. You can only choose the following amounts in the drop-down menu to invest: 100trx, 500trx, and 1000trx are available in the first 3 days, 5000trx is available on the 4th day, and the 5th 10000trx option will be open every day, 50,000trx option will be open on the 6th day, and 100000trx option will be open on the 7th day. ',
-            item2: 'A single investment amount of 1 to 100,000 TRX in category C contracts can be entered manually'
+            item2: 'A single investment amount of 1 to 100,000 ais in category C contracts can be entered manually'
         },
         Q15: {
             title: 'How long can this project run? ',
-            item1: 'Trontract.cc will always operate. When the contract fund pool is lower than 100trx, the restart mechanism will be activated after 24 hours. After the restart mechanism is activated, the contract investment and undrawn amounts of all players will be automatically cleared. . But the team framework remains the same, and it can be activated by reinvesting, and a new round will start at that time'
+            item1: 'aiswap.org will always operate. When the contract fund pool is lower than 100trx, the restart mechanism will be activated after 24 hours. After the restart mechanism is activated, the contract investment and undrawn amounts of all players will be automatically cleared. . But the team framework remains the same, and it can be activated by reinvesting, and a new round will start at that time'
         }
     }
 }

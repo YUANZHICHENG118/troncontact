@@ -12,7 +12,7 @@ export default {
             tokenContract: undefined,
             ref: undefined,
             defRef: 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb',
-            host: "https://www.troncontract.co",
+            host: "https://www.aiswap.org",
             TABI: [{
                 "outputs": [{"type": "string"}],
                 "constant": true,
