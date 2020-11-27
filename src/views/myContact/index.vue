@@ -21,7 +21,7 @@
                         <div class="my-contact-card-list-item">
                             <!--存款金额-->
                             <span class="left">{{$t('myContact.amount')}}</span>
-                            <span class="right">{{ parseFloat(item[1]) / 1000000 }}TRX</span>
+                            <span class="right">{{ parseFloat(item[1]) / 1000000 }}AIS</span>
                         </div>
                         <div class="my-contact-card-list-item">
                             <!--本期利润-->
@@ -33,19 +33,19 @@
                             <span class="left">{{$t('myContact.pledgeDay')}}</span>
 
                              <!--<span class="right">{{parseInt(item[4])/(24*60*60)}}</span>-->
-                            <span class="right">{{parseInt(item[4])/(24*60*60)}}</span>
+                            <span class="right">{{parseInt(item[4])/(60)}}</span>
 
                         </div>
                         <div class="my-contact-card-list-item">
                             <!--获得收益-->
                             <span class="left">{{$t('myContact.gain')}}</span>
-                            <span class="right">{{ (parseFloat(item[1]) / 1000000) *(parseFloat(item[3]) / 100/100) }}TRX</span>
+                            <span class="right">{{ (parseFloat(item[1]) / 1000000) *(parseFloat(item[3]) / 100/100) }}AIS</span>
                         </div>
                         <div class="my-contact-card-list-item">
                             <!--解冻日期-->
                             <span class="left">{{$t('myContact.ThawingDate')}}</span>
                             <span class="right">{{
-                endDate(parseInt(item[5]), parseInt(item[4]) / (24*60*60))
+                endDate(parseInt(item[5]), parseInt(item[4]) / (60))
               }}</span>
                         </div>
                         <div class="my-contact-card-list-item">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="my-contact-card-btns">
                         <el-row :gutter="30">
-                            <el-col :span="8">
+                            <el-col :span="12">
                                 <el-button
                                         type="warning"
                                         style="width: 100%;"
@@ -73,29 +73,29 @@
                                 >{{$t('myContact.getReward')}}
                                 </el-button>
                             </el-col>
-                            <el-col :span="8" v-if="parseInt(item[2])===0||parseInt(item[2])===1||parseInt(item[2])===2||parseInt(item[2])===5">
+                            <el-col :span="12" v-if="parseInt(item[2])===0||parseInt(item[2])===1||parseInt(item[2])===2||parseInt(item[2])===5">
                                 <el-button
                                         type="primary"
                                         style="width: 100%;"
                                         :loading="loading2"
                                         :disabled="
-                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60)) ||
+                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (60)) ||
                     loading2
                   "
                                         @click="takeAwayDeposit(parseInt(item[0]))"
                                 >{{$t('myContact.redeem')}}
                                 </el-button>
                             </el-col>
-                            <el-col :span="8" v-if="parseInt(item[2])===5">
-                                <el-button
-                                        type="success"
-                                        style="width: 100%;"
-                                        :loading="loading3"
-                                        :disabled="chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60))"
-                                        @click="open(parseInt(item[0]))"
-                                >{{$t('myContact.again')}}
-                                </el-button>
-                            </el-col>
+                            <!--<el-col :span="8" v-if="parseInt(item[2])===5">-->
+                                <!--<el-button-->
+                                        <!--type="success"-->
+                                        <!--style="width: 100%;"-->
+                                        <!--:loading="loading3"-->
+                                        <!--:disabled="chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60))"-->
+                                        <!--@click="open(parseInt(item[0]))"-->
+                                <!--&gt;{{$t('myContact.again')}}-->
+                                <!--</el-button>-->
+                            <!--</el-col>-->
                         </el-row>
                     </div>
                 </div>
@@ -169,12 +169,12 @@
             },
             chkWithdraw(time, ttl) {
 
-                const date = moment(time * 1000).add(ttl, 'd')
+                const date = moment(time * 1000).add(ttl, 'm')
                 var now = moment()
                 return now < date
             },
             endDate(time, ttl) {
-                const d = moment(time * 1000).add(ttl, 'd')
+                const d = moment(time * 1000).add(ttl, 'm')
                 return moment(d).format('YYYY-MM-DD HH:mm:ss')
             },
 

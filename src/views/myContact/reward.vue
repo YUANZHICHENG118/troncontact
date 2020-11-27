@@ -1,5 +1,5 @@
 <template>
-<span>{{amount}} TRX</span>
+<span>{{amount}} AIS</span>
 </template>
 
 <script>

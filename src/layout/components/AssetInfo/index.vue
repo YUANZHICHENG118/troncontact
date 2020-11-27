@@ -5,18 +5,18 @@
             <h2><img src="@/assets/assetImgs/user.png" alt="">{{$t('account.userData.title')}}</h2>
             <ul>
                 <!--A类合约累计投资-->
-                <li><span class="label">{{$t('account.userData.AInvest')}}</span> <span>{{stats0}}TRX</span></li>
-                <li><span class="label">{{$t('account.userData.investing')}}</span> <span>{{stats1}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.AInvest')}}</span> <span>{{stats0}}AIS</span></li>
+                <li><span class="label">{{$t('account.userData.investing')}}</span> <span>{{stats1}}AIS</span></li>
                 <!--B类合约累计投资-->
-                <li><span class="label">{{$t('account.userData.BInvest')}}</span> <span>{{stats2}}TRX</span></li>
-                <li><span class="label">{{$t('account.userData.investing')}}</span> <span>{{stats3}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.BInvest')}}</span> <span>{{stats2}}AIS</span></li>
+                <li><span class="label">{{$t('account.userData.investing')}}</span> <span>{{stats3}}AIS</span></li>
                 <!--C类合约累计投资-->
-                <li><span class="label">{{$t('account.userData.CInvest')}}</span> <span>{{stats4}}TRX</span></li>
-                <li><span class="label">{{$t('account.userData.investing')}}</span> <span>{{stats5}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.CInvest')}}</span> <span>{{stats4}}AIS</span></li>
+                <li><span class="label">{{$t('account.userData.investing')}}</span> <span>{{stats5}}AIS</span></li>
                 <!--团队奖励额度-->
-                <li><span class="label">{{$t('account.userData.rewardQuota')}}</span> <span>{{stats6}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.rewardQuota')}}</span> <span>{{stats6}}AIS</span></li>
                 <!--团队领取额度-->
-                <li><span class="label">{{$t('account.userData.receivedQuota')}}</span> <span>{{stats7}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.receivedQuota')}}</span> <span>{{stats7}}AIS</span></li>
                 <!--个人级别  普通用户  VIP  超级VIP -->
                 <li><span class="label">{{$t('account.userData.level')}}</span> <span>{{stats8===0?`${$t('account.userData.OrdinaryUser')}`:stats8===1?'VIP':`${$t('account.userData.super')}VIP`}}</span>
                 </li>
@@ -25,11 +25,11 @@
                 <!--团队总人数-->
                 <li><span class="label">{{$t('account.userData.teamSize')}}</span> <span>{{stats10}}</span></li>
                 <!--团队业绩-->
-                <li><span class="label">{{$t('account.userData.performance')}}</span> <span>{{stats13}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.performance')}}</span> <span>{{stats13}}AIS</span></li>
                 <!--总存入-->
-                <li><span class="label">{{$t('account.userData.deposit')}}</span> <span>{{stats11}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.deposit')}}</span> <span>{{stats11}}AIS</span></li>
                 <!--总提取-->
-                <li><span class="label">{{$t('account.userData.extraction')}}</span> <span>{{stats12}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.extraction')}}</span> <span>{{stats12}}AIS</span></li>
 
             </ul>
         </asset-item>
@@ -38,11 +38,11 @@
             <h2><img src="@/assets/assetImgs/network.png" alt="">{{$t('account.networkData.title')}}</h2>
             <ul>
                 <!--总投资数量-->
-                <!--<li><span class="label">{{$t('account.networkData.investTotal')}}</span> <span>{{g0}} TRX</span></li>-->
+                <!--<li><span class="label">{{$t('account.networkData.investTotal')}}</span> <span>{{g0}} AIS</span></li>-->
                 <!--资金池结余-->
                 <li><span class="label">{{$t('account.networkData.poolBalance')}}</span> <span>{{g1}}</span></li>
                 <!--会员总提币-->
-                <li><span class="label">{{$t('account.networkData.withdrawalTotal')}}</span> <span>{{g2}} TRX</span>
+                <li><span class="label">{{$t('account.networkData.withdrawalTotal')}}</span> <span>{{g2}} AIS</span>
                 </li>
                 <!--全球会员数-->
                 <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g3}} </span></li>

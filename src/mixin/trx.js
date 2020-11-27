@@ -6,22 +6,118 @@ export default {
                 auth: false,
                 account: ''
             },
-            contract_address: 'TK6ZfoNhRdWscFaZq7ucnUaVJ36VN8UjZS',
+            token_address: 'TWE9MefAtXMMsoTBk5ahSogCsdMeWCGcV8',
+            contract_address: 'TMikBZnwJAR59TZRVERfUVPvKrkUjTedUa',
             contract: undefined,
+            tokenContract: undefined,
             ref: undefined,
             defRef: 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb',
             host: "https://www.troncontract.co",
+            TABI: [{
+                "outputs": [{"type": "string"}],
+                "constant": true,
+                "name": "name",
+                "stateMutability": "View",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "address"}],
+                "constant": true,
+                "name": "minter",
+                "stateMutability": "View",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "bool"}],
+                "inputs": [{"name": "spender", "type": "address"}, {"name": "amount", "type": "uint256"}],
+                "name": "approve",
+                "stateMutability": "Nonpayable",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "uint256"}],
+                "constant": true,
+                "name": "totalSupply",
+                "stateMutability": "View",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "bool"}],
+                "inputs": [{"name": "sender", "type": "address"}, {
+                    "name": "recipient",
+                    "type": "address"
+                }, {"name": "amount", "type": "uint256"}],
+                "name": "transferFrom",
+                "stateMutability": "Nonpayable",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "uint8"}],
+                "constant": true,
+                "name": "decimals",
+                "stateMutability": "View",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "bool"}],
+                "inputs": [{"name": "spender", "type": "address"}, {"name": "addedValue", "type": "uint256"}],
+                "name": "increaseAllowance",
+                "stateMutability": "Nonpayable",
+                "type": "Function"
+            }, {
+                "inputs": [{"name": "account", "type": "address"}, {"name": "amount", "type": "uint256"}],
+                "name": "mint",
+                "stateMutability": "Nonpayable",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "uint256"}],
+                "constant": true,
+                "inputs": [{"name": "account", "type": "address"}],
+                "name": "balanceOf",
+                "stateMutability": "View",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "string"}],
+                "constant": true,
+                "name": "symbol",
+                "stateMutability": "View",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "bool"}],
+                "inputs": [{"name": "spender", "type": "address"}, {"name": "subtractedValue", "type": "uint256"}],
+                "name": "decreaseAllowance",
+                "stateMutability": "Nonpayable",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "bool"}],
+                "inputs": [{"name": "recipient", "type": "address"}, {"name": "amount", "type": "uint256"}],
+                "name": "transfer",
+                "stateMutability": "Nonpayable",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "uint256"}],
+                "constant": true,
+                "inputs": [{"name": "owner", "type": "address"}, {"name": "spender", "type": "address"}],
+                "name": "allowance",
+                "stateMutability": "View",
+                "type": "Function"
+            }, {
+                "inputs": [{"name": "name", "type": "string"}, {"name": "symbol", "type": "string"}, {
+                    "name": "minter_",
+                    "type": "address"
+                }], "stateMutability": "Nonpayable", "type": "Constructor"
+            }, {
+                "inputs": [{"indexed": true, "name": "from", "type": "address"}, {
+                    "indexed": true,
+                    "name": "to",
+                    "type": "address"
+                }, {"name": "value", "type": "uint256"}], "name": "Transfer", "type": "Event"
+            }, {
+                "inputs": [{"indexed": true, "name": "owner", "type": "address"}, {
+                    "indexed": true,
+                    "name": "spender",
+                    "type": "address"
+                }, {"name": "value", "type": "uint256"}], "name": "Approval", "type": "Event"
+            }],
             ABI: [{
                 "outputs": [{"type": "uint256"}],
                 "constant": true,
                 "inputs": [{"name": "player", "type": "address"}],
                 "name": "referRewardMaps",
-                "stateMutability": "View",
-                "type": "Function"
-            }, {
-                "outputs": [{"type": "uint256"}],
-                "constant": true,
-                "name": "getBalance",
                 "stateMutability": "View",
                 "type": "Function"
             }, {
@@ -44,9 +140,9 @@ export default {
                 "stateMutability": "View",
                 "type": "Function"
             }, {
-                "outputs": [{"type": "address"}],
+                "outputs": [{"type": "bool"}],
                 "constant": true,
-                "name": "MAINTAINER",
+                "name": "checktest",
                 "stateMutability": "View",
                 "type": "Function"
             }, {
@@ -56,13 +152,12 @@ export default {
                 "stateMutability": "Nonpayable",
                 "type": "Function"
             }, {
-                "payable": true,
                 "inputs": [{"name": "ref", "type": "address"}, {
                     "name": "modelType",
                     "type": "uint8"
-                }, {"name": "payType", "type": "uint8"}],
+                }, {"name": "payType", "type": "uint8"}, {"name": "depositAmount", "type": "uint256"}],
                 "name": "makeDeposit",
-                "stateMutability": "Payable",
+                "stateMutability": "Nonpayable",
                 "type": "Function"
             }, {
                 "outputs": [{"type": "uint256"}],
@@ -110,6 +205,12 @@ export default {
             }, {
                 "outputs": [{"type": "address"}],
                 "constant": true,
+                "name": "erc20Token",
+                "stateMutability": "View",
+                "type": "Function"
+            }, {
+                "outputs": [{"type": "address"}],
+                "constant": true,
                 "name": "owner",
                 "stateMutability": "View",
                 "type": "Function"
@@ -119,7 +220,7 @@ export default {
                 "name": "isOwner",
                 "stateMutability": "View",
                 "type": "Function"
-            },  {
+            }, {
                 "outputs": [{"type": "uint256"}],
                 "constant": true,
                 "inputs": [{"type": "address"}],
@@ -171,12 +272,6 @@ export default {
                 "stateMutability": "View",
                 "type": "Function"
             }, {
-                "payable": true,
-                "inputs": [{"name": "depositId", "type": "uint256"}],
-                "name": "makeDepositAgain",
-                "stateMutability": "Payable",
-                "type": "Function"
-            }, {
                 "outputs": [{"name": "referrer", "type": "address"}, {
                     "name": "linkEnable",
                     "type": "bool"
@@ -201,7 +296,7 @@ export default {
             }, {
                 "outputs": [{"type": "address"}],
                 "constant": true,
-                "name": "PROJECT_LEADER",
+                "name": "AISImpl",
                 "stateMutability": "View",
                 "type": "Function"
             }, {
@@ -257,6 +352,7 @@ export default {
                     "type": "address"
                 }], "name": "OwnershipTransferred", "type": "Event"
             }]
+
         }
     },
     watch: {},

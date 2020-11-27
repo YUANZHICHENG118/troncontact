@@ -17,9 +17,9 @@
 
                 <div v-if="data.pid===5">
                     <el-input placeholder="请输入" type="text" v-model="payType">
-                        <span slot="suffix" class="suffix">TRX</span>
+                        <span slot="suffix" class="suffix">AIS</span>
                     </el-input>
-                    <div class="tip">限额100~100000TRX</div>
+                    <div class="tip">限额100~100000AIS</div>
 
                 </div>
 
@@ -34,8 +34,11 @@
                 </el-select>
             </div>
         </div>
+        <el-button v-if="!allowance" type="primary" style="width:100%;" :loading="loading" :disabled="loading"
+                   @click="approve">授权
+        </el-button>
         <!--获取资金-->
-        <el-button type="primary" style="width:100%;" :loading="loading" :disabled="data.pid===2?!a3:loading"
+        <el-button v-else type="primary" style="width:100%;" :loading="loading" :disabled="data.pid===2?!a3:loading"
                    @click="deposit">{{$t('contact.getMoney')}}
         </el-button>
 
@@ -57,6 +60,8 @@
                 referrer: '',
                 prv:0,
                 now:0,
+                allowance:false,
+                allowAmount:100000000
 
             }
         },
@@ -76,6 +81,8 @@
             'tron.account'() {
                 this.getTronWeb().then(tronWeb => {
                     this.contract = tronWeb.contract(this.ABI, tronWeb.address.toHex(this.contract_address))
+                    this.tokenContract = tronWeb.contract(this.TABI, tronWeb.address.toHex(this.token_address))
+
                     this.loadData();
                     if (this.data.pid === 2) this.allow()
                 })
@@ -93,7 +100,6 @@
         methods: {
             a3Allow() {
                 if (this.pid === 2) {
-                    debugger
                     return !this.a3
                 } else {
                     return this.loading
@@ -108,6 +114,20 @@
                     })
                 })
 
+
+                this.loadAllowance();
+
+
+
+            },
+
+            loadAllowance(){
+                this.getTronWeb().then(tronWeb => {
+                    this.tokenContract.allowance(this.tron.account,this.contract_address).call().then(res => {
+                        let allow=parseInt(res)
+                        allow===0?this.allowance=false:this.allowance=true
+                    })
+                })
             },
 
             async allow() {
@@ -115,20 +135,43 @@
 
                 if(!res){
                     this.a3=false
-                    return ;
+                }else{
+                    this.a3=true
                 }
 
-               const prv=await this.contract.a3Valve().call();
+               // const prv=await this.contract.a3Valve().call();
+               //
+               //  const global=await this.contract.getGlobalStats().call();
+               //
+               //  const  p = tronWeb.fromSun(prv['previousTotalSupply'])
+               //  const  now = tronWeb.fromSun(global['stats'][1])
+               //
+               //  if(((p-now)/p).toFixed(4)>0.12){
+               //      this.a3=true;
+               //  }
 
-                const global=await this.contract.getGlobalStats().call();
+            },
+            approve(){
+                this.getTronWeb().then(tronWeb => {
+                    this.tokenContract.approve(this.contract_address,tronWeb.toSun(this.allowAmount)).send({
+                        callValue: 0
+                    }).then(tx => {
+                        this.loading = false
+                        this.$message({
+                            message: 'Transaction was successfully sent. Wait confirming..',
+                            type: 'success'
+                        })
+                        this.awaitTx(tx).then(() => {
+                            // if(auto_upline) fetch('/auto_upline/?address=' + this.tron.account + '&upline=' + this.upline);
+                            //this.updateInfo();
+                        })
+                    }).catch(e => {
+                        this.loading = false
 
-                const  p = tronWeb.fromSun(prv['previousTotalSupply'])
-                const  now = tronWeb.fromSun(global['stats'][1])
-
-                if(((p-now)/p).toFixed(4)>0.12){
-                    this.a3=true;
-                }
-
+                    })
+                }).catch(e => {
+                    this.loading = false
+                })
             },
             async deposit() {
 
@@ -186,9 +229,9 @@
 
                 this.loading = true
                 const type = this.pid === 5 ? 0 : this.moneyArr.indexOf(this.payType)
-                this.getTronWeb(this.ref || this.defRef, this.data.pid, type).then(tronWeb => {
-                    this.contract.makeDeposit(this.ref || this.defRef, this.data.pid, type).send({
-                        callValue: tronWeb.toSun(this.payType)
+                this.getTronWeb(this.ref || this.defRef, this.data.pid, type,tronWeb.toSun(this.payType)).then(tronWeb => {
+                    this.contract.makeDeposit(this.ref || this.defRef, this.data.pid, type,tronWeb.toSun(this.payType)).send({
+                        callValue: 0
                     }).then(tx => {
                         this.loading = false
                         this.$message({
@@ -196,8 +239,9 @@
                             type: 'success'
                         })
                         this.awaitTx(tx).then(() => {
-                            // if(auto_upline) fetch('/auto_upline/?address=' + this.tron.account + '&upline=' + this.upline);
-                            //this.updateInfo();
+                            setTimeout(()=>{
+                                this.loadAllowance()
+                            },1000)
                         })
                     }).catch(e => {
                         this.loading = false
