@@ -6,14 +6,14 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
 @import "~element-ui/packages/theme-chalk/src/index";
 // sidebar
-$menuText: #002033;;
+$menuText: #fff;;
 $menuActiveText:rgba(34, 166, 108, 1);
 $subMenuActiveText:#f4f4f5; //https://github.com/ElemeFE/element/issues/12951
 
-$menuBg:#fff;
-$menuHover:rgba(34, 166, 108, .1);
-$subMenuBg:#1f2d3d;
-$subMenuHover:#001528;
+$menuBg:#000;
+$menuHover:#fff;
+$subMenuBg:#fff;
+$subMenuHover:#fff;
 
 $sideBarWidth: 260px;
 $orange:#FA6400;

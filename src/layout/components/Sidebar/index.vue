@@ -31,8 +31,8 @@
         <div class="share-title" v-show="!isCollapse">{{$t('global.share')}}</div>
         <share-options v-show="!isCollapse"></share-options>
 
-        <div class="share-title" v-show="!isCollapse">{{$t('global.team')}}</div>
-        <share-team v-show="!isCollapse"></share-team>
+        <!--<div class="share-title" v-show="!isCollapse">{{$t('global.team')}}</div>-->
+        <!--<share-team v-show="!isCollapse"></share-team>-->
       </div>
     </div>
   </div>

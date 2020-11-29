@@ -71,7 +71,7 @@ export default {
       font-size: 30px;
       font-family: PingFangSC-Semibold, PingFang SC;
       font-weight: 600;
-      color: rgba(0, 0, 0, 0.85);
+      color: #fff;
       line-height: 50px;
       margin: 0;
     }

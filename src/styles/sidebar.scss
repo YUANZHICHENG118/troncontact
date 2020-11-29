@@ -5,7 +5,11 @@
     transition: margin-left .28s;
     margin-left: $sideBarWidth;
     position: relative;
-    background-color: rgba(246, 246, 246, 1);
+    //background-color: rgba(246, 246, 246, 1);
+
+    background: url(../assets/bg.jpg) center repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
   }
 
   .sidebar-container {
@@ -32,7 +36,7 @@
       font-size: 16px;
       font-family: PingFangSC-Semibold, PingFang SC;
       font-weight: 600;
-      color: #4D4D4D;
+      color: #fff;
       width: 100%;
       .mobileIcon{
         color: rgb(255, 255, 255);

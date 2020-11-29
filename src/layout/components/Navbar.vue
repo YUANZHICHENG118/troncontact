@@ -85,7 +85,7 @@ export default {
     height: 60px;
     overflow: hidden;
     position: relative;
-    background: #fff;
+    background: #000;
     box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
     .logoWrap {
       display: inline-flex;
@@ -146,7 +146,7 @@ export default {
         font-size: 14px;
         font-family: PingFangSC-Semibold, PingFang SC;
         font-weight: 600;
-        color: #00304D;
+        color: #fff;
         margin: 0 30px 0 10px;
       }
       .avatar-container {

@@ -19,27 +19,27 @@
       <el-collapse-item :title="$t('question.Q5.title')" name="5">
         <div>{{$t('question.Q5.item1')}}</div>
       </el-collapse-item>
-      <el-collapse-item :title="$t('question.Q6.title')" name="6">
-        <div>{{$t('question.Q6.item1')}}</div>
-        <div>{{$t('question.Q6.item2')}}</div>
-        <div>{{$t('question.Q6.item3')}}</div>
-        <div>{{$t('question.Q6.item4')}}</div>
-        <div>{{$t('question.Q6.item5')}}</div>
-      </el-collapse-item>
-      <el-collapse-item :title="$t('question.Q7.title')" name="7">
-        <div>{{$t('question.Q7.item1')}}</div>
-        <div>{{$t('question.Q7.item2')}}</div>
-        <div>{{$t('question.Q7.item3')}}</div>
-        <div>{{$t('question.Q7.item4')}}</div>
-      </el-collapse-item>
-      <el-collapse-item :title="$t('question.Q8.title')" name="8">
-        <div>{{$t('question.Q8.item1')}}</div>
-        <div>{{$t('question.Q8.item2')}}</div>
-        <div>{{$t('question.Q8.item3')}}</div>
-        <div>{{$t('question.Q8.item4')}}</div>
-        <div>{{$t('question.Q8.item5')}}</div>
-        <div>{{$t('question.Q8.item6')}}</div>
-      </el-collapse-item>
+      <!--<el-collapse-item :title="$t('question.Q6.title')" name="6">-->
+        <!--<div>{{$t('question.Q6.item1')}}</div>-->
+        <!--<div>{{$t('question.Q6.item2')}}</div>-->
+        <!--<div>{{$t('question.Q6.item3')}}</div>-->
+        <!--<div>{{$t('question.Q6.item4')}}</div>-->
+        <!--<div>{{$t('question.Q6.item5')}}</div>-->
+      <!--</el-collapse-item>-->
+      <!--<el-collapse-item :title="$t('question.Q7.title')" name="7">-->
+        <!--<div>{{$t('question.Q7.item1')}}</div>-->
+        <!--<div>{{$t('question.Q7.item2')}}</div>-->
+        <!--<div>{{$t('question.Q7.item3')}}</div>-->
+        <!--<div>{{$t('question.Q7.item4')}}</div>-->
+      <!--</el-collapse-item>-->
+      <!--<el-collapse-item :title="$t('question.Q8.title')" name="8">-->
+        <!--<div>{{$t('question.Q8.item1')}}</div>-->
+        <!--<div>{{$t('question.Q8.item2')}}</div>-->
+        <!--<div>{{$t('question.Q8.item3')}}</div>-->
+        <!--<div>{{$t('question.Q8.item4')}}</div>-->
+        <!--<div>{{$t('question.Q8.item5')}}</div>-->
+        <!--<div>{{$t('question.Q8.item6')}}</div>-->
+      <!--</el-collapse-item>-->
       <el-collapse-item :title="$t('question.Q9.title')" name="9">
         <div>{{$t('question.Q9.item1')}}</div>
       </el-collapse-item>
@@ -50,16 +50,16 @@
         <div>{{$t('question.Q11.item1')}}</div>
         <div>{{$t('question.Q11.item2')}}</div>
       </el-collapse-item>
-      <el-collapse-item :title="$t('question.Q12.title')" name="12">
-        <div>{{$t('question.Q12.item1')}}</div>
-        <div>{{$t('question.Q12.item2')}}</div>
-      </el-collapse-item>
-      <el-collapse-item :title="$t('question.Q13.title')" name="13">
-        <div>{{$t('question.Q13.item1')}}</div>
-      </el-collapse-item>
+      <!--<el-collapse-item :title="$t('question.Q12.title')" name="12">-->
+        <!--<div>{{$t('question.Q12.item1')}}</div>-->
+        <!--<div>{{$t('question.Q12.item2')}}</div>-->
+      <!--</el-collapse-item>-->
+      <!--<el-collapse-item :title="$t('question.Q13.title')" name="13">-->
+        <!--<div>{{$t('question.Q13.item1')}}</div>-->
+      <!--</el-collapse-item>-->
       <el-collapse-item :title="$t('question.Q14.title')" name="14">
         <div>{{$t('question.Q14.item1')}}</div>
-        <div>{{$t('question.Q14.item2')}}</div>
+        <!--<div>{{$t('question.Q14.item2')}}</div>-->
 
       </el-collapse-item>
       <el-collapse-item :title="$t('question.Q15.title')" name="15">

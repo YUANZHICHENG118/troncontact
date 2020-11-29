@@ -77,83 +77,83 @@ export default {
         nthFifth: 'Generation 10-15',
         available: 'Awards available'
     },
-    question: {
-        title: 'common problem',
-        Q1: {
-            title: 'What do I need to participate in this project?',
-            item1: 'You need to have a Chrome browser extension tool for tronlink or a mobile application like Klever (tronwallet) or tronlink.'
+    question:{
+        title:'FAQ',
+        Q1:{
+            title:'What do I need to participate in this project? ',
+            item1:'You need to have TronLinks Chrome browser extension tool or download a mobile APP application such as TronLink. '
         },
         Q2: {
-            title: 'How do I need to get ais?',
-            item1: 'You can buy Tron (ais) from popular digital cryptocurrency exchanges: binance, poloniex, bitrex, bitfinex, okex, or use a local online exchange. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposits)!'
+            title:'How do I get AIS? ',
+            item1:'You can buy TRX on a cryptocurrency exchange and then exchange for AIS: or use the decentralized exchange Justswap to exchange for AIS. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposit)!'
         },
         Q3: {
-            title: 'Why? troncontract.co Trustworthy?',
-            item1: 'This platform is managed by the smart contract on the Tron blockchain. No one can change the algorithm of smart contracts, not even management. You can view the open source code of the contract in the Tron browser. You can check the smart contract code through professional tools to ensure that the platform is secure.'
+            title:'Why is Aiswap.org trustworthy? ',
+            item1:'This platform is managed by a smart contract on the blockchain. No one can change the algorithm of a smart contract, not even the management department. You can view the open source code of the contract in the tron ​​browser, and you can check the smart contract code with professional tools to ensure that the platform is safe.'
         },
         Q4: {
-            title: 'How to obtain capital (investment)?',
-            item1: 'You need to select the type of contract you want, then select the contract (deposit) period and select or enter the deposit amount.'
+            title:'How to obtain funds (investment)? ',
+            item1:'You need to select the desired contract type, then select the contract (deposit) term and select or enter the deposit amount. '
         },
         Q5: {
-            title: 'What types of investment are available?',
-            item1: 'In the troncontract platform, you can choose a, B, C three types of contracts to invest. '
+            title:'What investment types are available? ',
+            item1:'On the aiswap.org platform, you can choose A, B, and C three types of contracts to invest. If you want, you can sign after the contract expires. '
         },
-        Q6: {
-            title: 'How to play type A contract?',
-            item1: 'The principal of class a contract is frozen, and the income is issued every 5 seconds.',
-            item2: 'A1 contract: principal freezing days - 5 days, contract cumulative income 5% and daily income 1%',
-            item3: 'A2 contract: principal freezing days - 15 days, cumulative contract income 20%, daily income 1.33%',
-            item4: 'A3 contract: principal freezing days - 3 days, contract cumulative income 10%, daily income 3.33%',
-            item5: 'Contract A3 is closed by default, and the platform will automatically open if the balance of the fund pool falls by 10%. When the balance of the fund pool is restored and exceeds the amount when it was opened, it will be automatically closed.',
-        },
-        Q7: {
-            title: 'How to play type B contract?',
-            item1: 'The principal of type B contract will be issued together with the income, once every 5 seconds.',
-            item2: 'B1 contract: the period is 10 days, including 110% of the accumulated principal income and 11% of the daily income',
-            item3: 'B2 contract: the period is 20 days, including 130% of the accumulated principal income and 6.5% of the daily income',
-            item4: 'Class B contract is locked by default, and can only be unlocked by participating in class C contract. The cumulative investment amount of type B Contract shall not be higher than that of class C contract.',
-        },
-        Q8: {
-            title: 'How to play type C contract?',
-            item1: 'The freezing days of class C contract principal is 30 days, and the contract income is 20% - 50%. Once the investment is successful, the income will be released immediately.',
-            item2: 'The investment amount of category C contract is from 1 million to 100 thousand ais, which can be manually entered.',
-            item3: 'The return of the first round investment of contract C is 20%. After the contract expires, you can click the renew button, and the renewal amount is 100-100000 ais. The revenue of the first renewal is 30%.',
-            item4:'',
-            item5:'',
-            item6:'',
-        },
+        // Q6: {
+        // title:'Introduction to type A contract gameplay? ',
+        // item1:'A type contract freezes the principal, and the income is issued every 5 seconds. ',
+        // item2:'A1 contract: the number of days when the principal is frozen-5 days, the contract's cumulative return is 5%, and the daily return is 1%',
+        // item3:'A2 contract: Principal frozen days -15 days, contract cumulative return 20%, daily return 1.33%',
+        // item4:'A3 contract: the number of days when the principal is frozen-3 days, the cumulative return of the contract is 10%, and the daily return is 3.33%',
+        // item5:'The A3 contract is closed by default, and the platform fund pool balance is automatically opened when the balance of the platform fund pool drops by 10%, and the fund pool balance is restored and exceeds the amount when it was opened. ',
+        // },
+        // Q7: {
+        // title:'Introduction to type B contract play? ',
+        // item1:'Type B contract principal is issued along with the income, which is issued every 5 seconds. ',
+        // item2:'B1 contract: 10-day period, including 110% cumulative return on principal and 11% daily return',
+        // item3:'B2 contract: 20-day period, including 130% cumulative return on principal and 6.5% per day',
+        // item4:'Type B contract is locked by default, you need to participate in Type C contract to unlock it. The cumulative investment amount of type B contracts cannot be higher than the cumulative investment amount of type C contracts. ',
+        // },
+        // Q8: {
+        // title:'Introduction to C type contract gameplay? ',
+        // item1:'C type contract principal is frozen for 30 days, the contract income is 20%-50%, and the investment is successful, and the income will be issued once. ',
+        // item2:'C type contract investment amount of 100 to 100,000 TRX, can be entered manually. ',
+        // item3:'The return of the first round investment of the C contract is 20%. ',
+        // item4:'',
+        // item5:'',
+        // item6:'',
+        // },
         Q9: {
-            title: 'How to upgrade to VIP? What are the advantages of VIP?',
-            item1: 'Accounts with an accumulated investment amount of 500000 ais in class C contracts are automatically upgraded to VIP accounts, and 5% ais reward will be given to VIP accounts for each withdrawal of cash. If 10000 ais are withdrawn, 10500 ais are actually received. (excluding withdrawal of principal refund)'
+            title:'How to upgrade to VIP, what are the advantages of VIP? ',
+            item1:'Accounts with a cumulative investment amount of 500,000 AIS in category C contracts are automatically upgraded to VIP accounts, and VIP accounts will be given 5% AIS rewards for each withdrawal. If you withdraw 10,000 AIS, you will actually receive 10,500 AIS. (Excluding withdrawals for refund of principal)'
         },
-        Q10: {
-            title: 'How to activate my recommended links?',
-            item1: 'There are three types of contract investment: Class A, type B and type C. in order to activate the recommendation link, you need to make an investment in a class a contract with a minimum investment of 100trx'
+        Q10:{
+            title:'How to activate my referral link? ',
+            item1:'Contract investment is divided into three types: Type A, Type B, and Type C. In order to activate the referral link, you need to make an investment in a Type A contract. The minimum investment amount is 100 AIS'
         },
-        Q11: {
-            title: 'How can I get team rewards? ',
-            item1: 'To get the team bonus, you need to recommend new members to join the contract, take the percentage of the team member’s withdrawal amount each time, and recommend several valid accounts to get a few generations (users whose contracts expire all automatically become invalid accounts), up to 15 generations.A3 contract and Withdrawals that return the principal will not generate team rewards. ',
-            item2: 'reward cap: the cumulative maximum available team reward is 3.3 times of the total investment principal in type A contracts. For example, if your total investment principal in Type A contracts is 1000 ais, then your team rewards will stop issuing when 3300 ais is issued. If you want to continue to get team rewards, you need to increase the investment principal of Type A contracts. If there is no ongoing Type A contract on your account, you will not enjoy team rewards.'
+        Q11:{
+            title:'How can I get team rewards? ',
+            item1:'To get the team bonus, you need to recommend new members to join the contract, take the percentage of the team member’s withdrawal amount each time, and recommend several valid accounts for several generations (users whose contracts expire all automatically become invalid accounts), up to 15 generations . A3 contract and withdrawal of principal refund will not generate team rewards',
+            item2:'reward cap: the cumulative maximum available team reward is 3.3 times of the total investment principal in the A contract. For example, if your total investment principal in Type A contracts is 1000 AIS, then your team rewards will stop issuing when 3300 AIS is issued. If you want to continue to receive team rewards, you need to increase the investment principal of Type A contracts. When there is no ongoing Type A contract on your account, you will not enjoy team rewards.'
 
         },
-        Q12: {
-            title: 'How is the team reward calculated? ',
-            item1: 'Type A contract 10% for the first generation, 5% for the second generation, 6% for the third generation, 2% for the 4-10 generation, 3% for the 11-15 generation',
-            item2: 'Type B contract and Type C contract 1st generation 3%, 2nd generation 1%, 3rd generation 2%, 4-10th generation 0.2%, 11-15th generation 0.5%'
+        // Q12:{
+        // title:'How is the team reward calculated? ',
+        // item1:'Type A contract 10% for the first generation, 5% for the second generation, 6% for the third generation, 2% for the 4-10 generation, 3% for the 11-15 generation',
+        // item2:'Type B contract and Type C contract 1st generation 3%, 2nd generation 1%, 3rd generation 2%, 4-10th generation 0.2%, 11-15th generation 0.5%'
+        // },
+        // Q13: {
+        // title:'Related policies for withdrawal of profits, rewards, and principal? ',
+        // item1:'In order to prevent a run, each investment is a separate contract number, separate settlement and withdrawal, contract revenue, contract principal and team rewards are withdrawn separately, and each wallet address needs to wait 8 for each withdrawal You can withdraw again only after hours'
+        // },
+        Q14:{
+            title:'Is there any investment limit? ',
+            item1:'There is no limit on the total investment amount, but a single investment amount is limited. The investment amounts of Type A and Type B contracts cannot be filled out independently. You can only choose the following amounts in the drop-down menu to invest: 100AIS, 500AIS, and 1000AIS are available in the first 3 days, 5000AIS is available on the fourth day, and the fifth 10000AIS option will be available every day, 50,000 AIS option will be available on the 6th day, and 100,000 AIS option will be available on the 7th day. \n' +
+            'A single investment amount of 1 to 100,000 AIS for Type C contracts can be entered manually'
         },
-        Q13: {
-            title: 'Related policies for withdrawal of profits, rewards, and principal? ',
-            item1: 'In order to prevent a run, each investment is a separate contract number, separate settlement and withdrawal, contract income, contract principal and team rewards are withdrawn separately, each wallet address needs to wait 8 hours for each withdrawal Can withdraw again'
-        },
-        Q14: {
-            title: 'Is there any investment limit? ',
-            item1: 'There is no limit on the total investment amount, but a single investment amount is limited. Among them, the investment amount of Type A and Type B contracts cannot be filled out independently. You can only choose the following amounts in the drop-down menu to invest: 100trx, 500trx, and 1000trx are available in the first 3 days, 5000trx is available on the 4th day, and the 5th 10000trx option will be open every day, 50,000trx option will be open on the 6th day, and 100000trx option will be open on the 7th day. ',
-            item2: 'A single investment amount of 1 to 100,000 ais in category C contracts can be entered manually'
-        },
-        Q15: {
-            title: 'How long can this project run? ',
-            item1: 'aiswap.org will always operate. When the contract fund pool is lower than 100trx, the restart mechanism will be activated after 24 hours. After the restart mechanism is activated, the contract investment and undrawn amounts of all players will be automatically cleared. . But the team framework remains the same, and it can be activated by reinvesting, and a new round will start at that time'
+        Q15:{
+            title:'How long can this project run? ',
+            item1:'Aiswap.org This project will always operate. When the contract fund pool is below 100 AIS, the restart mechanism will be activated after 24 hours. After the restart mechanism is activated, the contract investment amount and undrawn amount of all players will be automatically cleared. . But the team framework remains the same, and it can be activated by reinvesting, and a new round will start at that time'
         }
     }
 }
