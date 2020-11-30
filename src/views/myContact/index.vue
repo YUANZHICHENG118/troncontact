@@ -7,7 +7,7 @@
                     :sm="12"
                     :md="12"
                     :lg="12"
-                    v-for="(item, index) in myContact"
+                    v-for="item in myContact"
                     v-if="parseInt(item[8]) > 0"
             >
                 <div class="myContactCard">
