@@ -92,7 +92,10 @@ export default {
       line-height: 24px;
       background: #313432;
       color: #fff;
-      border-color: #535454;
+      border-bottom-color: #535454;
+    }
+    .el-collapse-item__header.is-active{
+      border-bottom-color: transparent;
     }
     .el-collapse-item__wrap{
       border-bottom-color: #313432;
