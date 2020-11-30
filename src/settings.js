@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Tron contract',
+  title: 'aiswap',
 
   /**
    * @type {boolean} true | false
