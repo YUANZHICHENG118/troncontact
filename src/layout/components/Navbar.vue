@@ -96,6 +96,7 @@ export default {
       }
       .logoTextImg {
         height: 16px;
+        margin-left:10px;
       }
     }
     .hamburger-container {

@@ -4,8 +4,9 @@
   </div>
 </template>
 <style scoped lang="scss">
+  @import "@/styles/variables";
   .assetItem {
-    background: #ffffff;
+    background: $menuHover;
     box-shadow: 4px 0px 8px 1px rgba(0, 0, 0, 0.06);
     border-radius: 14px;
     padding: 30px;
@@ -36,6 +37,7 @@
       display: flex;
       align-items: center;
       font-size: 16px;
+      color: $menuActiveText;
       img {
         margin-right: 10px;
         width: 25px;
@@ -55,8 +57,13 @@
         font-weight: 600;
         color: #4c4c4c;
         align-items: center;
+        span{
+          &:last-child{
+            color: $menuText;
+          }
+        }
         .label {
-          color: #666666;
+          color: #B3B3B3;
           flex: 1;
         }
       }

@@ -1,24 +1,24 @@
 @import "./variables";
 .contactCard {
-  background: #FFFFFF;
+  background: $menuHover;
   box-shadow: 0px 10px 31px -6px rgba(34, 166, 108, 0.09);
   border-radius: 14px;
-  border: 1px solid #EBEBEB;
-  padding: 20px 7%;
+  //border: 1px solid #EBEBEB;
+  padding: 36px 7%;
   .profit{
     text-align: center;
     .desc{
       display: flex;
       flex-direction: column;
       font-weight: 400;
-      color: #616161;
+      color: #fff;
       font-size: 14px;
       line-height: 26px;
     }
     .percent{
       font-size: 16px;
       font-weight: 500;
-      color: #666666;
+      color: #CDCDCD;
       span{
         color: $menuActiveText;
         font-size: 78px;
@@ -39,8 +39,10 @@
       .el-input__inner{
         font-size: 14px;
         font-weight: 500;
-        color: #000000;
+        color: #fff;
         text-align: center;
+        background-color: transparent;
+        border-color: #cccccc;
       }
       .suffix{
         font-size: 12px;
@@ -63,7 +65,7 @@
     }
     .tit {
       font-weight: 500;
-      color: #666666;
+      color: #fff;
       font-size: 14px;
     }
   }

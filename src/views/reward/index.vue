@@ -8,7 +8,7 @@
                         <div class="tit">{{$t('teamReward.available')}}</div>
                         <div class="val"><span>{{withdrawnReferalFunds}}</span>AIS</div>
                         <!--提取-->
-                        <el-button  type="primary" style="width:85%;" :loading="loading" :disabled="chkReward()||loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">{{$t('myContact.get')}}
+                        <el-button  type="primary" style="width:85%; margin-top:1rem" :loading="loading" :disabled="chkReward()||loading||parseInt(this.withdrawnReferalFunds)===0" @click="withdraw">{{$t('myContact.get')}}
                         </el-button>
                     </div>
                 </el-col>

@@ -16,12 +16,12 @@
     line-height: 35px;
     .label {
       font-weight: 400;
-      color: #717171;
+      color: #B3B3B3;
 
     }
     .value {
       font-weight: 600;
-      color: rgba(77, 77, 77, 0.85);
+      color: $menuText;
     }
 
   }
@@ -63,10 +63,10 @@
 }
 
 .rewardItem {
-  background: #ffffff;
+  background: #313432;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
   border-radius: 14px;
-  border: 1px solid #ebebeb;
+  //border: 1px solid #ebebeb;
   height: 187px;
   box-sizing: border-box;
 }
@@ -124,10 +124,10 @@
     font-weight: 600;
     font-family: PingFangTC-Semibold, PingFangTC;
     .tit {
-      color: #4d4d4d;
+      color: $menuText;
     }
     .val {
-      color: #666666;
+      color: $menuText;
       margin-top: 14px;
       span {
         color: $menuActiveText;

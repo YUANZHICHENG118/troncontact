@@ -81,16 +81,27 @@ export default {
   .question-box{
     margin: 30px 0;
     //collapse
+    .el-collapse{
+      border-color: #535454;
+    }
     .el-collapse-item__header{
       padding: 15px 3%;
       font-weight: bold;
       font-size: 15px;
       height: auto;
       line-height: 24px;
+      background: #313432;
+      color: #fff;
+      border-color: #535454;
+    }
+    .el-collapse-item__wrap{
+      border-bottom-color: #313432;
+      background-color: #313432;
     }
     .el-collapse-item__content{
       padding: 0 3% 10px;
       font-size: 14px;
+      color:#aaabaa;
     }
   }
 </style>

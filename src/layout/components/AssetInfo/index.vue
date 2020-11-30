@@ -62,7 +62,7 @@
         </asset-item>
         <asset-item v-if="showRefer">
             <!--推荐链接-->
-            <h2><img src="@/assets/assetImgs/star.png" alt="">{{$t('account.inviteData.title')}}</h2>
+            <h2 class=""><img src="@/assets/assetImgs/star.png" alt="">{{$t('account.inviteData.title')}}</h2>
             <div class="invite">
                <input type="text" :value="`${host}/#/contact?ref=${tron.account.substring(0,5)+'...'}`">
             </div>
