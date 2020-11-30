@@ -2,8 +2,8 @@
   <div class="navbar">
     <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar"/>
     <div class="logoWrap">
-      <img src="@/assets/logo.png" class="logoImg" alt=""/>
-      <img  src="@/assets/logoText.png" class="logoTextImg" alt=""/>
+     <a href="/"> <img src="@/assets/logo.png" class="logoImg" alt=""/></a>
+      <a href="/"> <img  src="@/assets/logoText.png" class="logoTextImg" alt=""/></a>
     </div>
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click" @command="handleCommand">

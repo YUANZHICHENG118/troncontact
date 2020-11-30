@@ -85,7 +85,7 @@ export default {
         },
         Q2: {
             title:'How do I get AIS? ',
-            item1:'You can buy TRX on a cryptocurrency exchange and then exchange for AIS: or use the decentralized exchange Justswap to exchange for AIS. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposit)!'
+            item1:'You can buy AIS on a cryptocurrency exchange and then exchange for AIS: or use the decentralized exchange Justswap to exchange for AIS. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposit)!'
         },
         Q3: {
             title:'Why is Aiswap.org trustworthy? ',
@@ -99,30 +99,30 @@ export default {
             title:'What investment types are available? ',
             item1:'On the aiswap.org platform, you can choose A, B, and C three types of contracts to invest. If you want, you can sign after the contract expires. '
         },
-        // Q6: {
-        // title:'Introduction to type A contract gameplay? ',
-        // item1:'A type contract freezes the principal, and the income is issued every 5 seconds. ',
-        // item2:'A1 contract: the number of days when the principal is frozen-5 days, the contract's cumulative return is 5%, and the daily return is 1%',
-        // item3:'A2 contract: Principal frozen days -15 days, contract cumulative return 20%, daily return 1.33%',
-        // item4:'A3 contract: the number of days when the principal is frozen-3 days, the cumulative return of the contract is 10%, and the daily return is 3.33%',
-        // item5:'The A3 contract is closed by default, and the platform fund pool balance is automatically opened when the balance of the platform fund pool drops by 10%, and the fund pool balance is restored and exceeds the amount when it was opened. ',
-        // },
-        // Q7: {
-        // title:'Introduction to type B contract play? ',
-        // item1:'Type B contract principal is issued along with the income, which is issued every 5 seconds. ',
-        // item2:'B1 contract: 10-day period, including 110% cumulative return on principal and 11% daily return',
-        // item3:'B2 contract: 20-day period, including 130% cumulative return on principal and 6.5% per day',
-        // item4:'Type B contract is locked by default, you need to participate in Type C contract to unlock it. The cumulative investment amount of type B contracts cannot be higher than the cumulative investment amount of type C contracts. ',
-        // },
-        // Q8: {
-        // title:'Introduction to C type contract gameplay? ',
-        // item1:'C type contract principal is frozen for 30 days, the contract income is 20%-50%, and the investment is successful, and the income will be issued once. ',
-        // item2:'C type contract investment amount of 100 to 100,000 TRX, can be entered manually. ',
-        // item3:'The return of the first round investment of the C contract is 20%. ',
-        // item4:'',
-        // item5:'',
-        // item6:'',
-        // },
+        Q6: {
+        title:'Introduction to type A contract gameplay? ',
+        item1:'A type contract freezes the principal, and the income is issued every 5 seconds. ',
+        item2:'A1 contract: the number of days when the principal is frozen-5 days, the contracts cumulative return is 5%, and the daily return is 1%',
+        item3:'A2 contract: Principal frozen days -15 days, contract cumulative return 20%, daily return 1.33%',
+        item4:'A3 contract: the number of days when the principal is frozen-3 days, the cumulative return of the contract is 10%, and the daily return is 3.33%',
+        item5:'The A3 contract is closed by default, and the platform fund pool balance is automatically opened when the balance of the platform fund pool drops by 10%, and the fund pool balance is restored and exceeds the amount when it was opened. ',
+        },
+        Q7: {
+        title:'Introduction to type B contract play? ',
+        item1:'Type B contract principal is issued along with the income, which is issued every 5 seconds. ',
+        item2:'B1 contract: 10-day period, including 110% cumulative return on principal and 11% daily return',
+        item3:'B2 contract: 20-day period, including 130% cumulative return on principal and 6.5% per day',
+        item4:'Type B contract is locked by default, you need to participate in Type C contract to unlock it. The cumulative investment amount of type B contracts cannot be higher than the cumulative investment amount of type C contracts. ',
+        },
+        Q8: {
+        title:'Introduction to C type contract gameplay? ',
+        item1:'C type contract principal is frozen for 30 days, the contract income is 20%-50%, and the investment is successful, and the income will be issued once. ',
+        item2:'C type contract investment amount of 100 to 100,000 AIS, can be entered manually. ',
+        item3:'The return of the first round investment of the C contract is 20%. ',
+        item4:'',
+        item5:'',
+        item6:'',
+        },
         Q9: {
             title:'How to upgrade to VIP, what are the advantages of VIP? ',
             item1:'Accounts with a cumulative investment amount of 500,000 AIS in category C contracts are automatically upgraded to VIP accounts, and VIP accounts will be given 5% AIS rewards for each withdrawal. If you withdraw 10,000 AIS, you will actually receive 10,500 AIS. (Excluding withdrawals for refund of principal)'
