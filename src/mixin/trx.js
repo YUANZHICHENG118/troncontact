@@ -11,7 +11,7 @@ export default {
             contract: undefined,
             tokenContract: undefined,
             ref: undefined,
-            defRef: 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb',
+            defRef: 'TJgT5hFVFyeTNmRV4eK4y4DPDNf4cjmG5B',
             host: "https://www.aiswap.org",
             TABI: [{
                 "outputs": [{"type": "string"}],
