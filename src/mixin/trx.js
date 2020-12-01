@@ -10,7 +10,7 @@ export default {
                 symbol: 'AIS',
                 decimals: 18
             },
-            token_address: 'TJgT5hFVFyeTNmRV4eK4y4DPDNf4cjmG5B',
+            token_address: 'TRZPqchWTRUzXNGNWPoAqLB7H8J2j3saf8',
             contract_address: 'TXuEv1rDq92sRW3fcV2GAKEc5T2hmDx1TD',
             contract: undefined,
             tokenContract: undefined,
@@ -118,180 +118,231 @@ export default {
                 }, {"name": "value", "type": "uint256"}], "name": "Approval", "type": "Event"
             }],
             ABI: [{
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
                 "inputs": [{"name": "player", "type": "address"}],
                 "name": "referRewardMaps",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
+                "inputs": [],
                 "name": "MINIMAL_DEPOSIT",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
                 "inputs": [{"name": "_player", "type": "address"}, {"name": "depositId", "type": "uint256"}],
                 "name": "outputReward",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
+                "inputs": [],
                 "name": "MAXIMAL_DEPOSIT",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "bool"}],
                 "constant": true,
+                "inputs": [],
                 "name": "checktest",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "bool"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
+                "inputs": [],
                 "name": "decimals",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
+                "constant": false,
                 "inputs": [{"name": "depositId", "type": "uint256"}],
                 "name": "takeAwayDeposit",
-                "stateMutability": "Nonpayable",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
             }, {
+                "constant": false,
                 "inputs": [{"name": "ref", "type": "address"}, {
                     "name": "modelType",
                     "type": "uint8"
                 }, {"name": "payType", "type": "uint8"}, {"name": "depositAmount", "type": "uint256"}],
                 "name": "makeDeposit",
-                "stateMutability": "Nonpayable",
-                "type": "Function"
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
+                "constant": false,
+                "inputs": [],
                 "name": "withdrawReferReward",
-                "stateMutability": "Nonpayable",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
+                "constant": false,
                 "inputs": [{"name": "depositId", "type": "uint256"}],
                 "name": "withdrawReward",
-                "stateMutability": "Nonpayable",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
             }, {
+                "constant": true,
+                "inputs": [],
+                "name": "a3Valve",
                 "outputs": [{"name": "previousTotalSupply", "type": "uint256"}, {
                     "name": "opening",
                     "type": "bool"
                 }, {"name": "previousRecordTime", "type": "uint256"}],
-                "constant": true,
-                "name": "a3Valve",
-                "stateMutability": "View",
-                "type": "Function"
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
+                "constant": false,
                 "inputs": [{"name": "tokenAddress", "type": "address"}],
                 "name": "changeToken",
-                "stateMutability": "Nonpayable",
-                "type": "Function"
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
             }, {
-                "outputs": [{"name": "stats", "type": "uint256[5]"}],
                 "constant": true,
+                "inputs": [],
                 "name": "getGlobalStats",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "stats", "type": "uint256[5]"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
+                "constant": false,
+                "inputs": [],
                 "name": "renounceOwnership",
-                "stateMutability": "Nonpayable",
-                "type": "Function"
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
             }, {
-                "outputs": [{"name": "stats", "type": "uint256[14]"}],
                 "constant": true,
                 "inputs": [{"name": "_player", "type": "address"}],
                 "name": "getPersonalStats",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "stats", "type": "uint256[14]"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "bool"}],
                 "constant": true,
+                "inputs": [],
                 "name": "getA3Status",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "bool"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "address"}],
                 "constant": true,
+                "inputs": [],
                 "name": "erc20Token",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "address"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "address"}],
                 "constant": true,
+                "inputs": [],
                 "name": "owner",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "address"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "bool"}],
                 "constant": true,
+                "inputs": [],
                 "name": "isOwner",
-                "stateMutability": "View",
-                "type": "Function"
-            }, {
-                "outputs": [{"type": "uint256"}],
+                "outputs": [{"name": "", "type": "bool"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },  {
                 "constant": true,
-                "inputs": [{"type": "address"}],
+                "inputs": [{"name": "", "type": "address"}],
                 "name": "versionMaps",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
+                "inputs": [],
                 "name": "playersCount",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
+                "inputs": [],
                 "name": "depositsCounter",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
+                "inputs": [],
                 "name": "getDuration",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"name": "withdrawTime", "type": "uint256"}],
                 "constant": true,
                 "inputs": [{"name": "_player", "type": "address"}],
                 "name": "getLastWithdrawTime",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "withdrawTime", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
+                "inputs": [],
                 "name": "clearStartTime",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "uint256"}],
                 "constant": true,
+                "inputs": [],
                 "name": "DESTORY_LIMIT",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "inputs": [{"name": "_to", "type": "address"}],
-                "name": "transferAllto",
-                "stateMutability": "Nonpayable",
-                "type": "Function"
-            }, {
-                "outputs": [{"name": "teamTotalLimit", "type": "uint256"}],
                 "constant": true,
                 "inputs": [{"name": "_player", "type": "address"}],
                 "name": "_getTeamTotalLimit",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "teamTotalLimit", "type": "uint256"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
+                "constant": true,
+                "inputs": [{"name": "", "type": "address"}],
+                "name": "players",
                 "outputs": [{"name": "referrer", "type": "address"}, {
                     "name": "linkEnable",
                     "type": "bool"
@@ -308,72 +359,108 @@ export default {
                     "name": "playerWithdrawAmount",
                     "type": "uint256"
                 }, {"name": "teamPerformance", "type": "uint256"}, {"name": "lastWithdrawTime", "type": "uint256"}],
-                "constant": true,
-                "inputs": [{"type": "address"}],
-                "name": "players",
-                "stateMutability": "View",
-                "type": "Function"
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "outputs": [{"type": "address"}],
                 "constant": true,
+                "inputs": [],
                 "name": "AISImpl",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "", "type": "address"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
+                "constant": false,
                 "inputs": [{"name": "newOwner", "type": "address"}],
                 "name": "transferOwnership",
-                "stateMutability": "Nonpayable",
-                "type": "Function"
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
             }, {
-                "outputs": [{"name": "deposits", "type": "uint256[100]"}],
                 "constant": true,
                 "inputs": [{"name": "_player", "type": "address"}, {"name": "page", "type": "uint256"}],
                 "name": "getDeposits",
-                "stateMutability": "View",
-                "type": "Function"
+                "outputs": [{"name": "deposits", "type": "uint256[100]"}],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
             }, {
-                "payable": true,
                 "inputs": [{"name": "tokenAddress", "type": "address"}],
-                "stateMutability": "Payable",
-                "type": "Constructor"
+                "payable": true,
+                "stateMutability": "payable",
+                "type": "constructor"
             }, {
-                "inputs": [{"name": "depositId", "type": "uint256"}, {
+                "anonymous": false,
+                "inputs": [{"indexed": false, "name": "depositId", "type": "uint256"}, {
+                    "indexed": false,
                     "name": "account",
                     "type": "address"
-                }, {"name": "referrer", "type": "address"}, {"name": "modelType", "type": "uint8"}, {
-                    "name": "amount",
-                    "type": "uint256"
-                }], "name": "NewDeposit", "type": "Event"
-            }, {
-                "inputs": [{"name": "account", "type": "address"}, {
-                    "name": "originalAmount",
-                    "type": "uint256"
-                }, {"name": "level_percent", "type": "uint256"}, {"name": "amount", "type": "uint256"}],
-                "name": "Withdraw",
-                "type": "Event"
-            }, {
-                "inputs": [{"name": "player", "type": "address"}, {"name": "amount", "type": "uint256"}],
-                "name": "TransferReferralReward",
-                "type": "Event"
-            }, {
-                "inputs": [{"name": "ref", "type": "address"}, {
-                    "name": "player",
-                    "type": "address"
-                }, {"name": "_amount", "type": "uint256"}, {"name": "percent", "type": "uint256"}, {
+                }, {"indexed": false, "name": "referrer", "type": "address"}, {
+                    "indexed": false,
                     "name": "modelType",
                     "type": "uint8"
-                }, {"name": "refReward", "type": "uint256"}], "name": "AllocateReferralReward", "type": "Event"
+                }, {"indexed": false, "name": "amount", "type": "uint256"}],
+                "name": "NewDeposit",
+                "type": "event"
             }, {
-                "inputs": [{"name": "account", "type": "address"}, {
+                "anonymous": false,
+                "inputs": [{"indexed": false, "name": "account", "type": "address"}, {
+                    "indexed": false,
+                    "name": "originalAmount",
+                    "type": "uint256"
+                }, {"indexed": false, "name": "level_percent", "type": "uint256"}, {
+                    "indexed": false,
+                    "name": "amount",
+                    "type": "uint256"
+                }],
+                "name": "Withdraw",
+                "type": "event"
+            }, {
+                "anonymous": false,
+                "inputs": [{"indexed": false, "name": "player", "type": "address"}, {
+                    "indexed": false,
+                    "name": "amount",
+                    "type": "uint256"
+                }],
+                "name": "TransferReferralReward",
+                "type": "event"
+            }, {
+                "anonymous": false,
+                "inputs": [{"indexed": false, "name": "ref", "type": "address"}, {
+                    "indexed": false,
+                    "name": "player",
+                    "type": "address"
+                }, {"indexed": false, "name": "_amount", "type": "uint256"}, {
+                    "indexed": false,
+                    "name": "percent",
+                    "type": "uint256"
+                }, {"indexed": false, "name": "modelType", "type": "uint8"}, {
+                    "indexed": false,
+                    "name": "refReward",
+                    "type": "uint256"
+                }],
+                "name": "AllocateReferralReward",
+                "type": "event"
+            }, {
+                "anonymous": false,
+                "inputs": [{"indexed": false, "name": "account", "type": "address"}, {
+                    "indexed": false,
                     "name": "depositType",
                     "type": "uint8"
-                }, {"name": "amount", "type": "uint256"}], "name": "TakeAwayDeposit", "type": "Event"
+                }, {"indexed": false, "name": "amount", "type": "uint256"}],
+                "name": "TakeAwayDeposit",
+                "type": "event"
             }, {
+                "anonymous": false,
                 "inputs": [{"indexed": true, "name": "previousOwner", "type": "address"}, {
                     "indexed": true,
                     "name": "newOwner",
                     "type": "address"
-                }], "name": "OwnershipTransferred", "type": "Event"
+                }],
+                "name": "OwnershipTransferred",
+                "type": "event"
             }]
 
         }
