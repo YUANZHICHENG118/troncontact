@@ -6,7 +6,7 @@ export default {
                 auth: false,
                 account: ''
             },
-            token_address: 'TWE9MefAtXMMsoTBk5ahSogCsdMeWCGcV8',
+            token_address: 'TRZPqchWTRUzXNGNWPoAqLB7H8J2j3saf8',
             contract_address: 'TFaRS7rEDECYmKsfCH9HGqG4Yqh9jSB8sd',
             contract: undefined,
             tokenContract: undefined,
