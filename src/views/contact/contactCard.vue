@@ -2,7 +2,7 @@
     <div class="contactCard">
         <div class="head"><b>{{data.title}}</b><span>{{$t('sidebar.contact')}}</span></div>
         <div class="profit">
-            <div class="percent"><span style="font-size:58px ">{{data.pid===5?'20-50':data.rate}}</span>%</div>
+            <div class="percent"><span style="font-size:58px ">{{data.pid===5?'20':data.rate}}</span>%</div>
             <div class="desc">
                 <span>{{data.d}} days</span>
                 <!--随本金发放 锁定$-->
