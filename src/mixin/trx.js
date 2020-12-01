@@ -10,7 +10,7 @@ export default {
                 symbol: 'AIS',
                 decimals: 18
             },
-            token_address: 'TRZPqchWTRUzXNGNWPoAqLB7H8J2j3saf8',
+            token_address: 'TJgT5hFVFyeTNmRV4eK4y4DPDNf4cjmG5B',
             contract_address: 'TXuEv1rDq92sRW3fcV2GAKEc5T2hmDx1TD',
             contract: undefined,
             tokenContract: undefined,
