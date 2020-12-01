@@ -20,7 +20,7 @@
                         </div>
                         <div class="invite-con">
                             <div class="invite-link">
-                                <input type="text" :value="`${host}/#/contact?ref=${tron.account.substring(0,15)+'...'}`">
+                                <input style="color: #fff" type="text" :value="`${host}/#/contact?ref=${tron.account.substring(0,15)+'...'}`">
                             </div>
                             <el-button
                                     type="primary"
