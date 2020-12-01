@@ -47,7 +47,7 @@
                 <!--全球会员数-->
                 <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g3}} </span></li>
                 <!--全球会员数-->
-                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TFaRS7rEDECYmKsfCH9HGqG4Yqh9jSB8sd/code" target="_blank">AISwap</a> </span></li>
+                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TXuEv1rDq92sRW3fcV2GAKEc5T2hmDx1TD/code" target="_blank">AISwap</a> </span></li>
 
                 <!--审计报告-->
                 <!--<li><span class="label"></span> <span><a style="color: blueviolet" href="aiswap.pdf" target="_blank">{{$t('global.report')}}</a> </span></li>-->

@@ -11,7 +11,7 @@ export default {
                 decimals: 18
             },
             token_address: 'TRZPqchWTRUzXNGNWPoAqLB7H8J2j3saf8',
-            contract_address: 'TJp4dg6fWNGfih62uSxEF63Cuu2Aqm9zXy',
+            contract_address: 'TXuEv1rDq92sRW3fcV2GAKEc5T2hmDx1TD',
             contract: undefined,
             tokenContract: undefined,
             ref: undefined,
