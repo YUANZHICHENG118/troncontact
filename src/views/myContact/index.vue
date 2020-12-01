@@ -21,7 +21,7 @@
                         <div class="my-contact-card-list-item">
                             <!--存款金额-->
                             <span class="left">{{$t('myContact.amount')}}</span>
-                            <span class="right">{{ parseFloat(item[1]) / 1000000 }}AIS</span>
+                            <span class="right">{{ parseFloat(item[1]) / Math.pow(10,token.decimals) }}AIS</span>
                         </div>
                         <div class="my-contact-card-list-item">
                             <!--本期利润-->
@@ -39,7 +39,7 @@
                         <div class="my-contact-card-list-item">
                             <!--获得收益-->
                             <span class="left">{{$t('myContact.gain')}}</span>
-                            <span class="right">{{ (parseFloat(item[1]) / 1000000) *(parseFloat(item[3]) / 100/100) }}AIS</span>
+                            <span class="right">{{ (parseFloat(item[1]) / Math.pow(10,token.decimals)) *(parseFloat(item[3]) / 100/100) }}AIS</span>
                         </div>
                         <div class="my-contact-card-list-item">
                             <!--解冻日期-->
@@ -157,7 +157,6 @@
         methods: {
             async getOutputReward(pid) {
                 const d = await this.contract.outputReward(this.tron.account, pid).call()
-                //this.$set(this.reward, 'pid'+pid,  parseFloat(d) / 1000000)
                 return d
             },
             chkReward() {

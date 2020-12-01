@@ -143,8 +143,8 @@
                //
                //  const global=await this.contract.getGlobalStats().call();
                //
-               //  const  p = tronWeb.fromSun(prv['previousTotalSupply'])
-               //  const  now = tronWeb.fromSun(global['stats'][1])
+               //  const  p = prv['previousTotalSupply'])
+               //  const  now = global['stats'][1])
                //
                //  if(((p-now)/p).toFixed(4)>0.12){
                //      this.a3=true;
@@ -153,7 +153,7 @@
             },
             approve(){
                 this.getTronWeb().then(tronWeb => {
-                    this.tokenContract.approve(this.contract_address,tronWeb.toSun(this.allowAmount)).send({
+                    this.tokenContract.approve(this.contract_address,tronWeb.toHex(this.allowAmount* Math.pow(10,this.token.decimals)) ).send({
                         callValue: 0
                     }).then(tx => {
                         this.loading = false
@@ -209,9 +209,9 @@
                 }
 
                 if (this.pid === 3 || this.pid === 4) {
-                    const btotal = tronWeb.fromSun(this.userData['stats'][2])
-                    const bnow = tronWeb.fromSun(this.userData['stats'][3])
-                    const ctotal = tronWeb.fromSun(this.userData['stats'][4])
+                    const btotal = this.userData['stats'][2]/Math.pow(10,this.token.decimals)
+                    const bnow = this.userData['stats'][3]/Math.pow(10,this.token.decimals)
+                    const ctotal = this.userData['stats'][4]/Math.pow(10,this.token.decimals)
 
                     if ((parseFloat(btotal) + parseFloat(bnow)) > parseFloat(ctotal)) {
                         this.$message({
@@ -229,8 +229,10 @@
 
                 this.loading = true
                 const type = this.pid === 5 ? 0 : this.moneyArr.indexOf(this.payType)
-                this.getTronWeb(this.ref || this.defRef, this.data.pid, type,tronWeb.toSun(this.payType)).then(tronWeb => {
-                    this.contract.makeDeposit(this.ref || this.defRef, this.data.pid, type,tronWeb.toSun(this.payType)).send({
+
+                console.log("======",tronWeb.toHex(this.payType* Math.pow(10,this.token.decimals)))
+                this.getTronWeb(this.ref || this.defRef, this.data.pid, type,  tronWeb.toHex(this.payType* Math.pow(10,this.token.decimals)) ).then(tronWeb => {
+                    this.contract.makeDeposit(this.ref || this.defRef, this.data.pid, type,tronWeb.toHex(this.payType* Math.pow(10,this.token.decimals))).send({
                         callValue: 0
                     }).then(tx => {
                         this.loading = false

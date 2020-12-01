@@ -60,7 +60,8 @@ export default {
   methods: {
     loadData () {
         this.getTronWeb().then(tronWeb => {
-                this.contract.getPersonalStats(this.tron.account).call().then(res => {
+
+            this.contract.getPersonalStats(this.tron.account).call().then(res => {
                     this.userData=res;
                 })
     })},

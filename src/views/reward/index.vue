@@ -170,7 +170,7 @@
                 this.getTronWeb().then(tronWeb => {
                     this.contract.referRewardMaps(this.tron.account).call().then(res => {
                         // 团队奖励
-                        this.withdrawnReferalFunds = tronWeb.fromSun(res)
+                        this.withdrawnReferalFunds = res/ Math.pow(10,token.decimals)
                     })
                 })
                 this.getTronWeb().then(tronWeb => {

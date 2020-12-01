@@ -155,23 +155,23 @@
                 })
                 this.getTronWeb().then(tronWeb => {
                     this.contract.getPersonalStats(this.tron.account).call().then(res => {
-                        this.stats0 = tronWeb.fromSun(res['stats'][0])
-                        this.stats1 = tronWeb.fromSun(res['stats'][1])
-                        this.stats2 = tronWeb.fromSun(res['stats'][2])
-                        this.stats3 = tronWeb.fromSun(res['stats'][3])
-                        this.stats4 = tronWeb.fromSun(res['stats'][4])
+                        this.stats0 = res['stats'][0]/Math.pow(10,this.token.decimals)
+                        this.stats1 = res['stats'][1]/Math.pow(10,this.token.decimals)
+                        this.stats2 = res['stats'][2]/Math.pow(10,this.token.decimals)
+                        this.stats3 = res['stats'][3]/Math.pow(10,this.token.decimals)
+                        this.stats4 = res['stats'][4]/Math.pow(10,this.token.decimals)
 
-                        this.stats5 = tronWeb.fromSun(res['stats'][5])
+                        this.stats5 = res['stats'][5]/Math.pow(10,this.token.decimals)
 
-                        this.stats6 = tronWeb.fromSun(res['stats'][6])
-                        this.stats7 = tronWeb.fromSun(res['stats'][7])
+                        this.stats6 = res['stats'][6]/Math.pow(10,this.token.decimals)
+                        this.stats7 = res['stats'][7]/Math.pow(10,this.token.decimals)
                         this.stats8 = parseInt(res['stats'][8])
                         this.stats9 = parseInt(res['stats'][9])
 
                         this.stats10 = parseInt(res['stats'][10])
-                        this.stats11 = tronWeb.fromSun(res['stats'][11])
-                        this.stats12 = tronWeb.fromSun(res['stats'][12])
-                        this.stats13 = tronWeb.fromSun(res['stats'][13])
+                        this.stats11 = res['stats'][11]/Math.pow(10,this.token.decimals)
+                        this.stats12 = res['stats'][12]/Math.pow(10,this.token.decimals)
+                        this.stats13 = res['stats'][13]/Math.pow(10,this.token.decimals)
 
 
                     })
@@ -179,9 +179,9 @@
 
                     // 全网数量
                     this.contract.getGlobalStats().call().then(res => {
-                        this.g0 = tronWeb.fromSun(res['stats'][0])
-                        this.g1 = tronWeb.fromSun(res['stats'][1])
-                        this.g2 = tronWeb.fromSun(res['stats'][2])
+                        this.g0 = res['stats'][0]/Math.pow(10,this.token.decimals)
+                        this.g1 = res['stats'][1]/Math.pow(10,this.token.decimals)
+                        this.g2 = res['stats'][2]/Math.pow(10,this.token.decimals)
                         this.g3 = parseInt(res['stats'][3])
                         this.g4 = parseInt(res['stats'][4])
 
