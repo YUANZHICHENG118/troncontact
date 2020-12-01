@@ -47,10 +47,10 @@
                 <!--全球会员数-->
                 <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g3}} </span></li>
                 <!--全球会员数-->
-                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TRZPqchWTRUzXNGNWPoAqLB7H8J2j3saf8/code" target="_blank">AISwap</a> </span></li>
+                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TFaRS7rEDECYmKsfCH9HGqG4Yqh9jSB8sd/code" target="_blank">AISwap</a> </span></li>
 
                 <!--审计报告-->
-                <li><span class="label"></span> <span><a style="color: blueviolet" href="TronContract.pdf" target="_blank">{{$t('global.report')}}</a> </span></li>
+                <li><span class="label"></span> <span><a style="color: blueviolet" href="aiswap.pdf" target="_blank">{{$t('global.report')}}</a> </span></li>
 
                 <!--重启倒计时-->
                 <li v-if="g4>0"><span class="label">{{$t('account.networkData.Restart')}}</span> <span> <Countdown
