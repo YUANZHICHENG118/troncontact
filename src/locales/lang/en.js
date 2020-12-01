@@ -105,7 +105,7 @@ export default {
         item2:'A1 contract: the number of days when the principal is frozen-5 days, the contracts cumulative return is 5%, and the daily return is 1%',
         item3:'A2 contract: Principal frozen days -15 days, contract cumulative return 20%, daily return 1.33%',
         item4:'A3 contract: the number of days when the principal is frozen-3 days, the cumulative return of the contract is 10%, and the daily return is 3.33%',
-        item5:'The A3 contract is closed by default, and the platform fund pool balance is automatically opened when the balance of the platform fund pool drops by 10%, and the fund pool balance is restored and exceeds the amount when it was opened. ',
+        item5:'A3 contract is closed by default, and the platform fund pool balance will be automatically opened when it falls by 10% compared with 0:00 on the same day, and it will be automatically closed after the amount of fund pool balance is recovered and increased by 20%. ',
         },
         Q7: {
         title:'Introduction to type B contract play? ',

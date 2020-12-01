@@ -153,7 +153,6 @@
             },
             approve(){
                 this.getTronWeb().then(tronWeb => {
-                    debugger
                     this.tokenContract.approve(this.contract_address,tronWeb.toHex(this.allowAmount* Math.pow(10,this.token.decimals)) ).send({
                         callValue: 0
                     }).then(tx => {
