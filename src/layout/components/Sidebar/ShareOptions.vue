@@ -4,7 +4,7 @@
     <a href="https://twitter.com/troncontract1" target="_blank"><img src="@/assets/twitter.png" alt=""></a>
     <a href="https://t.me/troncontractcc" target="_blank"><img src="@/assets/telegram.png" alt=""></a>
     <a href="https://t.me/troncontractru" target="_blank"><img src="@/assets/telegram.png" alt=""></a>
-    <a href="https://www.instagram.com/troncontractcc" target="_blank"><img src="@/assets/instagram.svg" alt=""></a>
+    <a href="https://www.instagram.com/troncontractcc" target="_blank"><img src="@/assets/instagram.png" alt=""></a>
   </div>
 
 </template>

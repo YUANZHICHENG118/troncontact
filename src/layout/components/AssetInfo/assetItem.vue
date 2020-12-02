@@ -4,6 +4,7 @@
   </div>
 </template>
 <style scoped lang="scss">
+  @import "~@/styles/variables.scss";
   .assetItem {
     background: #ffffff;
     box-shadow: 4px 0px 8px 1px rgba(0, 0, 0, 0.06);
@@ -36,9 +37,10 @@
       display: flex;
       align-items: center;
       font-size: 16px;
+      color: $menuActiveText;
       img {
         margin-right: 10px;
-        width: 25px;
+        width: 20px;
       }
     }
     ul {
