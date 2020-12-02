@@ -155,5 +155,8 @@ export default {
             title: 'How long can this project run? ',
             item1: 'Trontract.cc will always operate. When the contract fund pool is lower than 100trx, the restart mechanism will be activated after 24 hours. After the restart mechanism is activated, the contract investment and undrawn amounts of all players will be automatically cleared. . But the team framework remains the same, and it can be activated by reinvesting, and a new round will start at that time'
         }
+    },
+    rankList:{
+        title:'Ranking list'
     }
 }

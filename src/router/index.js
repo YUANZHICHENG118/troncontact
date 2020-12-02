@@ -4,6 +4,8 @@ import BookIcon from '@/icons/book.png'
 import ClockIcon from '@/icons/clock.png'
 import MoneyIcon from '@/icons/money.png'
 import WalletIcon from '@/icons/wallet.png'
+import RankIcon from '@/icons/rank.png'
+
 Vue.use(Router)
 
 /* Layout */
@@ -29,18 +31,24 @@ export const constantRoutes = [
       path: 'contact',
       name: 'contact',
       component: () => import('@/views/contact/index'),
-      meta: { title:'sidebar.contact', icon: ClockIcon }
-    },{
+      meta: { title: 'sidebar.contact', icon: ClockIcon }
+    }, {
       path: 'mycontact',
       name: 'mycontact',
       component: () => import('@/views/myContact/index'),
       meta: { title: 'sidebar.myContact', icon: WalletIcon }
-    },{
+    }, {
       path: 'reward',
       name: 'reward',
       component: () => import('@/views/reward/index'),
       meta: { title: 'sidebar.reward', icon: MoneyIcon }
     },
+      {
+        path: 'rank-list',
+        name:'rank-list',
+        component:()=>import('@/views/rankList/index'),
+        meta:{title:'rankList.title',icon:RankIcon}
+      },
       {
         path: 'question',
         name: 'question',
@@ -60,8 +68,9 @@ const createRouter = () => new Router({
 })
 
 const router = createRouter()
+
 // Detail see: https://github.com/vuejs/vue-router/issues/1234#issuecomment-357941465
-export function resetRouter() {
+export function resetRouter () {
   const newRouter = createRouter()
   router.matcher = newRouter.matcher // reset router
 }
