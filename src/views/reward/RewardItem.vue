@@ -21,7 +21,7 @@ export default {
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
     border-radius: 14px;
     border: 1px solid #EBEBEB;
-    padding:15px 4%;
+    padding:15px 4% 40px;
     .title{
       color: $menuActiveText;
     }

@@ -73,6 +73,10 @@ div:focus {
 .justify-between{
   @include flex-between
 }
+.align-items-end{
+  display: flex;
+  align-items: flex-end;
+}
 .mr-8{
   margin-right:8px;
 }

@@ -3,24 +3,31 @@
     <el-row :gutter="20">
       <el-col :span="12" :xs="24">
         <RewardItem title="团队奖励">
-          <rank-item v-for="item in TeamRewardList" :data="item">
-
-          </rank-item>
+          <rank-item v-for="(item,index) in TeamRewardList" :key="index" :data="item"/>
+          <reward-withdraw
+            name="我的团队奖励"
+            :value="120"
+          ></reward-withdraw>
         </RewardItem>
       </el-col>
       <el-col :span="12" :xs="24">
-        <RewardItem title="推荐排名奖"></RewardItem>
+        <RewardItem title="推荐排名奖">
+          <rank-item v-for="item in InviteRewardList" :key="index" :data="item"/>
+          <reward-withdraw
+            name="我的推荐排名奖"
+            :value="120"
+          ></reward-withdraw>
+        </RewardItem>
       </el-col>
       <el-col span="24">
         <RewardItem class="lucky" title="幸运奖">
           <div class="justify-between">
             <lucky-left-component/>
-            <div>
-              <h3>我的幸运奖奖励</h3>
-              <div class="justify-between">
-
-              </div>
-            </div>
+            <reward-withdraw
+              name="我的幸运奖奖励"
+              :value="120"
+              style="flex:1"
+            ></reward-withdraw>
           </div>
         </RewardItem>
       </el-col>
@@ -28,37 +35,38 @@
   </div>
 </template>
 <script>
-    import RankItem from './Rank-item'
-   import RewardItem from './RewardItem'
-   import LuckyLeftComponent from './lucky-left-component'
+import RankItem from './Rank-item'
+import RewardItem from './RewardItem'
+import LuckyLeftComponent from './lucky-left-component'
+import RewardWithdraw from './reward-withdraw'
+
 export default {
-  components:{
+  components: {
     RewardItem,
     LuckyLeftComponent,
-    RankItem
+    RankItem,
+    RewardWithdraw
   },
   data () {
-    return {
-
-    }
+    return {}
   },
-  computed:{
-    TeamRewardList(){
+  computed: {
+    TeamRewardList () {
       return [
-        {label:'第1代',value:'20%'},
-        {label:'第2代',value:'10% '},
-        {label:'第3代',value:'15%'},
-        {label:'第4-10代',value:'5%'},
-        {label:'第11-15代',value:'6%'},
+        { label: '第1代', value: '20%' },
+        { label: '第2代', value: '10% ' },
+        { label: '第3代', value: '15%' },
+        { label: '第4-10代', value: '5%' },
+        { label: '第11-15代', value: '6%' }
       ]
     },
-    InviteRewardList(){
+    InviteRewardList () {
       return [
-        {label:'',value:''},
-        {label:'',value:''},
-        {label:'',value:''},
-        {label:'',value:''},
-        {label:'',value:''},
+        { label: '第1名', value: '5%' },
+        { label: '第2名', value: '4%' },
+        { label: '第3名', value: '3%' },
+        { label: '第4名', value: '2%' },
+        { label: '第5名', value: '1%' }
       ]
     }
   }

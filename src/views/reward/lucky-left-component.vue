@@ -15,7 +15,7 @@
       font-family: PingFangTC-Regular, PingFangTC;
       font-weight: 400;
       color: #4D4D4D;
-      line-height: 25px;
+      line-height: 20px;
     }
   }
 </style>
