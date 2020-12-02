@@ -35,6 +35,8 @@
       font-weight: 600;
       color: #4D4D4D;
       width: 100%;
+      padding-top:20px;
+      background: #fff;
       .mobileIcon{
         color: rgb(255, 255, 255);
         border: 1px solid $menuActiveText;
@@ -188,6 +190,25 @@
 
   .el-menu--collapse .el-menu .el-submenu {
     min-width: $sideBarWidth !important;
+  }
+  .invite-box{
+    margin-bottom:15px;
+    .invite{
+      background: $menuHover;
+      height:44px;
+      border-radius: 6px;
+      padding:0 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top:10px;
+      input{
+        background: none;
+        border:0;
+        width: 100%;
+        color: $menuActiveText;
+      }
+    }
   }
 
   // mobile responsive

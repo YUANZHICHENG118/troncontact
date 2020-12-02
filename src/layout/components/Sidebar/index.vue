@@ -16,7 +16,15 @@
           <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
         </el-menu>
       </el-scrollbar>
+
       <div class="shareBox">
+        <!--推荐链接-->
+        <div class="invite-box">
+          <div class="share-title">{{$t('account.inviteData.title')}}</div>
+          <div class="invite">
+            <input type="text" :value="`#/contact?ref=`">
+          </div>
+        </div>
         <div class="mobileIcon" v-show="isCollapse">
           <el-popover
             placement="left"
@@ -31,8 +39,8 @@
         <div class="share-title" v-show="!isCollapse">{{$t('global.share')}}</div>
         <share-options v-show="!isCollapse"></share-options>
 
-        <div class="share-title" v-show="!isCollapse">{{$t('global.team')}}</div>
-        <share-team v-show="!isCollapse"></share-team>
+        <!--<div class="share-title" v-show="!isCollapse">{{$t('global.team')}}</div>-->
+        <!--<share-team v-show="!isCollapse"></share-team>-->
       </div>
     </div>
   </div>
