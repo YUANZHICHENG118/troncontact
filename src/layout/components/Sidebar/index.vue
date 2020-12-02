@@ -23,6 +23,7 @@
           <div class="share-title">{{$t('account.inviteData.title')}}</div>
           <div class="invite">
             <input type="text" :value="`#/contact?ref=`">
+
           </div>
         </div>
         <div class="mobileIcon" v-show="isCollapse">
