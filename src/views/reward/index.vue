@@ -2,7 +2,7 @@
   <div class="wrap">
     <el-row :gutter="20">
       <el-col :span="12" :xs="24">
-        <RewardItem title="团队奖励">
+        <RewardItem :title="$t('teamReward.title')">
           <rank-item v-for="(item,index) in TeamRewardList" :key="index" :data="item"/>
           <reward-withdraw
             name="我的团队奖励"
@@ -53,11 +53,11 @@ export default {
   computed: {
     TeamRewardList () {
       return [
-        { label: '第1代', value: '20%' },
-        { label: '第2代', value: '10% ' },
-        { label: '第3代', value: '15%' },
-        { label: '第4-10代', value: '5%' },
-        { label: '第11-15代', value: '6%' }
+        { label: this.$t('teamReward.nthFirst'), value: '20%' },
+        { label: this.$t('teamReward.nthSecond'), value: '10% ' },
+        { label: this.$t('teamReward.nthThird'), value: '15%' },
+        { label: this.$t('teamReward.nthforth'), value: '5%' },
+        { label: this.$t('teamReward.nthFifth'), value: '6%' }
       ]
     },
     InviteRewardList () {
