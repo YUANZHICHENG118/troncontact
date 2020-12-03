@@ -1,5 +1,16 @@
 #app {
+  .invite-icon{
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    background: $menuActiveText;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
 
+  }
   .main-container {
     min-height: 100%;
     transition: margin-left .28s;
@@ -191,25 +202,12 @@
   .el-menu--collapse .el-menu .el-submenu {
     min-width: $sideBarWidth !important;
   }
+
   .invite-box{
     margin-bottom:15px;
-    .invite{
-      background: $menuHover;
-      height:44px;
-      border-radius: 6px;
-      padding:0 3%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top:10px;
-      input{
-        background: none;
-        border:0;
-        width: 100%;
-        color: $menuActiveText;
-      }
-    }
+
   }
+
 
   // mobile responsive
   .mobile {
