@@ -19,9 +19,18 @@
       font-size: 16px;
       font-weight: 500;
       color: #666666;
-      span{
+      justify-content: center;
+      .percent-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3% 0;
+        align-items: flex-start;
+      }
+      em{
         color: $menuActiveText;
         font-size: 78px;
+        font-style: normal;
       }
     }
   }
@@ -90,16 +99,8 @@
     background-color: #928b8b;
     border-color: #928b8b;
   }
-  .head b{
-    color: $red;
-  }
-  .profit{
-    .percent{
-      span{
-        color: $red;
-      }
-    }
-
+  .head b,.profit .percent em{
+    color: rgba(247, 181, 0, 1);
   }
 }
 .contactCard.contactItem2{
@@ -112,7 +113,7 @@
   }
   .profit{
     .percent{
-      span{
+      em{
         color: $orange;
       }
     }

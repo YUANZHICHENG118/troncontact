@@ -55,10 +55,10 @@ export default {
     },
     ContactData () {
       let rersult = []
-      rersult = [{ pid: 0, title: 'A', rate: '5', d: 5 }, { pid: 1, title: 'B', rate: '20', d: 15 }, {
+      rersult = [{ pid: 0, title: 'A', rate: '1', d: 5 }, { pid: 1, title: 'B', rate: '1', d: 15 }, {
         pid: 2,
         title: 'C',
-        rate: '10',
+        rate: '25',
         d: 3
       }]
       return rersult
