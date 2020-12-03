@@ -1,6 +1,7 @@
 <template>
   <div class="invite-input">
     <input type="text" :value="`#/contact?ref=`">
+    <span class="el-icon-copy-document primary"></span>
   </div>
 </template>
 <style lang="scss" scoped>

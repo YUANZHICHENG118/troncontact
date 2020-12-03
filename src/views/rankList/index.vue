@@ -12,7 +12,7 @@
         <el-table-column
           prop="rank"
           label="排名"
-          width="180">
+          >
           <template slot-scope="scope">
             <b :class="`rank${parseInt(scope.$index)+1}`" class="ranking">{{'0'+(scope.$index*1+1)}}</b>
           </template>
@@ -28,7 +28,7 @@
         <el-table-column
           prop="number"
           label="直推数量"
-          width="180">
+          >
           <template slot-scope="scope">
             <b class="number">{{scope.row.number}}</b>
           </template>
@@ -36,7 +36,7 @@
         <el-table-column
           prop="income"
           label="预计收入"
-          width="180">
+          >
           <template slot-scope="scope">
             <span class="primary income mr-8">{{parseInt(scope.row.income|| 0).toFixed(2)}}</span>
             <span class="unit">TRX</span>
