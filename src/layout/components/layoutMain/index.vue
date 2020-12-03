@@ -2,7 +2,7 @@
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
       <div>
-        <h2 class="title">{{$t($route.meta.title )}}</h2>
+        <h2 class="title" v-if="!$route.meta.hideTitle">{{$t($route.meta.title )}}</h2>
         <el-row :gutter="20">
           <el-col :xs="24" :sm="24" :md="17" :lg="17">
             <router-view :key="key" />

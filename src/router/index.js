@@ -32,23 +32,29 @@ export const constantRoutes = [
       name: 'contact',
       component: () => import('@/views/contact/index'),
       meta: { title: 'sidebar.contact', icon: ClockIcon }
-    }, {
-      path: 'mycontact',
-      name: 'mycontact',
-      component: () => import('@/views/myContact/index'),
-      meta: { title: 'sidebar.myContact', icon: WalletIcon }
-    }, {
-      path: 'reward',
-      name: 'reward',
-      component: () => import('@/views/reward/index'),
-      meta: { title: 'sidebar.reward', icon: MoneyIcon }
     },
+      //我的合同
+      {
+        path: 'mycontact',
+        name: 'mycontact',
+        component: () => import('@/views/myContact/index'),
+        meta: { title: 'sidebar.myContact', icon: WalletIcon,hideTitle:true }
+      },
+      //奖金
+      {
+        path: 'reward',
+        name: 'reward',
+        component: () => import('@/views/reward/index'),
+        meta: { title: 'sidebar.reward', icon: MoneyIcon }
+      },
+      //排行榜
       {
         path: 'rank-list',
-        name:'rank-list',
-        component:()=>import('@/views/rankList/index'),
-        meta:{title:'rankList.title',icon:RankIcon}
+        name: 'rank-list',
+        component: () => import('@/views/rankList/index'),
+        meta: { title: 'rankList.title', icon: RankIcon }
       },
+      //常见问题
       {
         path: 'question',
         name: 'question',
