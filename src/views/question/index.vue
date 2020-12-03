@@ -79,7 +79,7 @@ export default {
 </script>
 <style lang="scss">
   .question-box{
-    margin: 30px 0;
+    margin: 0 0 30px;
     //collapse
     .el-collapse-item__header{
       padding: 15px 3%;
