@@ -73,6 +73,9 @@ div:focus {
 .justify-between{
   @include flex-between
 }
+.flex-wrap{
+  flex-wrap: wrap;
+}
 .align-items-end{
   display: flex;
   align-items: flex-end;

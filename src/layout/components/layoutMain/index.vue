@@ -50,7 +50,7 @@ export default {
 <style scoped lang="scss">
   .mobile{
     .app-main {
-      padding: 110px 7% 0px;
+      padding: 110px 7% 30px;
       height: 100vh;
       .title{
         font-size: 24px;

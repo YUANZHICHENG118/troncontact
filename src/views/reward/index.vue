@@ -10,7 +10,7 @@
           ></reward-withdraw>
         </RewardItem>
       </el-col>
-      <el-col :span="12" :xs="24">
+      <el-col :span="12" :xs="24" class="inviteRank">
         <RewardItem title="推荐排名奖">
           <rank-item v-for="item in InviteRewardList" :key="index" :data="item"/>
           <reward-withdraw
@@ -21,7 +21,7 @@
       </el-col>
       <el-col span="24">
         <RewardItem class="lucky" title="幸运奖">
-          <div class="justify-between">
+          <div class="justify-between flex-wrap">
             <lucky-left-component/>
             <reward-withdraw
               name="我的幸运奖奖励"

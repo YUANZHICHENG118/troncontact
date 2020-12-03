@@ -6,6 +6,11 @@
   </div>
 </template>
 <style lang="scss" scoped>
+  .mobile{
+    .lucky-left{
+      border:0;
+    }
+  }
   .lucky-left{
     padding-right:4%;
     margin-right:4%;

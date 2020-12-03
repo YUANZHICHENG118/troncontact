@@ -77,6 +77,14 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  .mobile{
+    .rankList{
+      .performance-day{
+        position: relative;
+        top:-20px;
+      }
+    }
+  }
   .rankList {
     position: relative;
     .performance-day{
