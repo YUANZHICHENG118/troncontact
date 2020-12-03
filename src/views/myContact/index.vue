@@ -10,7 +10,7 @@
         v-for="(item, index) in myContact"
         v-if="parseInt(item[8]) > 0"
       >
-        <div class="myContactCard">
+        <div class="myContactCard" :style="{marginTop:index>1?'20px':0}">
           <div class="my-contact-card-head">
             <!--合同-->
             <span class="left">{{ type[parseInt(item[2])] }} {{$t('sidebar.contact')}}</span>
@@ -64,10 +64,7 @@
                 <el-button
                   type="warning"
                   style="width: 100%;"
-                  :disabled="
-                    chkReward() ||
-                    loading1
-                  "
+                  :disabled="chkReward() || loading1"
                   :loading="loading1"
                   @click="withdrawReward(parseInt(item[0]))"
                 >{{$t('myContact.getReward')}}
@@ -123,7 +120,7 @@ export default {
   components: { Reward },
   data () {
     return {
-      myContact: [[1,1,1,1,1,1,1,1,1,1],[2,2,2,2,2,2,2,2,2]],
+      myContact: [],
       type: ['A1', 'A2', 'A3', 'B1', 'B2', 'C'],
       withdraw: false,
       loading1: false, //提取奖励
