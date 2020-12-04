@@ -35,9 +35,11 @@
             </div>
         </div>
         <!--获取资金-->
-        <el-button type="primary" style="width:100%;" :loading="loading" :disabled="data.pid===2?!a3:loading"
+        <el-button  type="primary" style="width:100%;" :loading="loading" :disabled="data.pid===2?!a3:loading"
                    @click="deposit">{{$t('contact.getMoney')}}
         </el-button>
+
+
 
     </div>
 </template>
@@ -111,23 +113,23 @@
             },
 
             async allow() {
-                const res = await  this.contract.getA3Status().call()
-
-                if(!res){
-                    this.a3=false
-                    return ;
-                }
-
-               const prv=await this.contract.a3Valve().call();
-
-                const global=await this.contract.getGlobalStats().call();
-
-                const  p = tronWeb.fromSun(prv['previousTotalSupply'])
-                const  now = tronWeb.fromSun(global['stats'][1])
-
-                if(((p-now)/p).toFixed(4)>0.12){
-                    this.a3=true;
-                }
+               //  const res = await  this.contract.getA3Status().call()
+               //
+               //  if(!res){
+               //      this.a3=false
+               //      return ;
+               //  }
+               //
+               // const prv=await this.contract.a3Valve().call();
+               //
+               //  const global=await this.contract.getGlobalStats().call();
+               //
+               //  const  p = tronWeb.fromSun(prv['previousTotalSupply'])
+               //  const  now = tronWeb.fromSun(global['stats'][1])
+               //
+               //  if(((p-now)/p).toFixed(4)>0.12){
+               //      this.a3=true;
+               //  }
 
             },
             async deposit() {
