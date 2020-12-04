@@ -47,7 +47,7 @@
             async getOutputReward(pid) {
                 const d = await  this.contract.outputReward(this.address, pid).call();
                 //console.log("dddddd",d)
-                this.amount = parseFloat(d) / Math.pow(10,token.decimals)
+                this.amount = parseFloat(d) / Math.pow(10,18)
             }
         }
 
