@@ -59,7 +59,7 @@ export default {
         pid: 2,
         title: 'C',
         rate: '25',
-        d: 3
+        d: 30
       }]
       return rersult
     }

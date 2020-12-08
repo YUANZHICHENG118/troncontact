@@ -28,7 +28,7 @@
               <span class="left">{{$t('myContact.profit')}}</span>
               <span class="right">{{ parseFloat(item[3]) / 100 }}%</span>
             </div>
-            <div class="my-contact-card-list-item">
+            <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--质押天数-->
               <span class="left">{{$t('myContact.pledgeDay')}}</span>
 
@@ -36,17 +36,31 @@
               <span class="right">{{parseInt(item[4])/(24*60*60)}}</span>
 
             </div>
+
+            <div v-else class="my-contact-card-list-item">
+              <!--质押天数-->
+              <span class="left">{{$t('myContact.pledgeDay')}}</span>
+
+              <!--<span class="right">{{parseInt(item[4])/(24*60*60)}}</span>-->
+              <span class="right">--</span>
+
+            </div>
             <div class="my-contact-card-list-item">
               <!--获得收益-->
               <span class="left">{{$t('myContact.gain')}}</span>
               <span class="right">{{ (parseFloat(item[1]) / 1000000) *(parseFloat(item[3]) / 100/100) }}TRX</span>
             </div>
-            <div class="my-contact-card-list-item">
+            <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--解冻日期-->
               <span class="left">{{$t('myContact.ThawingDate')}}</span>
               <span class="right">{{
                 endDate(parseInt(item[5]), parseInt(item[4]) / (24*60*60))
               }}</span>
+            </div>
+            <div v-else class="my-contact-card-list-item">
+              <!--解冻日期-->
+              <span class="left">{{$t('myContact.ThawingDate')}}</span>
+              <span class="right">--</span>
             </div>
             <div class="my-contact-card-list-item">
               <!--可取款-->
@@ -121,7 +135,7 @@ export default {
   data () {
     return {
       myContact: [],
-      type: ['A1', 'A2', 'A3', 'B1', 'B2', 'C'],
+      type: ['A', 'B', 'C'],
       withdraw: false,
       loading1: false, //提取奖励
       loading2: false, // 提取本金

@@ -6,30 +6,27 @@
             <ul>
                 <!--A类合约累计投资-->
                 <li><span class="label">{{$t('account.userData.AInvest')}}</span> <span>{{stats0}}TRX</span></li>
-                <li><span class="label">{{$t('account.userData.investing')}}</span> <span>{{stats1}}TRX</span></li>
                 <!--B类合约累计投资-->
-                <li><span class="label">{{$t('account.userData.BInvest')}}</span> <span>{{stats2}}TRX</span></li>
-                <li><span class="label">{{$t('account.userData.investing')}}</span> <span>{{stats3}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.BInvest')}}</span> <span>{{stats1}}TRX</span></li>
+                <li><span class="label">B合约可投资额度</span> <span>{{stats2}}TRX</span></li>
                 <!--C类合约累计投资-->
-                <li><span class="label">{{$t('account.userData.CInvest')}}</span> <span>{{stats4}}TRX</span></li>
-                <li><span class="label">{{$t('account.userData.investing')}}</span> <span>{{stats5}}TRX</span></li>
-                <!--团队奖励额度-->
-                <li><span class="label">{{$t('account.userData.rewardQuota')}}</span> <span>{{stats6}}TRX</span></li>
-                <!--团队领取额度-->
-                <li><span class="label">{{$t('account.userData.receivedQuota')}}</span> <span>{{stats7}}TRX</span></li>
-                <!--个人级别  普通用户  VIP  超级VIP -->
-                <li><span class="label">{{$t('account.userData.level')}}</span> <span>{{stats8===0?`${$t('account.userData.OrdinaryUser')}`:stats8===1?'VIP':`${$t('account.userData.super')}VIP`}}</span>
-                </li>
+                <li><span class="label">{{$t('account.userData.CInvest')}}</span> <span>{{stats3}}TRX</span></li>
+                <li><span class="label">C合约可投资额度</span> <span>{{stats4}}TRX</span></li>
+                <!--出局额度-->
+                <li><span class="label">出局额度</span> <span>{{stats5}}TRX</span></li>
+
                 <!--直推总人数-->
-                <li><span class="label">{{$t('account.userData.promotionNum')}}</span> <span>{{stats9}}</span></li>
+                <li><span class="label">{{$t('account.userData.promotionNum')}}</span> <span>{{stats6}}</span></li>
                 <!--团队总人数-->
-                <li><span class="label">{{$t('account.userData.teamSize')}}</span> <span>{{stats10}}</span></li>
+                <li><span class="label">{{$t('account.userData.teamSize')}}</span> <span>{{stats7}}</span></li>
                 <!--团队业绩-->
-                <li><span class="label">{{$t('account.userData.performance')}}</span> <span>{{stats13}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.performance')}}</span> <span>{{stats8}}TRX</span></li>
                 <!--总存入-->
-                <li><span class="label">{{$t('account.userData.deposit')}}</span> <span>{{stats11}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.deposit')}}</span> <span>{{stats9}}TRX</span></li>
                 <!--总提取-->
-                <li><span class="label">{{$t('account.userData.extraction')}}</span> <span>{{stats12}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.extraction')}}</span> <span>{{stats10}}TRX</span></li>
+                <!--可用提现额度-->
+                <li><span class="label">可用提现额度</span> <span>{{stats11}}TRX</span></li>
 
             </ul>
         </asset-item>
@@ -38,25 +35,28 @@
             <h2><img src="@/assets/assetImgs/network.png" alt="">{{$t('account.networkData.title')}}</h2>
             <ul>
                 <!--总投资数量-->
-                <!--<li><span class="label">{{$t('account.networkData.investTotal')}}</span> <span>{{g0}} TRX</span></li>-->
+                <li><span class="label">{{$t('account.networkData.investTotal')}}</span> <span>{{g0}} TRX</span></li>
                 <!--资金池结余-->
-                <li><span class="label">{{$t('account.networkData.poolBalance')}}</span> <span>{{g1}}</span></li>
-                <!--会员总提币-->
-                <li><span class="label">{{$t('account.networkData.withdrawalTotal')}}</span> <span>{{g2}} TRX</span>
+                <li><span class="label">{{$t('account.networkData.poolBalance')}}</span> <span>{{g1}} TRX</span></li>
+                <!--幸运奖池-->
+                <li><span class="label">幸运奖池</span> <span>{{g2}} TRX</span>
                 </li>
-                <!--全球会员数-->
-                <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g3}} </span></li>
-                <!--全球会员数-->
-                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TK6ZfoNhRdWscFaZq7ucnUaVJ36VN8UjZS/code" target="_blank">TronContract</a> </span></li>
+
+                <!--推荐奖池-->
+                <li><span class="label">幸运奖池</span> <span>{{g3}} TRX</span>
+                </li>
+
+                <!--会员数量-->
+                <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g4}} </span></li>
 
                 <!--审计报告-->
                 <li><span class="label"></span> <span><a style="color: blueviolet" href="TronContract.pdf" target="_blank">{{$t('global.report')}}</a> </span></li>
 
-                <!--重启倒计时-->
-                <li v-if="g4>0"><span class="label">{{$t('account.networkData.Restart')}}</span> <span> <Countdown
-                        :time="time" format="hh:mm:ss" @on-end="onCountdownEnd">
-    <template slot-scope="{ time }">{{ time }}</template>
-  </Countdown></span></li>
+                <!--&lt;!&ndash;重启倒计时&ndash;&gt;-->
+                <!--<li v-if="g4>0"><span class="label">{{$t('account.networkData.Restart')}}</span> <span> <Countdown-->
+                        <!--:time="time" format="hh:mm:ss" @on-end="onCountdownEnd">-->
+    <!--<template slot-scope="{ time }">{{ time }}</template>-->
+  <!--</Countdown></span></li>-->
 
             </ul>
         </asset-item>
@@ -113,8 +113,6 @@
                 stats9: 0,
                 stats10: 0,
                 stats11: 0,
-                stats12: 0,
-                stats13: 0,
                 g0: 0,
                 g1: 0,
                 g2: 0,
@@ -163,15 +161,13 @@
 
                         this.stats5 = tronWeb.fromSun(res['stats'][5])
 
-                        this.stats6 = tronWeb.fromSun(res['stats'][6])
-                        this.stats7 = tronWeb.fromSun(res['stats'][7])
-                        this.stats8 = parseInt(res['stats'][8])
-                        this.stats9 = parseInt(res['stats'][9])
+                        this.stats6 = parseInt(res['stats'][6])
+                        this.stats7 = parseInt(res['stats'][7])
+                        this.stats8 = tronWeb.fromSun(res['stats'][8])
+                        this.stats9 = tronWeb.fromSun(res['stats'][9])
 
-                        this.stats10 = parseInt(res['stats'][10])
+                        this.stats10 = tronWeb.fromSun(res['stats'][10])
                         this.stats11 = tronWeb.fromSun(res['stats'][11])
-                        this.stats12 = tronWeb.fromSun(res['stats'][12])
-                        this.stats13 = tronWeb.fromSun(res['stats'][13])
 
 
                     })
@@ -182,20 +178,20 @@
                         this.g0 = tronWeb.fromSun(res['stats'][0])
                         this.g1 = tronWeb.fromSun(res['stats'][1])
                         this.g2 = tronWeb.fromSun(res['stats'][2])
-                        this.g3 = parseInt(res['stats'][3])
+                        this.g3 = tronWeb.fromSun(res['stats'][3])
                         this.g4 = parseInt(res['stats'][4])
 
                         // console.log("g4===",this.g4)
-                        if (this.g4 > 0 && this.time == 0) {
-                            const d = new Date();
-                            console.log("d.getTime()", d.getTime())
-                            const t=(this.g4+24*60*60)-d.getTime()/1000
-                            //const t = (this.g4 + 60) - d.getTime() / 1000
-
-                            // console.log("t",t)
-
-                            this.time = parseInt(t);
-                        }
+                        // if (this.g4 > 0 && this.time == 0) {
+                        //     const d = new Date();
+                        //     console.log("d.getTime()", d.getTime())
+                        //     const t=(this.g4+24*60*60)-d.getTime()/1000
+                        //     //const t = (this.g4 + 60) - d.getTime() / 1000
+                        //
+                        //     // console.log("t",t)
+                        //
+                        //     this.time = parseInt(t);
+                        // }
 
 
                     })
