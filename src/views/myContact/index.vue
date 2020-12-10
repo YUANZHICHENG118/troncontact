@@ -243,7 +243,7 @@ export default {
       this.getTronWeb(pid)
         .then((tronWeb) => {
           this.contract
-            .withdrawReward(pid)
+            .withdrawYield(pid)
             .send({
               callValue: 0
             })
@@ -272,20 +272,20 @@ export default {
 
     //提取本金
     async takeAwayDeposit (pid) {
-      let reward = await this.getOutputReward(pid)
-      if (reward > 0) {
-        this.$message({
-          //请先提取奖励
-          message: this.$t('myContact.PleaseWithdraw'),
-          type: 'error'
-        })
-        return
-      }
+      // let reward = await this.getOutputReward(pid)
+      // if (reward > 0) {
+      //   this.$message({
+      //     //请先提取奖励
+      //     message: this.$t('myContact.PleaseWithdraw'),
+      //     type: 'error'
+      //   })
+      //   return
+      // }
       this.loading2 = true
       this.getTronWeb(pid)
         .then((tronWeb) => {
           this.contract
-            .takeAwayDeposit(pid)
+            .refund(pid)
             .send({
               callValue: 0
             })

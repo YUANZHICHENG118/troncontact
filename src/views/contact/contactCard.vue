@@ -85,15 +85,13 @@
                 this.getTronWeb().then(tronWeb => {
                     this.contract = tronWeb.contract(this.ABI, tronWeb.address.toHex(this.contract_address))
                     this.loadData()
-                    if (this.data.pid === 2) this.allow()
+                    //if (this.data.pid === 2) this.allow()
                 })
             },
             'data.pid'(v, o) {
                 this.pid = v
 
-                if (v === 2) {
-                    this.allow()
-                }
+
             }
 
         },
