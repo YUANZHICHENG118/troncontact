@@ -2,7 +2,7 @@
     <div class="rankList ">
         <div class="performance-day">
             您的当天直推业绩
-            <span class="primary">120</span>
+            <span class="primary">{{total}}</span>
             <span class="unit">&nbsp;TRX</span>
         </div>
         <div class="rankTable">
@@ -52,28 +52,8 @@
     export default {
         data() {
             return {
-                tableData: [{
-                    address: 'TYEKKfsitDuE63D1Cyou4eJgTtJfeu84V7',
-                    number: '77',
-                    income: '99'
-                }, {
-                    address: 'TYEKKfsitDuE63D1Cyou4eJgTtJfeu84V7',
-                    number: '77',
-                    income: '99'
-                }, {
-                    address: 'TYEKKfsitDuE63D1Cyou4eJgTtJfeu84V7',
-                    number: '77',
-                    income: '99'
-                }, {
-                    address: 'TYEKKfsitDuE63D1Cyou4eJgTtJfeu84V7',
-                    number: '77',
-                    income: '99'
-                },
-                    {
-                        address: 'TYEKKfsitDuE63D1Cyou4eJgTtJfeu84V7',
-                        number: '77',
-                        income: '99'
-                    }]
+                tableData: [],
+                total:0
             }
         },
         mixins: [TrxMixin],
@@ -87,13 +67,35 @@
         },
         methods: {
             loadData() {
-                this.getTronWeb().then(tronWeb => {
-                    this.contract.awardDetails(this.tron.account).call().then(res => {
-                        this.a = (parseFloat(res["luckyPrize"]) / 1000000)
-                        this.b = (parseFloat(res["recommendAward"]) / 1000000)
-                        this.c = (parseFloat(res["referReward"]) / 1000000)
+                this.getTronWeb().then(async (tronWeb) => {
 
+
+
+                    const list=[{},{},{},{},{}];
+                    const day=await this.contract.duration().call();
+                    const total=await this.contract.performances(day,this.tron.account).call();
+
+                    this.total=total/1000000
+
+                    this.contract.userRanking(day).call().then(res => {
+                        const addressList=res['addressList']
+                        const refsCounts=res['refsCounts']
+                        const preEarn=res['preEarn']
+
+                        addressList.map((item,index)=>{
+                            list[index]['address']=tronWeb.address.fromHex(item)
+                        })
+                        refsCounts.map((item,index)=>{
+                            list[index]['number']=item
+                        })
+                        preEarn.map((item,index)=>{
+                            list[index]['income']=(parseFloat(item)/1000000).toFixed(2)
+                        })
+
+                        this.tableData=list
                     })
+
+
                 })
 
             },

@@ -92,9 +92,9 @@
             loadData() {
                 this.getTronWeb().then(tronWeb => {
                     this.contract.awardDetails(this.tron.account).call().then(res => {
-                        this.a = (parseFloat(res["luckyPrize"]) / 1000000)
-                        this.b = (parseFloat(res["recommendAward"]) / 1000000)
-                        this.c = (parseFloat(res["referReward"]) / 1000000)
+                        this.luckyPrize = (parseFloat(res["luckyPrize"]) / 1000000)
+                        this.recommendAward = (parseFloat(res["recommendAward"]) / 1000000)
+                        this.referReward = (parseFloat(res["referReward"]) / 1000000)
 
                     })
                 })
