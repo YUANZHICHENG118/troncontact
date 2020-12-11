@@ -1,7 +1,7 @@
 <template>
     <div class="rankList ">
         <div class="performance-day">
-            您的当天直推业绩
+            {{$t("rankList.a1")}}
             <span class="primary">{{total}}</span>
             <span class="unit">&nbsp;TRX</span>
         </div>
@@ -11,7 +11,7 @@
                     style="width: 100%">
                 <el-table-column
                         prop="rank"
-                        label="排名"
+                        :label="$t('rankList.a2')"
                 >
                     <template slot-scope="scope">
                         <b :class="`rank${parseInt(scope.$index)+1}`" class="ranking">{{'0'+(scope.$index*1+1)}}</b>
@@ -19,7 +19,7 @@
                 </el-table-column>
                 <el-table-column
                         prop="address"
-                        label="地址"
+                        :label="$t('rankList.a3')"
                 >
                     <template slot-scope="scope">
                         <b class="address">{{scope.row.address}}</b>
@@ -27,7 +27,8 @@
                 </el-table-column>
                 <el-table-column
                         prop="number"
-                        label="直推数量"
+                        :label="$t('rankList.a4')"
+
                 >
                     <template slot-scope="scope">
                         <b class="number">{{scope.row.number}}</b>
@@ -35,7 +36,8 @@
                 </el-table-column>
                 <el-table-column
                         prop="income"
-                        label="预计收入"
+                        :label="$t('rankList.a5')"
+
                 >
                     <template slot-scope="scope">
                         <span class="primary income mr-8">{{parseInt(scope.row.income|| 0).toFixed(2)}}</span>

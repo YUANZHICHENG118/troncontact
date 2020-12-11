@@ -6,28 +6,28 @@
                     <rank-item v-for="(item,index) in TeamRewardList" :key="index" :data="item"/>
                     <reward-withdraw
                             :type=0
-                            name="我的团队奖励"
+                            :name="$t('teamReward.a1')"
                             :value=recommendAward
                     ></reward-withdraw>
                 </RewardItem>
             </el-col>
             <el-col :span="12" :xs="24" class="inviteRank">
-                <RewardItem title="推荐排名奖">
+                <RewardItem :title="$t('teamReward.a2')">
                     <rank-item v-for="(item,index)  in InviteRewardList" :key="index" :data="item"/>
                     <reward-withdraw
                             :type=1
-                            name="我的推荐排名奖"
+                            :name="$t('teamReward.a4')"
                             :value=referReward
                     ></reward-withdraw>
                 </RewardItem>
             </el-col>
             <el-col :span="24">
-                <RewardItem class="lucky" title="幸运奖">
+                <RewardItem class="lucky" :title="$t('teamReward.a5')">
                     <div class="justify-between flex-wrap">
                         <lucky-left-component/>
                         <reward-withdraw
                                 :type=2
-                                name="我的幸运奖奖励"
+                                :name="$t('teamReward.a9')"
                                 :value=luckyPrize
                                 style="flex:1"
                         ></reward-withdraw>
@@ -80,11 +80,11 @@
             },
             InviteRewardList() {
                 return [
-                    {label: '第1名', value: '5%'},
-                    {label: '第2名', value: '4%'},
-                    {label: '第3名', value: '3%'},
-                    {label: '第4名', value: '2%'},
-                    {label: '第5名', value: '1%'}
+                    {label: this.$t('teamReward.a3',{num:1}), value: '5%'},
+                    {label: this.$t('teamReward.a3',{num:2}), value: '4%'},
+                    {label: this.$t('teamReward.a3',{num:3}), value: '3%'},
+                    {label: this.$t('teamReward.a3',{num:4}), value: '2%'},
+                    {label: this.$t('teamReward.a3',{num:5}), value: '1%'}
                 ]
             }
         },

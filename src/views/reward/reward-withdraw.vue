@@ -6,7 +6,7 @@
                 <b class="primary mr-8">{{value}}</b>
                 <span class="unit">TRX</span>
             </div>
-            <el-button type="primary" :disabled="loading|| value<=0" :loading="loading" @click="withdraw">取款</el-button>
+            <el-button type="primary" :disabled="loading|| value<=0" :loading="loading" @click="withdraw">{{$t('myContact.getReward')}}</el-button>
         </div>
     </div>
 </template>

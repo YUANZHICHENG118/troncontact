@@ -7,7 +7,7 @@
         :key="index"
         :xs="24" :sm="12" :md="12" :lg="8"
       >
-        <contact-card :data="item" :userData="userData" :class="contactItemClass(index)"></contact-card>
+        <contact-card :data="item" :allowAmount="item.pid===0?aAllow:item.pid===1?bAllow:cAllow" :userData="userData" :class="contactItemClass(index)"></contact-card>
       </el-col>
     </el-row>
   </div>
@@ -21,7 +21,10 @@ export default {
   name: 'Contact',
   data () {
     return {
-      userData: undefined
+      userData: undefined,
+        aAllow:100000,
+        bAllow:0,
+        cAllow:0
     }
   },
   mixins: [TrxMixin],
@@ -40,6 +43,19 @@ export default {
           this.userData = res
         })
       })
+
+
+        this.contract.getPersonalStats(this.tron.account).call().then(res => {
+            const stats1 = tronWeb.fromSun(res['stats'][1])
+            const stats2 = tronWeb.fromSun(res['stats'][2])
+            const stats3 = tronWeb.fromSun(res['stats'][3])
+            const stats4 = tronWeb.fromSun(res['stats'][4])
+
+            this.bAllow=stats2-stats1
+            this.cAllow=stats4-stats3
+
+
+        })
     }
   },
   components: {

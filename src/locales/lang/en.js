@@ -31,7 +31,12 @@ export default {
             extraction: 'Total extraction',
             OrdinaryUser: 'Ordinary users',
             super: 'super',
-            performance: 'Team performance'
+            performance: 'Team performance',
+            a1: "B contract investable limit",
+            a2: "C contract investable quota",
+            a3: "out limit",
+            a4: "Available withdrawal limit",
+
         },
         networkData: {
             title: 'Network',
@@ -40,7 +45,9 @@ export default {
             withdrawalTotal: 'Total withdrawal',
             membership: 'Global membership',
             Restart: 'Restart countdown',
-            contract: 'Contract'
+            contract: 'Contract',
+            a1:'Lucky prize pool',
+            a2:'Recommended prize pool'
         },
         inviteData: {
             title: 'Recommended links'
@@ -51,7 +58,11 @@ export default {
         getMoney: 'Access to funds',
         Issued: 'Issued with principal',
         choose: 'Please select',
-        lock: 'Lock in for {day} day'
+        lock: 'Lock in for {day} day',
+        a1:'every 24h',
+        a2:'issued every 24 hours',
+        a3:'Limit {min}-{max}',
+        a4:'The amount must be an integral multiple of 100'
     },
     myContact: {
         code: 'Contract code',
@@ -75,88 +86,78 @@ export default {
         nthThird: 'The third generation',
         nthforth: 'Generation 4-10',
         nthFifth: 'Generation 10-15',
-        available: 'Awards available'
+        available: 'Awards available',
+        a1: "My team reward",
+        a2: "Recommended Ranking Award",
+        a3: "the {num}th name",
+        a4: "My Recommendation Ranking Award",
+        a5: "Lucky Prize",
+        a6: "Those who invest in Contract A have a chance to win, the highest",
+        a7: "The contract number ",
+        a8: "of the contract investment amount is automatically obtained",
+        a9: "My Lucky Prize Reward"
     },
     question: {
         title: 'common problem',
-        Q1: {
-            title: 'What do I need to participate in this project?',
-            item1: 'You need to have a Chrome browser extension tool for tronlink or a mobile application like Klever (tronwallet) or tronlink.'
+        Q1:{
+            title:'What do I need to participate in this project? ',
+            item1:'You need to have TronLinks Chrome browser extension tool or a mobile application like Klever (TronWallet) or TronLink. '
         },
         Q2: {
-            title: 'How do I need to get TRX?',
-            item1: 'You can buy Tron (TRX) from popular digital cryptocurrency exchanges: binance, poloniex, bitrex, bitfinex, okex, or use a local online exchange. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposits)!'
+            title:'How do I get TRX? ',
+            item1:'You can buy TRON (TRX) on popular digital cryptocurrency exchanges: Binance, Poloniex, bitrex, Bitfinex, OKEx, or use local online exchanges. You need to put the cryptocurrency in your personal wallet and use it to get funds (deposit)!'
         },
         Q3: {
-            title: 'Why? troncontract.co Trustworthy?',
-            item1: 'This platform is managed by the smart contract on the Tron blockchain. No one can change the algorithm of smart contracts, not even management. You can view the open source code of the contract in the Tron browser. You can check the smart contract code through professional tools to ensure that the platform is secure.'
+            title:'Why is troncontract 2.0 trustworthy? ',
+            item1:'This platform is managed by a smart contract on the TRON blockchain. No one can change the algorithm of a smart contract, not even the management department. You can view the open source code of the contract in the tron ​​browser, and you can check the smart contract code with professional tools to ensure that the platform is safe.'
         },
         Q4: {
-            title: 'How to obtain capital (investment)?',
-            item1: 'You need to select the type of contract you want, then select the contract (deposit) period and select or enter the deposit amount.'
+            title:'How to obtain funds (investment)? ',
+            item1:'You first need to select A contract to invest and enter the deposit amount (multiple of 100)'
         },
         Q5: {
-            title: 'What types of investment are available?',
-            item1: 'In the troncontract platform, you can choose a, B, C three types of contracts to invest. You can also renew the contract after its expiration if you like.'
+            title:'What types of investment are available? ',
+            item1:'On the troncontract 2.0 platform, you can choose A, B, and C three types of contracts to invest. But to invest in B.C contract, you need to invest in A contract first. And the cumulative investment upper limit of contract B cannot exceed half of the cumulative investment of contract A, and the cumulative investment upper limit of contract C cannot exceed the cumulative investment of contract A. '
         },
         Q6: {
-            title: 'How to play type A contract?',
-            item1: 'The principal of class a contract is frozen, and the income is issued every 5 seconds.',
-            item2: 'A1 contract: principal freezing days - 5 days, contract cumulative income 5% and daily income 1%',
-            item3: 'A2 contract: principal freezing days - 15 days, cumulative contract income 20%, daily income 1.33%',
-            item4: 'A3 contract: principal freezing days - 3 days, contract cumulative income 10%, daily income 3.33%',
-            item5: 'Contract A3 is closed by default, and the platform will automatically open if the balance of the fund pool falls by 10%. When the balance of the fund pool is restored and exceeds the amount when it was opened, it will be automatically closed.',
+            title:'Introduction to Type A Contract Gameplay? ',
+            item1: "Contract A has a static return of 1% every day Principal and interest are issued together, a 24-hour countdown will start after the investment, and the return will be issued every 24 hours. Contract A can only be invested once, and reinvestment needs to be operated after 3.3 times the return. The investment quota is 100TRX-10 million TRX, and the investment quota from the second round is 100TRX-2 million TRX.",
+            item2:'',
+            item3:'',
+            item4:'',
+            item5:'',
         },
         Q7: {
-            title: 'How to play type B contract?',
-            item1: 'The principal of type B contract will be issued together with the income, once every 5 seconds.',
-            item2: 'B1 contract: the period is 10 days, including 110% of the accumulated principal income and 11% of the daily income',
-            item3: 'B2 contract: the period is 20 days, including 130% of the accumulated principal income and 6.5% of the daily income',
-            item4: 'Class B contract is locked by default, and can only be unlocked by participating in class C contract. The cumulative investment amount of type B Contract shall not be higher than that of class C contract.',
+            title:'Introduction to Type B Contract Gameplay? ',
+            item1:'B contract does not set the contract period, and the principal is pledged. Static income is 1% every day, a 24-hour countdown starts after the investment, and the income is issued every 24 hours. You can apply for a refund at any time, and the income will stop after the refund. The cumulative investment upper limit of contract B cannot exceed half of the cumulative investment of contract A. ',
+            item2:'',
+            item3:'',
+            item4:'',
         },
-        Q8: {
-            title: 'How to play type C contract?',
-            item1: 'The freezing days of class C contract principal is 30 days, and the contract income is 20% - 50%. Once the investment is successful, the income will be released immediately.',
-            item2: 'The investment amount of category C contract is from 1 million to 100 thousand TRX, which can be manually entered.',
-            item3: 'The return of the first round investment of contract C is 20%. After the contract expires, you can click the renew button, and the renewal amount is 100-100000 TRX. The revenue of the first renewal is 30%.',
-            item4: 'After the first renewal, you can continue to click the renew button. The income of the second renewal is 40%.',
-            item5: 'After the second renewal, you can continue to click the renew button. The income of the third renewal is 50%.',
-            item6: 'Starting from the fourth renewal, the revenue of each renewal is 50%.',
+        Q8:{
+            title:'Introduction to C type contract gameplay? ',
+            item1:'C contract period is 30 days and the return is 20%. The income will be returned immediately and can be withdrawn immediately. You can apply for a refund after the contract expires. The cumulative investment upper limit of C contract cannot exceed the cumulative investment of A contract. ',
+            item2:'',
+            item3:'',
+            item4:'',
+            item5:'',
+            item6:'',
         },
         Q9: {
-            title: 'How to upgrade to VIP? What are the advantages of VIP?',
-            item1: 'Accounts with an accumulated investment amount of 500000 TRX in class C contracts are automatically upgraded to VIP accounts, and 5% TRX reward will be given to VIP accounts for each withdrawal of cash. If 10000 TRX are withdrawn, 10500 TRX are actually received. (excluding withdrawal of principal refund)'
+            title:'Introduction to the Lucky Prize? ',
+            item1: '2% of each deposit will enter the lucky prize pool. Each A contract invested has a chance to win. A contract number is a multiple of 20, and 50% of the contract investment amount is automatically obtained as a lucky bonus. A contract number that is a multiple of 100 will automatically get 100% of the contract investment amount as a lucky bonus. The maximum amount of lucky prize winning is 10000Trx (the lucky prize only has A contract). The reward will not be triggered when the lucky prize pool funds are not enough to be allocated. In order to repay new and old customers, the project will directly inject 500,000 TRX into the lucky prize pool on the first day of the project'
         },
-        Q10: {
-            title: 'How to activate my recommended links?',
-            item1: 'There are three types of contract investment: Class A, type B and type C. in order to activate the recommendation link, you need to make an investment in a class a contract with a minimum investment of 100trx'
-        },
-        Q11: {
-            title: 'How can I get team rewards? ',
-            item1: 'To get the team bonus, you need to recommend new members to join the contract, take the percentage of the team member’s withdrawal amount each time, and recommend several valid accounts to get a few generations (users whose contracts expire all automatically become invalid accounts), up to 15 generations.A3 contract and Withdrawals that return the principal will not generate team rewards. ',
-            item2: 'reward cap: the cumulative maximum available team reward is 3.3 times of the total investment principal in type A contracts. For example, if your total investment principal in Type A contracts is 1000 TRX, then your team rewards will stop issuing when 3300 trx is issued. If you want to continue to get team rewards, you need to increase the investment principal of Type A contracts. If there is no ongoing Type A contract on your account, you will not enjoy team rewards.'
-
-        },
-        Q12: {
-            title: 'How is the team reward calculated? ',
-            item1: 'Type A contract 10% for the first generation, 5% for the second generation, 6% for the third generation, 2% for the 4-10 generation, 3% for the 11-15 generation',
-            item2: 'Type B contract and Type C contract 1st generation 3%, 2nd generation 1%, 3rd generation 2%, 4-10th generation 0.2%, 11-15th generation 0.5%'
-        },
-        Q13: {
-            title: 'Related policies for withdrawal of profits, rewards, and principal? ',
-            item1: 'In order to prevent a run, each investment is a separate contract number, separate settlement and withdrawal, contract income, contract principal and team rewards are withdrawn separately, each wallet address needs to wait 8 hours for each withdrawal Can withdraw again'
-        },
-        Q14: {
-            title: 'Is there any investment limit? ',
-            item1: 'There is no limit on the total investment amount, but a single investment amount is limited. Among them, the investment amount of Type A and Type B contracts cannot be filled out independently. You can only choose the following amounts in the drop-down menu to invest: 100trx, 500trx, and 1000trx are available in the first 3 days, 5000trx is available on the 4th day, and the 5th 10000trx option will be open every day, 50,000trx option will be open on the 6th day, and 100000trx option will be open on the 7th day. ',
-            item2: 'A single investment amount of 1 to 100,000 TRX in category C contracts can be entered manually'
-        },
-        Q15: {
-            title: 'How long can this project run? ',
-            item1: 'Trontract.cc will always operate. When the contract fund pool is lower than 100trx, the restart mechanism will be activated after 24 hours. After the restart mechanism is activated, the contract investment and undrawn amounts of all players will be automatically cleared. . But the team framework remains the same, and it can be activated by reinvesting, and a new round will start at that time'
+        Q10:{
+            title:'Recommended ranking award related introduction? ',
+            item1: '5% of each deposit will enter the recommended ranking prize pool. The top 5 recommended performance of A contract each day will share 15% of the prize pool. 1st place 5%-2nd place 4%-3rd place 3%-4th place 2%-5th place 1%'
         }
     },
     rankList:{
-        title:'Ranking list'
+        title:'Ranking list',
+        a1:'Your direct push performance that day',
+        a2:'rank',
+        a3:'Address',
+        a4:'direct push quantity',
+        a5:'Estimated income',
     }
 }

@@ -6,13 +6,13 @@
                 <em style="font-size:58px ">{{data.pid===5?'20-50':data.rate}}</em>
                 <div class="percent-right">
                     <b>%</b>
-                    <span v-if="data.pid!==2">每24h</span>
+                    <span v-if="data.pid!==2">{{$t('contact.a1')}}</span>
                 </div>
             </div>
             <div class="desc">
                 <!--<span v-if="data.pid===2">{{data.d}} days</span>-->
                 <!--随本金发放 锁定$-->
-                <span>{{data.pid===0||data.pid===1?"每24小时发放":`${$t('contact.lock',{day:data.d})}`}}
+                <span>{{data.pid===0||data.pid===1?`${$t('contact.a2')}`:`${$t('contact.lock',{day:data.d})}`}}
 </span>
             </div>
         </div>
@@ -25,7 +25,7 @@
                     <el-input placeholder="请输入" type="text" v-model="amount">
                         <span slot="suffix" class="suffix">TRX</span>
                     </el-input>
-                    <div class="tip">限额100~100000TRX</div>
+                    <div class="tip">{{$t('contact.a3',{min:100,max:100000})}}TRX</div>
 
                 </div>
 
@@ -41,7 +41,7 @@
             </div>
         </div>
         <!--获取资金-->
-        <el-button type="primary" style="width:100%;" :loading="loading" :disabled="loading"
+        <el-button type="primary" style="width:100%;" :loading="loading" :disabled="loading||allowAmount<=100"
                    @click="deposit">{{$t('contact.getMoney')}}
         </el-button>
 
@@ -64,13 +64,16 @@
                 active: false,
                 referrer: '',
                 prv: 0,
-                now: 0
+                now: 0,
+
+
 
             }
         },
         mixins: [TrxMixin],
 
         props: {
+            allowAmount:0,
             data: {
                 type: Object,
                 default: {}
@@ -114,6 +117,7 @@
                     })
                 })
 
+
             },
 
             async allow() {
@@ -140,7 +144,7 @@
 
                 if(this.amount<this.min){
                     this.$message({
-                        message: '下注限额为'+this.min+"-"+this.max,
+                        message: this.$t('contact.a3',{min:this.min,max:this.max}),
                         type: 'error'
                     })
                     return ;
@@ -149,7 +153,7 @@
 
                 if(this.amount>this.max){
                     this.$message({
-                        message: '下注限额为'+this.min+"-"+this.max,
+                        message: this.$t('contact.a3',{min:this.min,max:this.max}),
                         type: 'error'
                     })
                     return ;
@@ -157,13 +161,21 @@
                 }
                 if(this.amount%100>0){
                     this.$message({
-                        message: '金额必须是100的整数倍',
+                        message: this.$t('contact.a4'),
                         type: 'error'
                     })
                     return ;
 
                 }
 
+                if(this.amount-this.allowAmount>0){
+                    this.$message({
+                        message: "最多可投资"+this.allowAmount,
+                        type: 'error'
+                    })
+                    return ;
+
+                }
 
 
                 if (this.active) {

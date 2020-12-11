@@ -8,12 +8,12 @@
                 <li><span class="label">{{$t('account.userData.AInvest')}}</span> <span>{{stats0}}TRX</span></li>
                 <!--B类合约累计投资-->
                 <li><span class="label">{{$t('account.userData.BInvest')}}</span> <span>{{stats1}}TRX</span></li>
-                <li><span class="label">B合约可投资额度</span> <span>{{stats2}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.a1')}}</span> <span>{{parseFloat(stats2)-parseFloat(stats1)}}TRX</span></li>
                 <!--C类合约累计投资-->
                 <li><span class="label">{{$t('account.userData.CInvest')}}</span> <span>{{stats3}}TRX</span></li>
-                <li><span class="label">C合约可投资额度</span> <span>{{stats4}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.a2')}}</span> <span>{{parseFloat(stats4)-parseFloat(stats3)}}TRX</span></li>
                 <!--出局额度-->
-                <li><span class="label">出局额度</span> <span>{{stats5}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.a3')}}</span> <span>{{stats5}}TRX</span></li>
 
                 <!--直推总人数-->
                 <li><span class="label">{{$t('account.userData.promotionNum')}}</span> <span>{{stats6}}</span></li>
@@ -26,7 +26,7 @@
                 <!--总提取-->
                 <li><span class="label">{{$t('account.userData.extraction')}}</span> <span>{{stats10}}TRX</span></li>
                 <!--可用提现额度-->
-                <li><span class="label">可用提现额度</span> <span>{{stats11}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.a4')}}</span> <span>{{stats11}}TRX</span></li>
 
             </ul>
         </asset-item>
@@ -39,11 +39,11 @@
                 <!--资金池结余-->
                 <li><span class="label">{{$t('account.networkData.poolBalance')}}</span> <span>{{g1}} TRX</span></li>
                 <!--幸运奖池-->
-                <li><span class="label">幸运奖池</span> <span>{{g2}} TRX</span>
+                <li><span class="label">{{$t('account.networkData.a1')}}</span> <span>{{g2}} TRX</span>
                 </li>
 
                 <!--推荐奖池-->
-                <li><span class="label">幸运奖池</span> <span>{{g3}} TRX</span>
+                <li><span class="label">{{$t('account.networkData.a2')}}</span> <span>{{g3}} TRX</span>
                 </li>
 
                 <!--会员数量-->
@@ -168,7 +168,6 @@
 
                         this.stats10 = tronWeb.fromSun(res['stats'][10])
                         this.stats11 = tronWeb.fromSun(res['stats'][11])
-
 
                     })
 
