@@ -56,10 +56,10 @@
                     //const t = (this.g4 + 60) - d.getTime() / 1000
 
                      console.log("t",t)
-                    return  parseInt(t)
+                     this.time= parseInt(t)
                 }
 
-                return 0
+
 
             },
         }
