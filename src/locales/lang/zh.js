@@ -46,8 +46,8 @@ export default {
             membership:'全球會員數',
             Restart:'重啟倒計時',
             contract:'合同',
-            a1:'幸運獎池',
-            a2:'推薦獎池'
+            a1:'幸運獎池結餘',
+            a2:'推薦獎池結餘'
         },
         inviteData:{
             title:'推薦鏈接'

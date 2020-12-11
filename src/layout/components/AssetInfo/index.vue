@@ -35,19 +35,23 @@
             <h2><img src="@/assets/assetImgs/network.png" alt="">{{$t('account.networkData.title')}}</h2>
             <ul>
                 <!--总投资数量-->
-                <li><span class="label">{{$t('account.networkData.investTotal')}}</span> <span>{{g0}} TRX</span></li>
+                <!--<li><span class="label">{{$t('account.networkData.investTotal')}}</span> <span>{{g0}} TRX</span></li>-->
                 <!--资金池结余-->
                 <li><span class="label">{{$t('account.networkData.poolBalance')}}</span> <span>{{g1}} TRX</span></li>
-                <!--幸运奖池-->
-                <li><span class="label">{{$t('account.networkData.a1')}}</span> <span>{{g2}} TRX</span>
-                </li>
 
                 <!--推荐奖池-->
                 <li><span class="label">{{$t('account.networkData.a2')}}</span> <span>{{g3}} TRX</span>
                 </li>
 
+                <!--幸运奖池-->
+                <li><span class="label">{{$t('account.networkData.a1')}}</span> <span>{{g2}} TRX</span>
+                </li>
+
+
                 <!--会员数量-->
                 <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g4}} </span></li>
+
+                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TNvyP31heRXZHhKq3it5AGPuHjr8DDQKuv/code" target="_blank">TronContract</a> </span></li>
 
                 <!--审计报告-->
                 <li><span class="label"></span> <span><a style="color: blueviolet" href="TronContract.pdf" target="_blank">{{$t('global.report')}}</a> </span></li>

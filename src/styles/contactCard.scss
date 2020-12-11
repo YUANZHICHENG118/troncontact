@@ -108,6 +108,11 @@
     background: $orange;
     border:$orange;
   }
+  .is-disabled {
+    color: #f4f4f5;
+    background-color: #928b8b;
+    border-color: #928b8b;
+  }
   .head b{
     color: $orange;
   }
@@ -118,6 +123,15 @@
       }
     }
 
+  }
+}
+
+.contactCard.contactItem1 {
+
+  .is-disabled {
+    color: #f4f4f5;
+    background-color: #928b8b;
+    border-color: #928b8b;
   }
 }
 .mobile {

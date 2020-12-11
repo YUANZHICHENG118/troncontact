@@ -41,7 +41,7 @@
             </div>
         </div>
         <!--获取资金-->
-        <el-button type="primary" style="width:100%;" :loading="loading" :disabled="loading||allowAmount<=100"
+        <el-button type="primary" style="width:100%;" :loading="loading" :disabled="loading||allowAmount<100"
                    @click="deposit">{{$t('contact.getMoney')}}
         </el-button>
 

@@ -23,7 +23,7 @@
               <span class="left">{{$t('myContact.amount')}}</span>
               <span class="right">{{ parseFloat(item[1]) / 1000000 }}TRX</span>
             </div>
-            <div class="my-contact-card-list-item">
+            <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--本期利润-->
               <span class="left">{{$t('myContact.profit')}}</span>
               <span class="right">{{ parseFloat(item[3]) / 100 }}%</span>
@@ -31,21 +31,13 @@
             <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--质押天数-->
               <span class="left">{{$t('myContact.pledgeDay')}}</span>
-
               <!--<span class="right">{{parseInt(item[4])/(24*60*60)}}</span>-->
-              <span class="right">{{parseInt(item[4])/(24*60*60)}}</span>
+              <span class="right">{{parseInt(item[4])/(5*60)}}</span>
 
             </div>
 
-            <div v-else class="my-contact-card-list-item">
-              <!--质押天数-->
-              <span class="left">{{$t('myContact.pledgeDay')}}</span>
 
-              <!--<span class="right">{{parseInt(item[4])/(24*60*60)}}</span>-->
-              <span class="right">--</span>
-
-            </div>
-            <div class="my-contact-card-list-item">
+            <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--获得收益-->
               <span class="left">{{$t('myContact.gain')}}</span>
               <span class="right">{{ (parseFloat(item[1]) / 1000000) *(parseFloat(item[3]) / 100/100) }}TRX</span>
@@ -54,13 +46,21 @@
               <!--解冻日期-->
               <span class="left">{{$t('myContact.ThawingDate')}}</span>
               <span class="right">{{
-                endDate(parseInt(item[5]), parseInt(item[4]) / (24*60*60))
+                endDate(parseInt(item[5]), parseInt(item[4]) / (5*60))
               }}</span>
             </div>
             <div v-else class="my-contact-card-list-item">
-              <!--解冻日期-->
-              <span class="left">{{$t('myContact.ThawingDate')}}</span>
-              <span class="right">--</span>
+              <!--收益发放倒计时-->
+              <span class="left">收益发放倒计时</span>
+               <span>
+               <count
+                       :pid="parseInt(item[0])"
+                       :contract="contract"
+                       :address="tron.account"
+               ></count>
+
+
+               </span>
             </div>
             <div class="my-contact-card-list-item">
               <!--可取款-->
@@ -85,7 +85,7 @@
                 </el-button>
               </el-col>
               <el-col :span="parseInt(item[2])===5?8:12"
-                      v-if="parseInt(item[2])===0||parseInt(item[2])===1||parseInt(item[2])===2||parseInt(item[2])===5">
+                      v-if="parseInt(item[2])===1||parseInt(item[2])===2">
                 <el-button
                   type="primary"
                   style="width: 100%;"
@@ -126,12 +126,13 @@
 <script>
 import TrxMixin from '../../mixin/trx'
 import Reward from './reward'
+import Count from './count'
 
 import moment from 'moment'
 
 let timer = undefined
 export default {
-  components: { Reward },
+  components: { Reward ,Count},
   data () {
     return {
       myContact: [],
@@ -142,7 +143,8 @@ export default {
       loading3: false, // 复投
       reward: undefined,
       lastWithdrawTime: 0,
-      page: 0
+      page: 0,
+        time:0,
     }
   },
 
@@ -169,6 +171,7 @@ export default {
     }, 5000)
   },
   methods: {
+
     async getOutputReward (pid) {
       const d = await this.contract.outputReward(this.tron.account, pid).call()
       //this.$set(this.reward, 'pid'+pid,  parseFloat(d) / 1000000)
@@ -355,12 +358,12 @@ export default {
     },
 
     loadData () {
-      this.getTronWeb().then(tronWeb => {
-        this.contract.getLastWithdrawTime(this.tron.account).call().then(res => {
-          // 最后提取时间
-          this.lastWithdrawTime = parseInt(res['withdrawTime'])
-        })
-      })
+      // this.getTronWeb().then(tronWeb => {
+      //   this.contract.getLastWithdrawTime(this.tron.account).call().then(res => {
+      //     // 最后提取时间
+      //     this.lastWithdrawTime = parseInt(res['withdrawTime'])
+      //   })
+      // })
 
       this.loadContract()
     },
