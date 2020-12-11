@@ -19,6 +19,8 @@ export default {
         userData: {
             title: ' information',
             AInvest: 'investment A ',
+            AInvest1:'investment A progress',
+
             BInvest: 'investment B ',
             CInvest: 'investment C ',
             investing: 'progress',
@@ -61,6 +63,7 @@ export default {
         lock: 'Lock in for {day} day',
         a1:'every 24h',
         a2:'issued every 24 hours',
+        a21:'issued every 24 hours,Principal refundable',
         a3:'Limit {min}-{max}',
         a4:'The amount must be an integral multiple of 100'
     },
@@ -92,7 +95,7 @@ export default {
         a3: "the {num}th name",
         a4: "My Recommendation Ranking Award",
         a5: "Lucky Prize",
-        a6: "Those who invest in Contract A have a chance to win, the highest",
+        a6: "Those who invest in Contract A have a chance to win, the highest 10000TRX",
         a7: "The contract number ",
         a8: "of the contract investment amount is automatically obtained",
         a9: "My Lucky Prize Reward"
@@ -150,6 +153,38 @@ export default {
         Q10:{
             title:'Recommended ranking award related introduction? ',
             item1: '5% of each deposit will enter the recommended ranking prize pool. The top 5 recommended performance of A contract each day will share 15% of the prize pool. 1st place 5%-2nd place 4%-3rd place 3%-4th place 2%-5th place 1%'
+        },
+        Q11:{
+            title:'How much can I earn? ',
+            item1:'The cumulative upper limit of all your income in troncontract 2.0 is 3.3 times the amount you are investing in contract A. After the withdrawal of 3.3 times the proceeds, the A contract and all undrawn proceeds will be destroyed. (The unextracted parts of the refunded and recommended rankings will not be destroyed)',
+            item2:''
+
+        },
+        Q12:{
+            title:'How to activate my referral link? ',
+            item1:'Activate the referral link, you need to make a contract A investment, the minimum investment is 100TRX',
+            item2:''
+        },
+        Q13:{
+            title:'How can I get team rewards? ',
+            item1:'To get the team bonus, you need to recommend new members to join the contract, take the percentage of the team members withdrawal amount each time, and recommend several valid accounts for several generations, up to 15 generations. "The withdrawal of the principal refund and the withdrawal of the bonus part do not generate team rewards"',
+        },
+        Q14:{
+            title:'How is the team reward calculated? ',
+            item1: '20% for the 1st generation, 10% for the 2nd generation, 15% for the 3rd generation, 5% for the 4th and 10th generations, and 6% for the 11th and 15th generations',
+            item2:''
+        },
+        Q15:{
+            title:'Related policies for withdrawal of profits, rewards, and principal? ',
+            item1:'In order to prevent a run, each investment is a separate contract number, separate settlement and withdrawal, contract income, contract principal and various rewards are withdrawn separately, and each wallet address needs to wait 4 hours for each withdrawal '
+        },
+        Q16:{
+            title:'How to allocate the deposit funds? ',
+            item1: '80% enter the total fund pool',
+            item2: '8% is used for development team advertising and system operation and maintenance',
+            item3: '5% is directly transferred to the fund pool of Tron Contract 1.0',
+            item4: '5% enter the recommended performance prize pool',
+            item5: '2% enter the lucky prize pool'
         }
     },
     rankList:{

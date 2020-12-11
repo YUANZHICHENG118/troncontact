@@ -46,25 +46,32 @@
       <el-collapse-item :title="$t('question.Q10.title')" name="10">
         <div>{{$t('question.Q10.item1')}}</div>
       </el-collapse-item>
-      <!--<el-collapse-item :title="$t('question.Q11.title')" name="11">-->
-        <!--<div>{{$t('question.Q11.item1')}}</div>-->
-        <!--<div>{{$t('question.Q11.item2')}}</div>-->
-      <!--</el-collapse-item>-->
-      <!--<el-collapse-item :title="$t('question.Q12.title')" name="12">-->
-        <!--<div>{{$t('question.Q12.item1')}}</div>-->
-        <!--<div>{{$t('question.Q12.item2')}}</div>-->
-      <!--</el-collapse-item>-->
-      <!--<el-collapse-item :title="$t('question.Q13.title')" name="13">-->
-        <!--<div>{{$t('question.Q13.item1')}}</div>-->
-      <!--</el-collapse-item>-->
-      <!--<el-collapse-item :title="$t('question.Q14.title')" name="14">-->
-        <!--<div>{{$t('question.Q14.item1')}}</div>-->
-        <!--<div>{{$t('question.Q14.item2')}}</div>-->
+      <el-collapse-item :title="$t('question.Q11.title')" name="11">
+        <div>{{$t('question.Q11.item1')}}</div>
+        <div>{{$t('question.Q11.item2')}}</div>
+      </el-collapse-item>
+      <el-collapse-item :title="$t('question.Q12.title')" name="12">
+        <div>{{$t('question.Q12.item1')}}</div>
+        <div>{{$t('question.Q12.item2')}}</div>
+      </el-collapse-item>
+      <el-collapse-item :title="$t('question.Q13.title')" name="13">
+        <div>{{$t('question.Q13.item1')}}</div>
+      </el-collapse-item>
+      <el-collapse-item :title="$t('question.Q14.title')" name="14">
+        <div>{{$t('question.Q14.item1')}}</div>
+        <div>{{$t('question.Q14.item2')}}</div>
 
-      <!--</el-collapse-item>-->
-      <!--<el-collapse-item :title="$t('question.Q15.title')" name="15">-->
-        <!--<div>{{$t('question.Q15.item1')}}</div>-->
-      <!--</el-collapse-item>-->
+      </el-collapse-item>
+      <el-collapse-item :title="$t('question.Q15.title')" name="15">
+        <div>{{$t('question.Q15.item1')}}</div>
+      </el-collapse-item>
+      <el-collapse-item :title="$t('question.Q16.title')" name="15">
+        <div>{{$t('question.Q16.item1')}}</div>
+        <div>{{$t('question.Q16.item2')}}</div>
+        <div>{{$t('question.Q16.item3')}}</div>
+        <div>{{$t('question.Q16.item4')}}</div>
+        <div>{{$t('question.Q16.item5')}}</div>
+      </el-collapse-item>
     </el-collapse>
   </div>
 </template>

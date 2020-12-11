@@ -7,12 +7,13 @@
                 <div class="percent-right">
                     <b>%</b>
                     <span v-if="data.pid!==2">{{$t('contact.a1')}}</span>
+
                 </div>
             </div>
             <div class="desc">
                 <!--<span v-if="data.pid===2">{{data.d}} days</span>-->
                 <!--随本金发放 锁定$-->
-                <span>{{data.pid===0||data.pid===1?`${$t('contact.a2')}`:`${$t('contact.lock',{day:data.d})}`}}
+                <span>{{data.pid===0?`${$t('contact.a2')}`:data.pid===1?`${$t('contact.a21')}`:`${$t('contact.lock',{day:data.d})}`}}
 </span>
             </div>
         </div>

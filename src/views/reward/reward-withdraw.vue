@@ -6,7 +6,7 @@
                 <b class="primary mr-8">{{value}}</b>
                 <span class="unit">TRX</span>
             </div>
-            <el-button type="primary" :disabled="loading|| value<=0" :loading="loading" @click="withdraw">{{$t('myContact.getReward')}}</el-button>
+            <el-button type="primary" :disabled="disable||loading|| value<=0" :loading="loading" @click="withdraw">{{$t('myContact.getReward')}}</el-button>
         </div>
     </div>
 </template>
@@ -31,7 +31,8 @@
         },
         data() {
             return {
-                loading: false
+                loading: false,
+                disable:true,
 
             }
         },
@@ -40,10 +41,30 @@
             'tron.account'() {
                 this.getTronWeb().then(tronWeb => {
                     this.contract = tronWeb.contract(this.ABI, tronWeb.address.toHex(this.contract_address))
+
+                    this.loadData()
                 })
             },
         },
         methods: {
+            loadData(){
+                this.contract.getPersonalStats(this.tron.account).call().then(res => {
+
+                    const s13 = tronWeb.fromSun(res['stats'][13])
+
+                    if (s13 > 0 ) {
+                        const d = new Date();
+                        console.log("d.getTime()===", d.getTime())
+                        //const t=(s13+4*60*60)-d.getTime()/1000
+                        const t=(s13+5*60)-d.getTime()/1000
+
+                        console.log("t==",t)
+
+                        this.disable  = parseInt(t)>0;
+                    }
+
+                })
+            },
             withdraw() {
                 this.loading=true;
 

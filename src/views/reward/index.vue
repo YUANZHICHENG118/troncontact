@@ -7,7 +7,7 @@
                     <reward-withdraw
                             :type=0
                             :name="$t('teamReward.a1')"
-                            :value=recommendAward
+                            :value=referReward
                     ></reward-withdraw>
                 </RewardItem>
             </el-col>
@@ -17,7 +17,7 @@
                     <reward-withdraw
                             :type=1
                             :name="$t('teamReward.a4')"
-                            :value=referReward
+                            :value=recommendAward
                     ></reward-withdraw>
                 </RewardItem>
             </el-col>
@@ -50,6 +50,7 @@
             LuckyLeftComponent,
             RankItem,
             RewardWithdraw
+
         },
         data() {
             return {

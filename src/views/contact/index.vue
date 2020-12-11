@@ -79,7 +79,7 @@ export default {
       rersult = [{ pid: 0, title: 'A', rate: '1', d: 5 }, { pid: 1, title: 'B', rate: '1', d: 15 }, {
         pid: 2,
         title: 'C',
-        rate: '25',
+        rate: '20',
         d: 30
       }]
       return rersult

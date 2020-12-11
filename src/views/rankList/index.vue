@@ -1,10 +1,14 @@
 <template>
-    <div class="rankList ">
+    <div class="rankList">
         <div class="performance-day">
             {{$t("rankList.a1")}}
             <span class="primary">{{total}}</span>
             <span class="unit">&nbsp;TRX</span>
+            <Countdown :time="time" format="hh:mm:ss" @on-end="onCountdownEnd">
+                <template slot-scope="{ time }">{{ time }}</template>
+            </Countdown>
         </div>
+
         <div class="rankTable">
             <el-table
                     :data="tableData"
@@ -50,12 +54,17 @@
 </template>
 <script>
     import TrxMixin from '../../mixin/trx'
+    import Countdown from '@choujiaojiao/vue2-countdown'
 
     export default {
+        components: {
+            Countdown
+        },
         data() {
             return {
                 tableData: [],
-                total:0
+                total:0,
+                time:100
             }
         },
         mixins: [TrxMixin],
@@ -68,8 +77,33 @@
             },
         },
         methods: {
+            onCountdownEnd() {
+                this.time=0
+                console.log('countdown end~')
+            },
             loadData() {
                 this.getTronWeb().then(async (tronWeb) => {
+
+
+
+
+                    // 全网数量
+                    this.contract.getGlobalStats().call().then(res => {
+
+                        const g4 = parseInt(res['stats'][5])
+                        if (g4 > 0 && this.time == 0) {
+                            const d = new Date();
+                            console.log("d.getTime()", d.getTime())
+                            //const t=(g4+4*60*60)-d.getTime()/1000
+                            const t=(g4)-d.getTime()/1000
+
+                             console.log("t==",t)
+
+                            this.time = parseInt(t);
+                        }
+
+
+                    })
 
 
 

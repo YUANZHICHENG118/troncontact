@@ -6,6 +6,8 @@
             <ul>
                 <!--A类合约累计投资-->
                 <li><span class="label">{{$t('account.userData.AInvest')}}</span> <span>{{stats0}}TRX</span></li>
+                <li><span class="label">{{$t('account.userData.AInvest1')}}</span> <span>{{stats12}}TRX</span></li>
+
                 <!--B类合约累计投资-->
                 <li><span class="label">{{$t('account.userData.BInvest')}}</span> <span>{{stats1}}TRX</span></li>
                 <li><span class="label">{{$t('account.userData.a1')}}</span> <span>{{parseFloat(stats2)-parseFloat(stats1)}}TRX</span></li>
@@ -51,7 +53,7 @@
                 <!--会员数量-->
                 <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g4}} </span></li>
 
-                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TNvyP31heRXZHhKq3it5AGPuHjr8DDQKuv/code" target="_blank">TronContract</a> </span></li>
+                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TBuq3ZqRBzFA4BUvkS8Cp3dkFL8gkL4ktg/code" target="_blank">TronContract</a> </span></li>
 
                 <!--审计报告-->
                 <li><span class="label"></span> <span><a style="color: blueviolet" href="TronContract.pdf" target="_blank">{{$t('global.report')}}</a> </span></li>
@@ -117,6 +119,8 @@
                 stats9: 0,
                 stats10: 0,
                 stats11: 0,
+                stats12: 0,
+
                 g0: 0,
                 g1: 0,
                 g2: 0,
@@ -172,6 +176,7 @@
 
                         this.stats10 = tronWeb.fromSun(res['stats'][10])
                         this.stats11 = tronWeb.fromSun(res['stats'][11])
+                        this.stats12 = tronWeb.fromSun(res['stats'][12])
 
                     })
 

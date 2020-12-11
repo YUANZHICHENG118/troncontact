@@ -42,6 +42,7 @@
         },
         methods: {
             onCountdownEnd() {
+                this.time=0
                 console.log('countdown end~')
             },
             async timer(){
