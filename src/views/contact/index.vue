@@ -46,7 +46,7 @@ export default {
 
 
         this.contract.getPersonalStats(this.tron.account).call().then(res => {
-            const stats0 = tronWeb.fromSun(res['stats'][0])
+            const stats12 = tronWeb.fromSun(res['stats'][12])
 
             const stats1 = tronWeb.fromSun(res['stats'][1])
             const stats2 = tronWeb.fromSun(res['stats'][2])
@@ -57,7 +57,7 @@ export default {
             this.bAllow=parseFloat(stats2)-parseFloat(stats1)
             this.cAllow=parseFloat(stats4)-parseFloat(stats3)
 
-            this.aAllow=parseFloat(stats0)>0?0:100000
+            this.aAllow=parseFloat(stats12)>0?0:100000
 
 
         })

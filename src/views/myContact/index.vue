@@ -26,7 +26,7 @@
             <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--本期利润-->
               <span class="left">{{$t('myContact.profit')}}</span>
-              <span class="right">{{ parseFloat(item[3]) / 100 }}%</span>
+              <span class="right">{{ parseFloat(item[3]) }}%</span>
             </div>
             <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--质押天数-->
@@ -91,7 +91,7 @@
                   style="width: 100%;"
                   :loading="loading2"
                   :disabled="
-                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60)) ||
+                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (5*60)) ||
                     loading2
                   "
                   @click="takeAwayDeposit(parseInt(item[0]))"
@@ -193,6 +193,7 @@ export default {
     },
     chkWithdraw (time, ttl) {
 
+        console.log("time=====",time,ttl)
       const date = moment(time * 1000).add(ttl, 'd')
       var now = moment()
       return now < date
