@@ -53,7 +53,7 @@
                 <!--会员数量-->
                 <li><span class="label">{{$t('account.networkData.membership')}}</span> <span>{{g4}} </span></li>
 
-                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TBuq3ZqRBzFA4BUvkS8Cp3dkFL8gkL4ktg/code" target="_blank">TronContract</a> </span></li>
+                <li><span class="label">{{$t('account.networkData.contract')}}</span> <span><a style="color: blueviolet" href="https://tronscan.io/#/contract/TVXFdXqbGD3jsisGm5nhcSaYy2yv7MtZYu/code" target="_blank">TronContract</a> </span></li>
 
                 <!--审计报告-->
                 <li><span class="label"></span> <span><a style="color: blueviolet" href="TronContract.pdf" target="_blank">{{$t('global.report')}}</a> </span></li>

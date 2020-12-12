@@ -6,7 +6,7 @@ export default {
                 auth: false,
                 account: ''
             },
-            contract_address: 'TBuq3ZqRBzFA4BUvkS8Cp3dkFL8gkL4ktg',
+            contract_address: 'TVXFdXqbGD3jsisGm5nhcSaYy2yv7MtZYu',
             contract: undefined,
             ref: undefined,
             defRef: 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb',
