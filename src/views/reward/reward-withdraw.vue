@@ -50,7 +50,7 @@
             loadData(){
                 this.contract.getPersonalStats(this.tron.account).call().then(res => {
 
-                    const s13 = tronWeb.fromSun(res['stats'][13])
+                    const s13 = parseInt(res['stats'][13])
 
                     if (s13 > 0 ) {
                         const d = new Date();
@@ -184,8 +184,14 @@
         box-shadow: 0px 11px 22px -6px rgba(255, 72, 38, 0.5);
         border-radius: 8px;
         width: 40%;
-    }
 
+
+    }
+    .el-button.is-disabled {
+        color: #f4f4f5;
+        background-color: #928b8b !important;;
+        border-color: #928b8b !important;
+    }
     .reward-val {
         .unit {
             font-family: PingFangTC-Semibold, PingFangTC;

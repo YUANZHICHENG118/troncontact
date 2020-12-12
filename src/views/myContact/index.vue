@@ -78,7 +78,7 @@
                 <el-button
                   type="warning"
                   style="width: 100%;"
-                  :disabled="chkReward() || loading1"
+                  :disabled="chkReward() || loading1 ||disable"
                   :loading="loading1"
                   @click="withdrawReward(parseInt(item[0]))"
                 >{{$t('myContact.getReward')}}
@@ -143,6 +143,7 @@ export default {
       loading3: false, // 复投
       reward: undefined,
       lastWithdrawTime: 0,
+        disable:false,
       page: 0,
         time:0,
     }
@@ -179,10 +180,16 @@ export default {
     },
     chkReward () {
       console.log('this.lastWithdrawTime', this.lastWithdrawTime)
-      let ttl = 8
-      const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'h')
-      var now = moment()
-      return now < date
+      // let ttl = 4
+      // const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'h')
+      // var now = moment()
+      // return now < date
+
+
+        let ttl = 5
+        const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'm')
+        var now = moment()
+        return now < date
     },
     chkWithdraw (time, ttl) {
 
@@ -259,6 +266,9 @@ export default {
               })
               this.awaitTx(tx).then(() => {
                 // if(auto_upline) fetch('/auto_upline/?address=' + this.tron.account + '&upline=' + this.upline);
+
+                  this.disable=true
+
                 setTimeout(() => {
                   this.loadData()
                 }, 3000)
@@ -358,12 +368,24 @@ export default {
     },
 
     loadData () {
-      // this.getTronWeb().then(tronWeb => {
-      //   this.contract.getLastWithdrawTime(this.tron.account).call().then(res => {
-      //     // 最后提取时间
-      //     this.lastWithdrawTime = parseInt(res['withdrawTime'])
-      //   })
-      // })
+      this.getTronWeb().then(tronWeb => {
+
+
+          this.contract.getPersonalStats(this.tron.account).call().then(res => {
+
+              const s13 = parseInt(res['stats'][13])
+              // 最后提取时间
+
+              this.lastWithdrawTime  = s13;
+
+          })
+
+
+
+
+      })
+
+
 
       this.loadContract()
     },
