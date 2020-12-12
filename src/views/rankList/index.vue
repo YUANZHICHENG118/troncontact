@@ -128,6 +128,8 @@
                             list[index]['income']=(parseFloat(item)/1000000).toFixed(2)
                         })
 
+                        list.splice(list.findIndex(item => item.address === "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb"))
+
                         this.tableData=list
                     })
 
