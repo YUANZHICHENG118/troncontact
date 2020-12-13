@@ -181,7 +181,7 @@
 <style lang="scss" scoped>
 
     .el-button--primary {
-        box-shadow: 0px 11px 22px -6px rgba(255, 72, 38, 0.5);
+       // box-shadow: 0px 11px 22px -6px rgba(255, 72, 38, 0.5);
         border-radius: 8px;
         width: 40%;
 

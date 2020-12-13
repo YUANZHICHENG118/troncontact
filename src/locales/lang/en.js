@@ -148,7 +148,7 @@ export default {
         },
         Q9: {
             title:'Introduction to the Lucky Prize? ',
-            item1: '2% of each deposit will enter the lucky prize pool. Each A contract invested has a chance to win. A contract number is a multiple of 20, and 50% of the contract investment amount is automatically obtained as a lucky bonus. A contract number that is a multiple of 100 will automatically get 100% of the contract investment amount as a lucky bonus. The maximum amount of lucky prize winning is 10000Trx (the lucky prize only has A contract). The reward will not be triggered when the lucky prize pool funds are not enough to be allocated. In order to repay new and old customers, the project will directly inject 500,000 TRX into the lucky prize pool on the first day of the project'
+            item1: '2% of each deposit will enter the lucky prize pool. Each A contract invested has a chance to win. A contract number is a multiple of 20, and 50% of the contract investment amount is automatically obtained as a lucky bonus. A contract number that is a multiple of 100 will automatically get 100% of the contract investment amount as a lucky bonus. The maximum amount of lucky prize winning is 10000Trx (the lucky prize only has A contract). The reward will not be triggered when the lucky prize pool funds are not enough to be allocated. In order to repay new and old customers, the project will directly inject 300,000 TRX into the lucky prize pool on the first day of the project'
         },
         Q10:{
             title:'Recommended ranking award related introduction? ',
@@ -182,7 +182,7 @@ export default {
             title:'How to allocate the deposit funds? ',
             item1: '80% enter the total fund pool',
             item2: '8% is used for development team advertising and system operation and maintenance',
-            item3: '5% is directly transferred to the fund pool of Tron Contract 1.0',
+            item3: '5% is transferred to the fund pool of Tron Contract 1.0',
             item4: '5% enter the recommended performance prize pool',
             item5: '2% enter the lucky prize pool'
         }
