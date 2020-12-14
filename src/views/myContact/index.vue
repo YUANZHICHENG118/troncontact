@@ -40,7 +40,7 @@
             <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--获得收益-->
               <span class="left">{{$t('myContact.gain')}}</span>
-              <span class="right">{{ (parseFloat(item[1]) / 1000000) *(parseFloat(item[3]) / 100/100) }}TRX</span>
+              <span class="right">{{ (parseFloat(item[1]) / 1000000) *(parseFloat(item[3]) / 100) }}TRX</span>
             </div>
             <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--解冻日期-->
@@ -180,7 +180,8 @@ export default {
     },
     chkReward () {
       console.log('this.lastWithdrawTime', this.lastWithdrawTime)
-      // let ttl = 4
+
+        // let ttl = 4
       // const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'h')
       // var now = moment()
       // return now < date
@@ -371,18 +372,12 @@ export default {
     loadData () {
       this.getTronWeb().then(tronWeb => {
 
-
           this.contract.getPersonalStats(this.tron.account).call().then(res => {
-
               const s13 = parseInt(res['stats'][13])
               // 最后提取时间
-
               this.lastWithdrawTime  = s13;
 
           })
-
-
-
 
       })
 

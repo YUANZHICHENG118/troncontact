@@ -52,16 +52,32 @@
 
                     const s13 = parseInt(res['stats'][13])
 
-                    if (s13 > 0 ) {
-                        const d = new Date();
-                        console.log("d.getTime()===", d.getTime())
-                        //const t=(s13+4*60*60)-d.getTime()/1000
-                        const t=(s13+5*60)-d.getTime()/1000
+                    // if (s13 > 0 ) {
+                    //     const d = new Date();
+                    //     console.log("d.getTime()===", d.getTime())
+                    //     //const t=(s13+4*60*60)-d.getTime()/1000
+                    //     const t=(s13+5*60)-d.getTime()/1000
+                    //
+                    //     console.log("t==",t)
+                    //
+                    //     this.disable  = parseInt(t)>0;
+                    // }
 
-                        console.log("t==",t)
-
-                        this.disable  = parseInt(t)>0;
+                    if(s13===0){
+                        this.disable=false;
+                        return;
                     }
+
+                    // let ttl = 4
+                    // const date = moment(s13 * 1000).add(ttl, 'h')
+                    // var now = moment()
+                    // return now < date
+
+
+                    let ttl = 5
+                    const date = moment(s13 * 1000).add(ttl, 'm')
+                    var now = moment()
+                    this.disable= now < date
 
                 })
             },

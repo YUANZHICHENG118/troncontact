@@ -64,7 +64,7 @@
             return {
                 tableData: [],
                 total:0,
-                time:100
+                time:0
             }
         },
         mixins: [TrxMixin],
@@ -91,14 +91,13 @@
                     this.contract.getGlobalStats().call().then(res => {
 
                         const g4 = parseInt(res['stats'][5])
+                        console.log("g4===",g4)
                         if (g4 > 0 && this.time == 0) {
                             const d = new Date();
                             console.log("d.getTime()", d.getTime())
                             //const t=(g4+4*60*60)-d.getTime()/1000
                             const t=(g4)-d.getTime()/1000
-
                              console.log("t==",t)
-
                             this.time = parseInt(t);
                         }
 
