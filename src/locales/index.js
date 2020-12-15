@@ -22,7 +22,7 @@ export default i18n
 
 const loadedLanguages = [defaultLang]
 
-const _lan = localStorage.getItem('language')
+const _lan = localStorage.getItem('language')||'en'
 // 从缓存設置中加载当前语言
 if (_lan !== null && defaultLang !== _lan) {
   loadLanguageAsync(_lan)

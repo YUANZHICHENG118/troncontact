@@ -114,20 +114,22 @@
 
                     this.contract.userRanking(day).call().then(res => {
                         const addressList=res['addressList']
-                        const refsCounts=res['refsCounts']
+                        const refsCounts=res['performanceList']
                         const preEarn=res['preEarn']
+
 
                         addressList.map((item,index)=>{
                             list[index]['address']=tronWeb.address.fromHex(item)
                         })
                         refsCounts.map((item,index)=>{
-                            list[index]['number']=item
+                            list[index]['number']=item/1000000
                         })
                         preEarn.map((item,index)=>{
                             list[index]['income']=(parseFloat(item)/1000000).toFixed(2)
                         })
 
-                        list.splice(list.findIndex(item => item.address === "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb"))
+
+                       // list.splice(list.findIndex(item => item.address === "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb"))
 
                         this.tableData=list
                     })

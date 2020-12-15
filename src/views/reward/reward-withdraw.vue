@@ -12,6 +12,7 @@
 </template>
 <script>
     import TrxMixin from '../../mixin/trx'
+    import moment from 'moment'
 
     export default {
         name: 'RewardWithdraw',
@@ -68,16 +69,16 @@
                         return;
                     }
 
-                    // let ttl = 4
-                    // const date = moment(s13 * 1000).add(ttl, 'h')
-                    // var now = moment()
-                    // return now < date
-
-
-                    let ttl = 5
-                    const date = moment(s13 * 1000).add(ttl, 'm')
+                    let ttl = 4
+                    const date = moment(s13 * 1000).add(ttl, 'h')
                     var now = moment()
-                    this.disable= now < date
+                    return now < date
+
+                    //
+                    // let ttl = 5
+                    // const date = moment(s13 * 1000).add(ttl, 'm')
+                    // var now = moment()
+                    // this.disable= now < date
 
                 })
             },

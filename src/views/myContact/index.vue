@@ -31,8 +31,8 @@
             <div v-if="parseInt(item[2])===2" class="my-contact-card-list-item">
               <!--质押天数-->
               <span class="left">{{$t('myContact.pledgeDay')}}</span>
-              <!--<span class="right">{{parseInt(item[4])/(24*60*60)}}</span>-->
-              <span class="right">{{parseInt(item[4])/(5*60)}}</span>
+              <span class="right">{{parseInt(item[4])/(24*60*60)}}</span>
+              <!--<span class="right">{{parseInt(item[4])/(5*60)}}</span>-->
 
             </div>
 
@@ -46,7 +46,7 @@
               <!--解冻日期-->
               <span class="left">{{$t('myContact.ThawingDate')}}</span>
               <span class="right">{{
-                endDate(parseInt(item[5]), parseInt(item[4]) / (5*60))
+                endDate(parseInt(item[5]), parseInt(item[4]) / (24*60*60))
               }}</span>
             </div>
             <div v-else class="my-contact-card-list-item">
@@ -91,7 +91,7 @@
                   style="width: 100%;"
                   :loading="loading2"
                   :disabled="
-                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (5*60)) ||
+                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60)) ||
                     loading2
                   "
                   @click="takeAwayDeposit(parseInt(item[0]))"
@@ -181,16 +181,16 @@ export default {
     chkReward () {
       console.log('this.lastWithdrawTime', this.lastWithdrawTime)
 
-        // let ttl = 4
-      // const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'h')
-      // var now = moment()
-      // return now < date
+        let ttl = 4
+      const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'h')
+      var now = moment()
+      return now < date
 
 
-        let ttl = 5
-        const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'm')
-        var now = moment()
-        return now < date
+        // let ttl = 5
+        // const date = moment(this.lastWithdrawTime * 1000).add(ttl, 'm')
+        // var now = moment()
+        // return now < date
     },
     chkWithdraw (time, ttl) {
 

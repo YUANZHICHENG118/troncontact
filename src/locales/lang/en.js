@@ -192,7 +192,7 @@ export default {
         a1:'Your direct push performance that day',
         a2:'rank',
         a3:'Address',
-        a4:'direct push quantity',
+        a4:'direct push performance',
         a5:'Estimated income',
     }
 }

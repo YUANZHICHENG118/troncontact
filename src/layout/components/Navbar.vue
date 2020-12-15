@@ -63,7 +63,7 @@ export default {
     }
   },
   mounted(){
-    const lang=localStorage.getItem('language');
+    const lang=localStorage.getItem('language')||'en';
     this.activeLang=lang;
   },
   methods: {
