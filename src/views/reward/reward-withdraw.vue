@@ -72,7 +72,7 @@
                     let ttl = 4
                     const date = moment(s13 * 1000).add(ttl, 'h')
                     var now = moment()
-                    return now < date
+                    this.disable= now < date
 
                     //
                     // let ttl = 5
