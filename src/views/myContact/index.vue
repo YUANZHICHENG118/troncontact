@@ -85,19 +85,31 @@
                 </el-button>
               </el-col>
               <el-col :span="parseInt(item[2])===5?8:12"
-                      v-if="parseInt(item[2])===1||parseInt(item[2])===2">
+                      v-if="parseInt(item[2])===1">
                 <el-button
                   type="primary"
                   style="width: 100%;"
                   :loading="loading2"
-                  :disabled="
-                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60)) ||
-                    loading2
-                  "
                   @click="takeAwayDeposit(parseInt(item[0]))"
                 >{{$t('myContact.redeem')}}
                 </el-button>
               </el-col>
+
+              <el-col :span="parseInt(item[2])===5?8:12"
+                      v-if="parseInt(item[2])===2">
+                <el-button
+                        type="primary"
+                        style="width: 100%;"
+                        :loading="loading2"
+                        :disabled="
+                    chkReward() ||chkWithdraw(parseInt(item[5]), parseInt(item[4]) / (24*60*60)) ||
+                    loading2
+                  "
+                        @click="takeAwayDeposit(parseInt(item[0]))"
+                >{{$t('myContact.redeem')}}
+                </el-button>
+              </el-col>
+
               <el-col :span="8" v-if="parseInt(item[2])===5">
                 <el-button
                   type="success"

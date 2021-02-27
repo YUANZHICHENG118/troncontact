@@ -128,10 +128,16 @@
                             list[index]['income']=(parseFloat(item)/1000000).toFixed(2)
                         })
 
+                        const _list=[];
+                        list.map(item=>{
+                            if(item.address != "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb"){
+                                _list.push(item)
+                            }
+                        })
 
-                       // list.splice(list.findIndex(item => item.address === "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb"))
+                        //list.splice(list.findIndex(item => item.address === "T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb"))
 
-                        this.tableData=list
+                        this.tableData=_list
                     })
 
 
